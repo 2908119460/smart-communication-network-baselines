@@ -1,0 +1,5046 @@
+{
+  "records": [
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 0,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00000.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 13,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00013.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 26,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00026.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 40,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00040.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 53,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00053.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 66,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00066.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 80,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00080.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 93,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00093.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 106,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00106.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 120,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00120.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 133,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00133.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 146,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00146.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 160,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00160.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 173,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00173.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 186,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00186.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 200,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00200.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 213,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00213.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 226,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00226.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 240,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00240.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 253,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00253.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 266,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00266.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 280,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00280.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 293,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00293.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_013",
+      "frame": 307,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_013_00307.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 0,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00000.jpg",
+      "score": 0.046366628259420395
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 13,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00013.jpg",
+      "score": 0.06540634483098984
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 26,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00026.jpg",
+      "score": 0.05749643221497536
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 39,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00039.jpg",
+      "score": 0.05270463973283768
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 53,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00053.jpg",
+      "score": 0.06854552775621414
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 66,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00066.jpg",
+      "score": 0.07776153832674026
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 79,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00079.jpg",
+      "score": 0.046607475727796555
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 92,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00092.jpg",
+      "score": 0.018353356048464775
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 106,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00106.jpg",
+      "score": 0.0022331795189529657
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 119,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00119.jpg",
+      "score": 0.002021966502070427
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 132,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00132.jpg",
+      "score": 0.010478139854967594
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 145,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00145.jpg",
+      "score": 0.027291398495435715
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 159,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00159.jpg",
+      "score": 0.0015317002544179559
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 172,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00172.jpg",
+      "score": 0.0033499475102871656
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 185,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00185.jpg",
+      "score": 0.006514711305499077
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 198,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00198.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 212,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00212.jpg",
+      "score": 0.0025881442707031965
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 225,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00225.jpg",
+      "score": 0.0013650818727910519
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 238,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00238.jpg",
+      "score": 0.0017517812084406614
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 251,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00251.jpg",
+      "score": 0.002843262627720833
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 265,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00265.jpg",
+      "score": 0.0020079785026609898
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 278,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00278.jpg",
+      "score": 0.010267569683492184
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 291,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00291.jpg",
+      "score": 0.008510940708220005
+    },
+    {
+      "sequence": "V_AIRPLANE_019",
+      "frame": 305,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_019_00305.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 0,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00000.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 13,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00013.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 27,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00027.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 40,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00040.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 54,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00054.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 67,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00067.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 81,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00081.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 94,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00094.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 108,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00108.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 122,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00122.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 135,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00135.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 149,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00149.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 162,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00162.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 176,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00176.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 189,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00189.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 203,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00203.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 217,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00217.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 230,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00230.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 244,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00244.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 257,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00257.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 271,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00271.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 284,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00284.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 298,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00298.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_025",
+      "frame": 312,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_025_00312.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 0,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00000.jpg",
+      "score": 0.02106945961713791
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 13,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00013.jpg",
+      "score": 0.004067206289619207
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 27,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00027.jpg",
+      "score": 0.10663116723299026
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 40,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00040.jpg",
+      "score": 0.011288930661976337
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 54,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00054.jpg",
+      "score": 0.027676783502101898
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 68,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00068.jpg",
+      "score": 0.0605698898434639
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 81,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00081.jpg",
+      "score": 0.1109728217124939
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 95,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00095.jpg",
+      "score": 0.1186845675110817
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 108,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00108.jpg",
+      "score": 0.13021941483020782
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 122,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00122.jpg",
+      "score": 0.05588391795754433
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 136,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00136.jpg",
+      "score": 0.0627455934882164
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 149,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00149.jpg",
+      "score": 0.0985875055193901
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 163,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00163.jpg",
+      "score": 0.06054045259952545
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 176,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00176.jpg",
+      "score": 0.03392967954277992
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 190,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00190.jpg",
+      "score": 0.06184399127960205
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 204,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00204.jpg",
+      "score": 0.10413087159395218
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 217,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00217.jpg",
+      "score": 0.11434832960367203
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 231,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00231.jpg",
+      "score": 0.02535281702876091
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 244,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00244.jpg",
+      "score": 0.009613201953470707
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 258,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00258.jpg",
+      "score": 0.011144538410007954
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 272,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00272.jpg",
+      "score": 0.0034314035438001156
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 285,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00285.jpg",
+      "score": 0.006207298953086138
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 299,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00299.jpg",
+      "score": 0.005842389073222876
+    },
+    {
+      "sequence": "V_AIRPLANE_052",
+      "frame": 313,
+      "category": "AIRPLANE",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_AIRPLANE_052_00313.jpg",
+      "score": 0.0041023013181984425
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 0,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00000.jpg",
+      "score": 0.00494014099240303
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 13,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00013.jpg",
+      "score": 0.04970092326402664
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 27,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00027.jpg",
+      "score": 0.0583900511264801
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 40,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00040.jpg",
+      "score": 0.11382677406072617
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 54,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00054.jpg",
+      "score": 0.005102567374706268
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 67,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00067.jpg",
+      "score": 0.001495543634518981
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 81,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00081.jpg",
+      "score": 0.05264003947377205
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 94,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00094.jpg",
+      "score": 0.10199105739593506
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 108,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00108.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 122,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00122.jpg",
+      "score": 0.0027149131055921316
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 135,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00135.jpg",
+      "score": 0.018409430980682373
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 149,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00149.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 162,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00162.jpg",
+      "score": 0.0010011250851675868
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 176,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00176.jpg",
+      "score": 0.002275472041219473
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 189,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00189.jpg",
+      "score": 0.001813801471143961
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 203,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00203.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 217,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00217.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 230,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00230.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 244,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00244.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 257,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00257.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 271,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00271.jpg",
+      "score": 0.0018761042738333344
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 284,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00284.jpg",
+      "score": 0.0024375650100409985
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 298,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00298.jpg",
+      "score": 0.020342648029327393
+    },
+    {
+      "sequence": "V_BIRD_024",
+      "frame": 312,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_024_00312.jpg",
+      "score": 0.007733119651675224
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 0,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00000.jpg",
+      "score": 0.001452253432944417
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 13,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00013.jpg",
+      "score": 0.04481760039925575
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 26,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00026.jpg",
+      "score": 0.0011266098590567708
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 39,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00039.jpg",
+      "score": 0.03719768300652504
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 52,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00052.jpg",
+      "score": 0.036813315004110336
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 65,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00065.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 78,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00078.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 91,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00091.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 104,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00104.jpg",
+      "score": 0.001199559192173183
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 117,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00117.jpg",
+      "score": 0.01336692739278078
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 130,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00130.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 143,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00143.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 156,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00156.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 169,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00169.jpg",
+      "score": 0.02283872477710247
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 182,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00182.jpg",
+      "score": 0.004093104973435402
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 195,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00195.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 208,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00208.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 221,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00221.jpg",
+      "score": 0.0017578697297722101
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 234,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00234.jpg",
+      "score": 0.001585936639457941
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 247,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00247.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 260,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00260.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 273,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00273.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 286,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00286.jpg",
+      "score": 0.0014003069372847676
+    },
+    {
+      "sequence": "V_BIRD_029",
+      "frame": 299,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_029_00299.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 0,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00000.jpg",
+      "score": 0.02427072264254093
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 13,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00013.jpg",
+      "score": 0.01000222284346819
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 26,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00026.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 40,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00040.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 53,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00053.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 66,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00066.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 80,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00080.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 93,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00093.jpg",
+      "score": 0.0014119107509031892
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 106,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00106.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 120,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00120.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 133,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00133.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 146,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00146.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 160,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00160.jpg",
+      "score": 0.0017125981394201517
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 173,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00173.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 186,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00186.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 200,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00200.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 213,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00213.jpg",
+      "score": 0.009289720095694065
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 226,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00226.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 240,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00240.jpg",
+      "score": 0.006516668945550919
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 253,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00253.jpg",
+      "score": 0.053039055317640305
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 266,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00266.jpg",
+      "score": 0.045349400490522385
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 280,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00280.jpg",
+      "score": 0.030779846012592316
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 293,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00293.jpg",
+      "score": 0.010503294877707958
+    },
+    {
+      "sequence": "V_BIRD_045",
+      "frame": 307,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_045_00307.jpg",
+      "score": 0.0193624384701252
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 0,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00000.jpg",
+      "score": 0.00245829694904387
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 13,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00013.jpg",
+      "score": 0.007811911404132843
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 26,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00026.jpg",
+      "score": 0.0021408521570265293
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 39,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00039.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 52,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00052.jpg",
+      "score": 0.0065838126465678215
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 65,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00065.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 79,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00079.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 92,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00092.jpg",
+      "score": 0.0019042841158807278
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 105,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00105.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 118,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00118.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 131,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00131.jpg",
+      "score": 0.0019452680135145783
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 144,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00144.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 158,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00158.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 171,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00171.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 184,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00184.jpg",
+      "score": 0.0033902633003890514
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 197,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00197.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 210,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00210.jpg",
+      "score": 0.026751521974802017
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 223,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00223.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 237,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00237.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 250,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00250.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 263,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00263.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 276,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00276.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 289,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00289.jpg",
+      "score": 0.005635898094624281
+    },
+    {
+      "sequence": "V_BIRD_049",
+      "frame": 303,
+      "category": "BIRD",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_BIRD_049_00303.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00000.jpg",
+      "score": 0.47176042199134827
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00013.jpg",
+      "score": 0.4880465269088745
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00026.jpg",
+      "score": 0.5165109038352966
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00039.jpg",
+      "score": 0.4791746139526367
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00052.jpg",
+      "score": 0.517310380935669
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 65,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00065.jpg",
+      "score": 0.5170056819915771
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 78,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00078.jpg",
+      "score": 0.46348339319229126
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 91,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00091.jpg",
+      "score": 0.45008188486099243
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 104,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00104.jpg",
+      "score": 0.45903050899505615
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 117,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00117.jpg",
+      "score": 0.466993123292923
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 130,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00130.jpg",
+      "score": 0.4934060871601105
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 143,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00143.jpg",
+      "score": 0.45305269956588745
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 157,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00157.jpg",
+      "score": 0.4763042628765106
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 170,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00170.jpg",
+      "score": 0.45412677526474
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 183,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00183.jpg",
+      "score": 0.510351836681366
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 196,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00196.jpg",
+      "score": 0.4771808385848999
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 209,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00209.jpg",
+      "score": 0.5050958395004272
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 222,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00222.jpg",
+      "score": 0.45820629596710205
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 235,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00235.jpg",
+      "score": 0.4732438027858734
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 248,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00248.jpg",
+      "score": 0.46846804022789
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 261,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00261.jpg",
+      "score": 0.4108128249645233
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 274,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00274.jpg",
+      "score": 0.4184877872467041
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 287,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00287.jpg",
+      "score": 0.5327962040901184
+    },
+    {
+      "sequence": "V_DRONE_018",
+      "frame": 301,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_018_00301.jpg",
+      "score": 0.5148780345916748
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00000.jpg",
+      "score": 0.4398742616176605
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00013.jpg",
+      "score": 0.417656809091568
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00026.jpg",
+      "score": 0.4601028561592102
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00039.jpg",
+      "score": 0.4731588065624237
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00052.jpg",
+      "score": 0.4801870286464691
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 65,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00065.jpg",
+      "score": 0.4398057162761688
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 78,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00078.jpg",
+      "score": 0.40121352672576904
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 91,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00091.jpg",
+      "score": 0.4317043721675873
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 104,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00104.jpg",
+      "score": 0.43079468607902527
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 117,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00117.jpg",
+      "score": 0.4475114643573761
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 130,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00130.jpg",
+      "score": 0.44526001811027527
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 143,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00143.jpg",
+      "score": 0.4452129602432251
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 156,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00156.jpg",
+      "score": 0.4729478657245636
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 169,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00169.jpg",
+      "score": 0.5441368818283081
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 182,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00182.jpg",
+      "score": 0.45840349793434143
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 195,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00195.jpg",
+      "score": 0.44793224334716797
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 208,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00208.jpg",
+      "score": 0.4344879388809204
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 221,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00221.jpg",
+      "score": 0.4611709415912628
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 234,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00234.jpg",
+      "score": 0.4345659017562866
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 247,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00247.jpg",
+      "score": 0.43310579657554626
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 260,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00260.jpg",
+      "score": 0.4881534278392792
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 273,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00273.jpg",
+      "score": 0.47534263134002686
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 286,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00286.jpg",
+      "score": 0.5284703373908997
+    },
+    {
+      "sequence": "V_DRONE_022",
+      "frame": 300,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_022_00300.jpg",
+      "score": 0.4898969829082489
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00000.jpg",
+      "score": 0.4066590964794159
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00013.jpg",
+      "score": 0.3864831030368805
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00026.jpg",
+      "score": 0.3920660614967346
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00039.jpg",
+      "score": 0.4107440710067749
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00052.jpg",
+      "score": 0.41632553935050964
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 66,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00066.jpg",
+      "score": 0.42515021562576294
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 79,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00079.jpg",
+      "score": 0.4262465834617615
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 92,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00092.jpg",
+      "score": 0.4349023103713989
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 105,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00105.jpg",
+      "score": 0.44315946102142334
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 118,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00118.jpg",
+      "score": 0.44332200288772583
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 132,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00132.jpg",
+      "score": 0.45205220580101013
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 145,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00145.jpg",
+      "score": 0.5331297516822815
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 158,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00158.jpg",
+      "score": 0.5070343017578125
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 171,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00171.jpg",
+      "score": 0.4388008117675781
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 185,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00185.jpg",
+      "score": 0.4323510229587555
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 198,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00198.jpg",
+      "score": 0.43812477588653564
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 211,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00211.jpg",
+      "score": 0.3519512712955475
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 224,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00224.jpg",
+      "score": 0.43818187713623047
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 237,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00237.jpg",
+      "score": 0.3680548071861267
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 251,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00251.jpg",
+      "score": 0.38979285955429077
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 264,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00264.jpg",
+      "score": 0.47008898854255676
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 277,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00277.jpg",
+      "score": 0.4493134319782257
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 290,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00290.jpg",
+      "score": 0.4144471287727356
+    },
+    {
+      "sequence": "V_DRONE_025",
+      "frame": 304,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_025_00304.jpg",
+      "score": 0.47675272822380066
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00000.jpg",
+      "score": 0.4532482624053955
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00013.jpg",
+      "score": 0.4682736396789551
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00026.jpg",
+      "score": 0.4286552667617798
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00039.jpg",
+      "score": 0.4636906385421753
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00052.jpg",
+      "score": 0.46458899974823
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 65,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00065.jpg",
+      "score": 0.48811909556388855
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 78,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00078.jpg",
+      "score": 0.42757728695869446
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 91,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00091.jpg",
+      "score": 0.4513092637062073
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 104,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00104.jpg",
+      "score": 0.49089568853378296
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 117,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00117.jpg",
+      "score": 0.43571168184280396
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 130,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00130.jpg",
+      "score": 0.43206363916397095
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 143,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00143.jpg",
+      "score": 0.4512960612773895
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 157,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00157.jpg",
+      "score": 0.4453585147857666
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 170,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00170.jpg",
+      "score": 0.469632625579834
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 183,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00183.jpg",
+      "score": 0.45335543155670166
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 196,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00196.jpg",
+      "score": 0.4178868234157562
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 209,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00209.jpg",
+      "score": 0.4046878516674042
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 222,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00222.jpg",
+      "score": 0.4311559498310089
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 235,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00235.jpg",
+      "score": 0.42222124338150024
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 248,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00248.jpg",
+      "score": 0.42978328466415405
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 261,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00261.jpg",
+      "score": 0.42708131670951843
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 274,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00274.jpg",
+      "score": 0.43053966760635376
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 287,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00287.jpg",
+      "score": 0.5018121004104614
+    },
+    {
+      "sequence": "V_DRONE_035",
+      "frame": 301,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_035_00301.jpg",
+      "score": 0.5580264329910278
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00000.jpg",
+      "score": 0.53978031873703
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00013.jpg",
+      "score": 0.49645763635635376
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00026.jpg",
+      "score": 0.5098905563354492
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00039.jpg",
+      "score": 0.43502819538116455
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00052.jpg",
+      "score": 0.5463736653327942
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 65,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00065.jpg",
+      "score": 0.5291181206703186
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 79,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00079.jpg",
+      "score": 0.6219876408576965
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 92,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00092.jpg",
+      "score": 0.6161433458328247
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 105,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00105.jpg",
+      "score": 0.5382781624794006
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 118,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00118.jpg",
+      "score": 0.4739743173122406
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 131,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00131.jpg",
+      "score": 0.45196929574012756
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 144,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00144.jpg",
+      "score": 0.4649411737918854
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 158,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00158.jpg",
+      "score": 0.48590028285980225
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 171,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00171.jpg",
+      "score": 0.4456804394721985
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 184,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00184.jpg",
+      "score": 0.4642454981803894
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 197,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00197.jpg",
+      "score": 0.4392596483230591
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 210,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00210.jpg",
+      "score": 0.471771240234375
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 223,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00223.jpg",
+      "score": 0.45123782753944397
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 237,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00237.jpg",
+      "score": 0.4175402820110321
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 250,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00250.jpg",
+      "score": 0.458523154258728
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 263,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00263.jpg",
+      "score": 0.44072452187538147
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 276,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00276.jpg",
+      "score": 0.4132083058357239
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 289,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00289.jpg",
+      "score": 0.4816833436489105
+    },
+    {
+      "sequence": "V_DRONE_038",
+      "frame": 303,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_038_00303.jpg",
+      "score": 0.45853349566459656
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00000.jpg",
+      "score": 0.46670758724212646
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00013.jpg",
+      "score": 0.4565665125846863
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00026.jpg",
+      "score": 0.48929890990257263
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00039.jpg",
+      "score": 0.48440879583358765
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00052.jpg",
+      "score": 0.4953713119029999
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 66,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00066.jpg",
+      "score": 0.43653324246406555
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 79,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00079.jpg",
+      "score": 0.49487414956092834
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 92,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00092.jpg",
+      "score": 0.46434834599494934
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 105,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00105.jpg",
+      "score": 0.5277842879295349
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 118,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00118.jpg",
+      "score": 0.45242395997047424
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 132,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00132.jpg",
+      "score": 0.4768332540988922
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 145,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00145.jpg",
+      "score": 0.5240748524665833
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 158,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00158.jpg",
+      "score": 0.5539156198501587
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 171,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00171.jpg",
+      "score": 0.5512715578079224
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 185,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00185.jpg",
+      "score": 0.5587154626846313
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 198,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00198.jpg",
+      "score": 0.49908506870269775
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 211,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00211.jpg",
+      "score": 0.47565922141075134
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 224,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00224.jpg",
+      "score": 0.09047405421733856
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 237,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00237.jpg",
+      "score": 0.536154568195343
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 251,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00251.jpg",
+      "score": 0.4336842894554138
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 264,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00264.jpg",
+      "score": 0.2035747617483139
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 277,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00277.jpg",
+      "score": 0.5282745957374573
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 290,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00290.jpg",
+      "score": 0.5783807039260864
+    },
+    {
+      "sequence": "V_DRONE_043",
+      "frame": 304,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_043_00304.jpg",
+      "score": 0.5090662837028503
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00000.jpg",
+      "score": 0.4657258689403534
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00013.jpg",
+      "score": 0.4834318459033966
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00026.jpg",
+      "score": 0.45928797125816345
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00039.jpg",
+      "score": 0.44415047764778137
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 53,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00053.jpg",
+      "score": 0.40983524918556213
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 66,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00066.jpg",
+      "score": 0.42743629217147827
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 79,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00079.jpg",
+      "score": 0.45311829447746277
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 93,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00093.jpg",
+      "score": 0.4362015724182129
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 106,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00106.jpg",
+      "score": 0.4721973240375519
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 119,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00119.jpg",
+      "score": 0.49481910467147827
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 133,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00133.jpg",
+      "score": 0.449762761592865
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 146,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00146.jpg",
+      "score": 0.43317097425460815
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 159,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00159.jpg",
+      "score": 0.4324755370616913
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 172,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00172.jpg",
+      "score": 0.3885708749294281
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 186,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00186.jpg",
+      "score": 0.4452800750732422
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 199,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00199.jpg",
+      "score": 0.4002337157726288
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 212,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00212.jpg",
+      "score": 0.42224788665771484
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 226,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00226.jpg",
+      "score": 0.4027200937271118
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 239,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00239.jpg",
+      "score": 0.45050904154777527
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 252,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00252.jpg",
+      "score": 0.494484543800354
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 266,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00266.jpg",
+      "score": 0.4405849874019623
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 279,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00279.jpg",
+      "score": 0.46997520327568054
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 292,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00292.jpg",
+      "score": 0.4692300260066986
+    },
+    {
+      "sequence": "V_DRONE_049",
+      "frame": 306,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_049_00306.jpg",
+      "score": 0.42055463790893555
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00000.jpg",
+      "score": 0.4969080090522766
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00013.jpg",
+      "score": 0.466218501329422
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 27,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00027.jpg",
+      "score": 0.5598146319389343
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 40,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00040.jpg",
+      "score": 0.5862980484962463
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 54,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00054.jpg",
+      "score": 0.578673243522644
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 67,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00067.jpg",
+      "score": 0.47978752851486206
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 81,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00081.jpg",
+      "score": 0.5149857997894287
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 94,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00094.jpg",
+      "score": 0.4509572684764862
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 108,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00108.jpg",
+      "score": 0.43863561749458313
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 121,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00121.jpg",
+      "score": 0.4360561668872833
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 135,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00135.jpg",
+      "score": 0.3987395167350769
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 148,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00148.jpg",
+      "score": 0.39325806498527527
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 162,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00162.jpg",
+      "score": 0.3876485526561737
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 175,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00175.jpg",
+      "score": 0.4094301462173462
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 189,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00189.jpg",
+      "score": 0.4526228606700897
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 202,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00202.jpg",
+      "score": 0.45144814252853394
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 216,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00216.jpg",
+      "score": 0.4243917167186737
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 229,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00229.jpg",
+      "score": 0.47571316361427307
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 243,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00243.jpg",
+      "score": 0.44683411717414856
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 256,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00256.jpg",
+      "score": 0.4428682327270508
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 270,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00270.jpg",
+      "score": 0.40825819969177246
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 283,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00283.jpg",
+      "score": 0.4130796194076538
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 297,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00297.jpg",
+      "score": 0.4222072660923004
+    },
+    {
+      "sequence": "V_DRONE_052",
+      "frame": 311,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_052_00311.jpg",
+      "score": 0.4003605544567108
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00000.jpg",
+      "score": 0.5749217867851257
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 13,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00013.jpg",
+      "score": 0.49078911542892456
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 26,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00026.jpg",
+      "score": 0.4834034740924835
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 39,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00039.jpg",
+      "score": 0.48379966616630554
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 52,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00052.jpg",
+      "score": 0.4473564326763153
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 65,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00065.jpg",
+      "score": 0.5489704608917236
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 78,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00078.jpg",
+      "score": 0.5404081344604492
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 91,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00091.jpg",
+      "score": 0.5161945223808289
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 104,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00104.jpg",
+      "score": 0.4492156505584717
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 117,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00117.jpg",
+      "score": 0.46349096298217773
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 130,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00130.jpg",
+      "score": 0.5011688470840454
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 143,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00143.jpg",
+      "score": 0.4921281635761261
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 156,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00156.jpg",
+      "score": 0.45764654874801636
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 169,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00169.jpg",
+      "score": 0.385551780462265
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 182,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00182.jpg",
+      "score": 0.42256397008895874
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 195,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00195.jpg",
+      "score": 0.45235273241996765
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 208,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00208.jpg",
+      "score": 0.37652215361595154
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 221,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00221.jpg",
+      "score": 0.3998844027519226
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 234,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00234.jpg",
+      "score": 0.3249933123588562
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 247,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00247.jpg",
+      "score": 0.25520795583724976
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 260,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00260.jpg",
+      "score": 0.36085420846939087
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 273,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00273.jpg",
+      "score": 0.3929075598716736
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 286,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00286.jpg",
+      "score": 0.4908410906791687
+    },
+    {
+      "sequence": "V_DRONE_055",
+      "frame": 300,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_055_00300.jpg",
+      "score": 0.38791605830192566
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 0,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00000.jpg",
+      "score": 0.46849149465560913
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 14,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00014.jpg",
+      "score": 0.5344058275222778
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 28,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00028.jpg",
+      "score": 0.501666784286499
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 42,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00042.jpg",
+      "score": 0.5401685237884521
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 57,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00057.jpg",
+      "score": 0.44313913583755493
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 71,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00071.jpg",
+      "score": 0.48785698413848877
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 85,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00085.jpg",
+      "score": 0.4832179844379425
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 99,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00099.jpg",
+      "score": 0.4632950723171234
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 114,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00114.jpg",
+      "score": 0.5215849876403809
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 128,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00128.jpg",
+      "score": 0.5193539261817932
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 142,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00142.jpg",
+      "score": 0.45538416504859924
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 156,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00156.jpg",
+      "score": 0.528713047504425
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 171,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00171.jpg",
+      "score": 0.5361522436141968
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 185,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00185.jpg",
+      "score": 0.5075672268867493
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 199,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00199.jpg",
+      "score": 0.4908749461174011
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 213,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00213.jpg",
+      "score": 0.5994349718093872
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 228,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00228.jpg",
+      "score": 0.5917497873306274
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 242,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00242.jpg",
+      "score": 0.5330079197883606
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 256,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00256.jpg",
+      "score": 0.4482426345348358
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 270,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00270.jpg",
+      "score": 0.43728241324424744
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 285,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00285.jpg",
+      "score": 0.47002682089805603
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 299,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00299.jpg",
+      "score": 0.503219485282898
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 313,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00313.jpg",
+      "score": 0.5679078102111816
+    },
+    {
+      "sequence": "V_DRONE_091",
+      "frame": 328,
+      "category": "DRONE",
+      "positive": true,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_DRONE_091_00328.jpg",
+      "score": 0.5184413194656372
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 0,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00000.jpg",
+      "score": 0.0014221856836229563
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 13,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00013.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 26,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00026.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 40,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00040.jpg",
+      "score": 0.060506097972393036
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 53,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00053.jpg",
+      "score": 0.08415917307138443
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 66,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00066.jpg",
+      "score": 0.007142795715481043
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 80,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00080.jpg",
+      "score": 0.009311041794717312
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 93,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00093.jpg",
+      "score": 0.025958852842450142
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 107,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00107.jpg",
+      "score": 0.008856600150465965
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 120,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00120.jpg",
+      "score": 0.011195843107998371
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 133,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00133.jpg",
+      "score": 0.010702922008931637
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 147,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00147.jpg",
+      "score": 0.010428130626678467
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 160,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00160.jpg",
+      "score": 0.03694638982415199
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 174,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00174.jpg",
+      "score": 0.017342818900942802
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 187,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00187.jpg",
+      "score": 0.007779682520776987
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 200,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00200.jpg",
+      "score": 0.00926442351192236
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 214,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00214.jpg",
+      "score": 0.0063909245654940605
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 227,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00227.jpg",
+      "score": 0.008432475849986076
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 241,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00241.jpg",
+      "score": 0.007767089642584324
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 254,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00254.jpg",
+      "score": 0.012633392587304115
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 267,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00267.jpg",
+      "score": 0.009624093770980835
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 281,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00281.jpg",
+      "score": 0.006407083477824926
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 294,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00294.jpg",
+      "score": 0.017968447878956795
+    },
+    {
+      "sequence": "V_HELICOPTER_011",
+      "frame": 308,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_011_00308.jpg",
+      "score": 0.021499376744031906
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 0,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00000.jpg",
+      "score": 0.01483969110995531
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 13,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00013.jpg",
+      "score": 0.010261011309921741
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 27,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00027.jpg",
+      "score": 0.0017754752188920975
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 40,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00040.jpg",
+      "score": 0.0026651856023818254
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 54,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00054.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 67,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00067.jpg",
+      "score": 0.0
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 81,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00081.jpg",
+      "score": 0.004428648855537176
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 94,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00094.jpg",
+      "score": 0.0022545692045241594
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 108,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00108.jpg",
+      "score": 0.0016020126640796661
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 121,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00121.jpg",
+      "score": 0.008892355486750603
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 135,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00135.jpg",
+      "score": 0.0014984799781814218
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 148,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00148.jpg",
+      "score": 0.002525096759200096
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 162,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00162.jpg",
+      "score": 0.0012504530604928732
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 175,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00175.jpg",
+      "score": 0.008119484409689903
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 189,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00189.jpg",
+      "score": 0.0012715642806142569
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 202,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00202.jpg",
+      "score": 0.003959410823881626
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 216,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00216.jpg",
+      "score": 0.003593667410314083
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 229,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00229.jpg",
+      "score": 0.0023858947679400444
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 243,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00243.jpg",
+      "score": 0.0014665373601019382
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 256,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00256.jpg",
+      "score": 0.015952900052070618
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 270,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00270.jpg",
+      "score": 0.0011540899286046624
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 283,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00283.jpg",
+      "score": 0.0010113721946254373
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 297,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00297.jpg",
+      "score": 0.0018068657955154777
+    },
+    {
+      "sequence": "V_HELICOPTER_058",
+      "frame": 311,
+      "category": "HELICOPTER",
+      "positive": false,
+      "image": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\paper_v1\\images\\calibration\\V_HELICOPTER_058_00311.jpg",
+      "score": 0.008174139074981213
+    }
+  ],
+  "grid": [
+    {
+      "threshold": 0.01,
+      "frames": 480,
+      "TP": 240,
+      "FP": 63,
+      "FN": 0,
+      "TN": 177,
+      "precision": 0.7920792079207921,
+      "recall": 1.0,
+      "f1": 0.8839779005524862,
+      "negative_frame_FPR": 0.2625
+    },
+    {
+      "threshold": 0.02,
+      "frames": 480,
+      "TP": 240,
+      "FP": 44,
+      "FN": 0,
+      "TN": 196,
+      "precision": 0.8450704225352113,
+      "recall": 1.0,
+      "f1": 0.916030534351145,
+      "negative_frame_FPR": 0.18333333333333332
+    },
+    {
+      "threshold": 0.03,
+      "frames": 480,
+      "TP": 240,
+      "FP": 34,
+      "FN": 0,
+      "TN": 206,
+      "precision": 0.8759124087591241,
+      "recall": 1.0,
+      "f1": 0.933852140077821,
+      "negative_frame_FPR": 0.14166666666666666
+    },
+    {
+      "threshold": 0.04,
+      "frames": 480,
+      "TP": 240,
+      "FP": 29,
+      "FN": 0,
+      "TN": 211,
+      "precision": 0.8921933085501859,
+      "recall": 1.0,
+      "f1": 0.9430255402750491,
+      "negative_frame_FPR": 0.12083333333333333
+    },
+    {
+      "threshold": 0.05,
+      "frames": 480,
+      "TP": 240,
+      "FP": 24,
+      "FN": 0,
+      "TN": 216,
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1": 0.9523809523809523,
+      "negative_frame_FPR": 0.1
+    },
+    {
+      "threshold": 0.06,
+      "frames": 480,
+      "TP": 240,
+      "FP": 18,
+      "FN": 0,
+      "TN": 222,
+      "precision": 0.9302325581395349,
+      "recall": 1.0,
+      "f1": 0.963855421686747,
+      "negative_frame_FPR": 0.075
+    },
+    {
+      "threshold": 0.07,
+      "frames": 480,
+      "TP": 240,
+      "FP": 11,
+      "FN": 0,
+      "TN": 229,
+      "precision": 0.9561752988047809,
+      "recall": 1.0,
+      "f1": 0.9775967413441955,
+      "negative_frame_FPR": 0.04583333333333333
+    },
+    {
+      "threshold": 0.08,
+      "frames": 480,
+      "TP": 240,
+      "FP": 10,
+      "FN": 0,
+      "TN": 230,
+      "precision": 0.96,
+      "recall": 1.0,
+      "f1": 0.9795918367346939,
+      "negative_frame_FPR": 0.041666666666666664
+    },
+    {
+      "threshold": 0.09,
+      "frames": 480,
+      "TP": 240,
+      "FP": 9,
+      "FN": 0,
+      "TN": 231,
+      "precision": 0.963855421686747,
+      "recall": 1.0,
+      "f1": 0.9815950920245399,
+      "negative_frame_FPR": 0.0375
+    },
+    {
+      "threshold": 0.1,
+      "frames": 480,
+      "TP": 239,
+      "FP": 8,
+      "FN": 1,
+      "TN": 232,
+      "precision": 0.9676113360323887,
+      "recall": 0.9958333333333333,
+      "f1": 0.9815195071868583,
+      "negative_frame_FPR": 0.03333333333333333
+    },
+    {
+      "threshold": 0.11,
+      "frames": 480,
+      "TP": 239,
+      "FP": 5,
+      "FN": 1,
+      "TN": 235,
+      "precision": 0.9795081967213115,
+      "recall": 0.9958333333333333,
+      "f1": 0.987603305785124,
+      "negative_frame_FPR": 0.020833333333333332
+    },
+    {
+      "threshold": 0.12,
+      "frames": 480,
+      "TP": 239,
+      "FP": 1,
+      "FN": 1,
+      "TN": 239,
+      "precision": 0.9958333333333333,
+      "recall": 0.9958333333333333,
+      "f1": 0.9958333333333333,
+      "negative_frame_FPR": 0.004166666666666667
+    },
+    {
+      "threshold": 0.13,
+      "frames": 480,
+      "TP": 239,
+      "FP": 1,
+      "FN": 1,
+      "TN": 239,
+      "precision": 0.9958333333333333,
+      "recall": 0.9958333333333333,
+      "f1": 0.9958333333333333,
+      "negative_frame_FPR": 0.004166666666666667
+    },
+    {
+      "threshold": 0.14,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.15,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.16,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.17,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.18,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.19,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.2,
+      "frames": 480,
+      "TP": 239,
+      "FP": 0,
+      "FN": 1,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.21,
+      "frames": 480,
+      "TP": 238,
+      "FP": 0,
+      "FN": 2,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.22,
+      "frames": 480,
+      "TP": 238,
+      "FP": 0,
+      "FN": 2,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.23,
+      "frames": 480,
+      "TP": 238,
+      "FP": 0,
+      "FN": 2,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.24,
+      "frames": 480,
+      "TP": 238,
+      "FP": 0,
+      "FN": 2,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.25,
+      "frames": 480,
+      "TP": 238,
+      "FP": 0,
+      "FN": 2,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1": 0.99581589958159,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.26,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.27,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.28,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.29,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.3,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.31,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.32,
+      "frames": 480,
+      "TP": 237,
+      "FP": 0,
+      "FN": 3,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1": 0.9937106918238994,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.33,
+      "frames": 480,
+      "TP": 236,
+      "FP": 0,
+      "FN": 4,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.34,
+      "frames": 480,
+      "TP": 236,
+      "FP": 0,
+      "FN": 4,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.35,
+      "frames": 480,
+      "TP": 236,
+      "FP": 0,
+      "FN": 4,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1": 0.9915966386554622,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.36,
+      "frames": 480,
+      "TP": 235,
+      "FP": 0,
+      "FN": 5,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9791666666666666,
+      "f1": 0.9894736842105263,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.37,
+      "frames": 480,
+      "TP": 233,
+      "FP": 0,
+      "FN": 7,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9708333333333333,
+      "f1": 0.985200845665962,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.38,
+      "frames": 480,
+      "TP": 232,
+      "FP": 0,
+      "FN": 8,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.9830508474576272,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.39,
+      "frames": 480,
+      "TP": 226,
+      "FP": 0,
+      "FN": 14,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9416666666666667,
+      "f1": 0.9699570815450643,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.4,
+      "frames": 480,
+      "TP": 221,
+      "FP": 0,
+      "FN": 19,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.9208333333333333,
+      "f1": 0.9587852494577006,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.41,
+      "frames": 480,
+      "TP": 212,
+      "FP": 0,
+      "FN": 28,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.8833333333333333,
+      "f1": 0.9380530973451328,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.42,
+      "frames": 480,
+      "TP": 202,
+      "FP": 0,
+      "FN": 38,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.8416666666666667,
+      "f1": 0.9140271493212669,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.43,
+      "frames": 480,
+      "TP": 189,
+      "FP": 0,
+      "FN": 51,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.7875,
+      "f1": 0.8811188811188811,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.44,
+      "frames": 480,
+      "TP": 163,
+      "FP": 0,
+      "FN": 77,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.6791666666666667,
+      "f1": 0.8089330024813896,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.45,
+      "frames": 480,
+      "TP": 143,
+      "FP": 0,
+      "FN": 97,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.5958333333333333,
+      "f1": 0.7467362924281984,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.46,
+      "frames": 480,
+      "TP": 117,
+      "FP": 0,
+      "FN": 123,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.4875,
+      "f1": 0.6554621848739496,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.47,
+      "frames": 480,
+      "TP": 97,
+      "FP": 0,
+      "FN": 143,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.4041666666666667,
+      "f1": 0.5756676557863502,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.48,
+      "frames": 480,
+      "TP": 79,
+      "FP": 0,
+      "FN": 161,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.32916666666666666,
+      "f1": 0.4952978056426332,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.49,
+      "frames": 480,
+      "TP": 65,
+      "FP": 0,
+      "FN": 175,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.2708333333333333,
+      "f1": 0.4262295081967213,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.5,
+      "frames": 480,
+      "TP": 52,
+      "FP": 0,
+      "FN": 188,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.21666666666666667,
+      "f1": 0.3561643835616438,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.51,
+      "frames": 480,
+      "TP": 43,
+      "FP": 0,
+      "FN": 197,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.17916666666666667,
+      "f1": 0.303886925795053,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.52,
+      "frames": 480,
+      "TP": 34,
+      "FP": 0,
+      "FN": 206,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.14166666666666666,
+      "f1": 0.24817518248175183,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.53,
+      "frames": 480,
+      "TP": 27,
+      "FP": 0,
+      "FN": 213,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.1125,
+      "f1": 0.20224719101123595,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.54,
+      "frames": 480,
+      "TP": 19,
+      "FP": 0,
+      "FN": 221,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.07916666666666666,
+      "f1": 0.14671814671814673,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.55,
+      "frames": 480,
+      "TP": 14,
+      "FP": 0,
+      "FN": 226,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.058333333333333334,
+      "f1": 0.11023622047244094,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.56,
+      "frames": 480,
+      "TP": 9,
+      "FP": 0,
+      "FN": 231,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.0375,
+      "f1": 0.07228915662650602,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.57,
+      "frames": 480,
+      "TP": 8,
+      "FP": 0,
+      "FN": 232,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.03333333333333333,
+      "f1": 0.06451612903225806,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.58,
+      "frames": 480,
+      "TP": 5,
+      "FP": 0,
+      "FN": 235,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.020833333333333332,
+      "f1": 0.04081632653061224,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.59,
+      "frames": 480,
+      "TP": 4,
+      "FP": 0,
+      "FN": 236,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.016666666666666666,
+      "f1": 0.03278688524590164,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.6,
+      "frames": 480,
+      "TP": 2,
+      "FP": 0,
+      "FN": 238,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.008333333333333333,
+      "f1": 0.01652892561983471,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.61,
+      "frames": 480,
+      "TP": 2,
+      "FP": 0,
+      "FN": 238,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.008333333333333333,
+      "f1": 0.01652892561983471,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.62,
+      "frames": 480,
+      "TP": 1,
+      "FP": 0,
+      "FN": 239,
+      "TN": 240,
+      "precision": 1.0,
+      "recall": 0.004166666666666667,
+      "f1": 0.008298755186721992,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.63,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.64,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.65,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.66,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.67,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.68,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.69,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.7,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.71,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.72,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.73,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.74,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.75,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.76,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.77,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.78,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.79,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.8,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.81,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.82,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.83,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.84,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.86,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.87,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.88,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.89,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.9,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.91,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.92,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.93,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.94,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.95,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.96,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.97,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.98,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 0.99,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    },
+    {
+      "threshold": 1.01,
+      "frames": 480,
+      "TP": 0,
+      "FP": 0,
+      "FN": 240,
+      "TN": 240,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "negative_frame_FPR": 0.0
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "created_date": "2026-10-11",
+  "status": "completed",
+  "verification_summary": "3 个方向共 7 段 MP4 已完成编码、逐帧解码核验和固定抽帧目视检查",
+  "directions": [
+    {
+      "id": "vision",
+      "label": "01 · 真实 RGB 视频",
+      "title": "YOLO11n：无人机检出与背景误报",
+      "summary": "左侧是原视频，右侧叠加模型预测。绿框为无人机标注，红框为预测。先看无人机，再看没有无人机的鸟类背景片段。",
+      "stats": ["50 轮上限 · 第 21 轮早停", "最佳模型：第 11 轮", "原速 30 FPS", "固定展示阈值 0.25"],
+      "clips": [
+        {
+          "title": "连续合辑 · 无人机 → 鸟类背景",
+          "file": "vision/baseline_drone_then_background.mp4",
+          "poster": "vision/qa/baseline_V_DRONE_001_cover.png",
+          "caption": "共 20.8 秒。按类别内文件名排序选第一段 test 视频，全段连续帧推理，未按效果挑片段。无人机段保留漏检，背景段保留误报。",
+          "manifest": "vision/manifest.json"
+        },
+        {
+          "title": "单段 · V_DRONE_001 无人机",
+          "file": "vision/baseline_V_DRONE_001.mp4",
+          "poster": "vision/qa/baseline_V_DRONE_001_cover.png",
+          "caption": "10.03 秒、301 帧、原始 30 FPS。完整段落保留 134 帧出现预测、167 帧漏检的连续 presence 现象；该计数不等于 IoU mAP。",
+          "manifest": "vision/manifest.json"
+        },
+        {
+          "title": "单段 · V_BIRD_021 鸟类 / 复杂背景",
+          "file": "vision/baseline_V_BIRD_021.mp4",
+          "poster": "vision/qa/baseline_V_BIRD_021_cover.png",
+          "caption": "10.77 秒、323 帧、原始 30 FPS。没有无人机的背景段保留大量模型误报，用来直观看到低误报问题。",
+          "manifest": "vision/manifest.json"
+        }
+      ],
+      "boundaries": [
+        "当前训练集只有 264 帧，完整 train/calibration/test 共 480 帧。视频连续推理使用 624 帧，与正式评测的抽帧口径不同。",
+        "两个视频属于本轮 test 划分，但来源此前已经过 smoke 审阅，不能当作新增独立测试。",
+        "0.25 只是固定展示阈值，不保证低误报。视频中最大置信度是预测候选的最大值，与已显示的框数不同。"
+      ]
+    },
+    {
+      "id": "rl",
+      "label": "02 · 同外部轨迹的仿真对照",
+      "title": "60 GHz 调度：队列与用户 / 中继选择",
+      "summary": "三列同步重放短训 PPO、完整预算 PPO 和固定码本启发式；每一列使用同一外部到达、位置、遮挡和路径损耗轨迹。",
+      "stats": ["30k vs 360k 交互", "训练 seed 0", "5 个 UE", "环境 seed 10000", "10 FPS 重放"],
+      "clips": [
+        {
+          "title": "test12 · 1.1 Gbps 业务 / 遮挡 ×1.2",
+          "file": "rl/rl_test12_load11_block12_seed10000.mp4",
+          "poster": "rl/rl_test12_load11_block12_seed10000_poster.png",
+          "caption": "20 秒视频对应 warmup 后 15 秒仿真，200 个画面抽样展示 2,000 个时隙。队列是 service 后采样；位置与遮挡是服务所用 slot-start 记录。",
+          "manifest": "rl/manifest.json"
+        },
+        {
+          "title": "test13 · 1.0 Gbps 业务 / 遮挡 ×1.0",
+          "file": "rl/rl_test13_load10_block10_seed10000.mp4",
+          "poster": "rl/rl_test13_load10_block10_seed10000_poster.png",
+          "caption": "同一固定外部轨迹下，360k PPO通常积压更少；动画仅用于解释一条轨迹，完整十个环境 seed 的指标仍以报告为准。",
+          "manifest": "rl/manifest.json"
+        }
+      ],
+      "boundaries": [
+        "标准 PPO 360k 是训练预算诊断，不是候选创新与 30k 方法的公平比较。视频采用保存动作的精确重放，不重新采样策略。",
+        "右侧启发式是固定码本直接链路的 MaxWeight-like 参考，不是完整最优 MaxWeight。视频不展示 180 个原始动作编号。",
+        "画面中的几何位置是按实际移动轨迹绘制，方向箭头仅作示意；队列、吞吐和 pending 数字来自同一原始评价数组。"
+      ]
+    },
+    {
+      "id": "pa",
+      "label": "03 · 真实 PA 数据与模型预测",
+      "title": "PA / DPD：波形拟合与预失真补偿",
+      "summary": "同一测试窗口中，左侧查看 I/Q 真实输出与 PA 模型拟合；右侧查看 DPD 输入变换以及冻结 PA surrogate 下无补偿 / 有补偿输出。",
+      "stats": ["APA_200MHz 真实采集", "PA 1,911 参数", "DPD 887 参数", "150 + 150 轮原配方", "983.04 MHz 采样率"],
+      "clips": [
+        {
+          "title": "PA forward · 真实输出、模型拟合与残差",
+          "file": "pa/pa_forward_modeling.mp4",
+          "poster": "pa/pa_forward_modeling_cover.png",
+          "caption": "连续 test 波形窗口的滚动展示。曲线和 residual 是 PA 行为建模，不是 DPD 线性化结果。",
+          "manifest": "pa/manifest.json"
+        },
+        {
+          "title": "DPD common surrogate · 无 DPD / 有 DPD",
+          "file": "pa/dpd_common_surrogate_v2.mp4",
+          "poster": "pa/dpd_common_surrogate_v2_cover.png",
+          "caption": "同一个冻结 PA evaluator 对比：test surrogate NMSE −13.876 dB → −38.609 dB，改善 24.733 dB；对应 legacy ACLR 均值 −27.65 → −49.74 dB。请结合下方边界阅读。",
+          "manifest": "pa/manifest.json"
+        }
+      ],
+      "boundaries": [
+        "这是 OpenDPD legacy GRU 原配方的单 seed baseline：PA 与 DPD 各 150 轮，测试集只在验证选模后评估一次。",
+        "补偿输出由同一个冻结 PA surrogate 预测，不能称真实射频硬件 ACLR/EVM 改善；legacy ACLR 是该工程的子信道参考定义。",
+        "该完整 frame200 配方与此前 frame50/custom 的 MoE 对照不同，不能直接把两者的数值差异解释为架构贡献。"
+      ]
+    }
+  ]
+}

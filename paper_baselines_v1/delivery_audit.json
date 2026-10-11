@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "created_utc": "2026-10-11T13:25:05.241451+00:00",
+  "checks_total": 16,
+  "checks_passed": 16,
+  "checks": [
+    {
+      "name": "pa_traditional_audit",
+      "passed": true,
+      "detail": "polynomial replay"
+    },
+    {
+      "name": "pa_single_neural",
+      "passed": true,
+      "detail": {
+        "status": "completed",
+        "rows": 14
+      }
+    },
+    {
+      "name": "pa_single_report",
+      "passed": true,
+      "detail": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_single_demo_v1\\README.md"
+    },
+    {
+      "name": "pa_single_demo_qa",
+      "passed": true,
+      "detail": "passed_after_layout_repairs"
+    },
+    {
+      "name": "rl_integrity_post",
+      "passed": true,
+      "detail": "passed"
+    },
+    {
+      "name": "rl_summary",
+      "passed": true,
+      "detail": {
+        "status": "completed",
+        "rows": 800
+      }
+    },
+    {
+      "name": "rl_report",
+      "passed": true,
+      "detail": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\REPORT.md"
+    },
+    {
+      "name": "rl_video",
+      "passed": true,
+      "detail": {
+        "status": "completed",
+        "decoded": true
+      }
+    },
+    {
+      "name": "rl_figures",
+      "passed": true,
+      "detail": "figures_v2"
+    },
+    {
+      "name": "rl_prior_demo_comparison",
+      "passed": true,
+      "detail": {
+        "status": "completed",
+        "exit_code": 0,
+        "duration_seconds": 168.0147794999648,
+        "rows": 24
+      }
+    },
+    {
+      "name": "vision_scope",
+      "passed": true,
+      "detail": "not run by user scope"
+    },
+    {
+      "name": "vision_single_summary",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "name": "vision_single_test",
+      "passed": true,
+      "detail": "test score files"
+    },
+    {
+      "name": "vision_single_video",
+      "passed": true,
+      "detail": {
+        "status": "completed",
+        "videos": 4
+      }
+    },
+    {
+      "name": "vision_single_visual_qa",
+      "passed": true,
+      "detail": "passed"
+    },
+    {
+      "name": "vision_single_report",
+      "passed": true,
+      "detail": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\README.md"
+    }
+  ],
+  "scope": "Single-seed validation/demo; original multi-seed protocols preserved and incomplete",
+  "source_receipts": {
+    "pa_delivery_audit": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_paper_baseline_v1\\delivery_audit.json",
+    "rl_integrity_post": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\integrity_post_v1.json",
+    "vision_audit_or_single": {
+      "scope": "single YOLO11n seed0 demo/evaluation",
+      "summary": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\summary.json"
+    }
+  }
+}

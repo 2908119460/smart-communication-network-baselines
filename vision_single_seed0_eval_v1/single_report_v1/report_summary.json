@@ -1,0 +1,1779 @@
+{
+  "status": "completed",
+  "source_evaluation_summary": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\summary.json",
+  "source_training_summary": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\training_summary.json",
+  "thresholds": {
+    "fixed_025": 0.25,
+    "calibrated_f1": 0.2,
+    "calibrated_fpr10": 0.09
+  },
+  "sampled_test_mAP50": 0.8309610605066371,
+  "sampled_test_mAP50_95": 0.39139735389455205,
+  "continuous_presence": {
+    "fixed_025": {
+      "frame_micro": {
+        "threshold": 0.25,
+        "frames": 10357,
+        "TP": 5001,
+        "FP": 147,
+        "FN": 21,
+        "TN": 5188,
+        "precision": 0.9714452214452215,
+        "recall": 0.9958183990442055,
+        "f1": 0.983480825958702,
+        "negative_frame_FPR": 0.027553889409559513
+      },
+      "per_video": {
+        "V_AIRPLANE_007": {
+          "threshold": 0.25,
+          "frames": 300,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 300,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_011": {
+          "threshold": 0.25,
+          "frames": 308,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 308,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_017": {
+          "threshold": 0.25,
+          "frames": 312,
+          "TP": 0,
+          "FP": 5,
+          "FN": 0,
+          "TN": 307,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.016025641025641024
+        },
+        "V_AIRPLANE_021": {
+          "threshold": 0.25,
+          "frames": 319,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 319,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_022": {
+          "threshold": 0.25,
+          "frames": 311,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 311,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_055": {
+          "threshold": 0.25,
+          "frames": 303,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 303,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_056": {
+          "threshold": 0.25,
+          "frames": 324,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 324,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_004": {
+          "threshold": 0.25,
+          "frames": 315,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 315,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_028": {
+          "threshold": 0.25,
+          "frames": 318,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 318,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_032": {
+          "threshold": 0.25,
+          "frames": 326,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_037": {
+          "threshold": 0.25,
+          "frames": 326,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_038": {
+          "threshold": 0.25,
+          "frames": 328,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 328,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_042": {
+          "threshold": 0.25,
+          "frames": 306,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 306,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_047": {
+          "threshold": 0.25,
+          "frames": 322,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 322,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_005": {
+          "threshold": 0.25,
+          "frames": 305,
+          "TP": 302,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9901639344262295,
+          "f1": 0.9950576606260296,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_016": {
+          "threshold": 0.25,
+          "frames": 310,
+          "TP": 304,
+          "FP": 0,
+          "FN": 6,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9806451612903225,
+          "f1": 0.990228013029316,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_027": {
+          "threshold": 0.25,
+          "frames": 307,
+          "TP": 304,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.990228013029316,
+          "f1": 0.9950900163666121,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_031": {
+          "threshold": 0.25,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_034": {
+          "threshold": 0.25,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_057": {
+          "threshold": 0.25,
+          "frames": 329,
+          "TP": 329,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_062": {
+          "threshold": 0.25,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_067": {
+          "threshold": 0.25,
+          "frames": 325,
+          "TP": 325,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_071": {
+          "threshold": 0.25,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_073": {
+          "threshold": 0.25,
+          "frames": 311,
+          "TP": 303,
+          "FP": 0,
+          "FN": 8,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9742765273311897,
+          "f1": 0.9869706840390879,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_078": {
+          "threshold": 0.25,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_082": {
+          "threshold": 0.25,
+          "frames": 307,
+          "TP": 307,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_087": {
+          "threshold": 0.25,
+          "frames": 312,
+          "TP": 312,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_099": {
+          "threshold": 0.25,
+          "frames": 309,
+          "TP": 309,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_100": {
+          "threshold": 0.25,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_103": {
+          "threshold": 0.25,
+          "frames": 321,
+          "TP": 320,
+          "FP": 0,
+          "FN": 1,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9968847352024922,
+          "f1": 0.9984399375975039,
+          "negative_frame_FPR": 0.0
+        },
+        "V_HELICOPTER_008": {
+          "threshold": 0.25,
+          "frames": 304,
+          "TP": 0,
+          "FP": 123,
+          "FN": 0,
+          "TN": 181,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.40460526315789475
+        },
+        "V_HELICOPTER_016": {
+          "threshold": 0.25,
+          "frames": 306,
+          "TP": 0,
+          "FP": 19,
+          "FN": 0,
+          "TN": 287,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.06209150326797386
+        },
+        "V_HELICOPTER_061": {
+          "threshold": 0.25,
+          "frames": 307,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 307,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        }
+      },
+      "macro_positive_video_recall": 0.9957623982049719,
+      "macro_negative_video_FPR": 0.028395435732441743,
+      "videos_with_positive_frames": 16,
+      "videos_with_negative_frames": 17,
+      "video_any_frame_presence": {
+        "threshold": 0.25,
+        "TP": 16,
+        "FP": 3,
+        "FN": 0,
+        "TN": 14,
+        "precision": 0.8421052631578947,
+        "recall": 1.0,
+        "f1": 0.9142857142857143,
+        "negative_frame_FPR": 0.17647058823529413,
+        "videos": 33
+      }
+    },
+    "calibrated_f1": {
+      "frame_micro": {
+        "threshold": 0.2,
+        "frames": 10357,
+        "TP": 5003,
+        "FP": 171,
+        "FN": 19,
+        "TN": 5164,
+        "precision": 0.9669501352918438,
+        "recall": 0.9962166467542811,
+        "f1": 0.9813652412710867,
+        "negative_frame_FPR": 0.03205248359887535
+      },
+      "per_video": {
+        "V_AIRPLANE_007": {
+          "threshold": 0.2,
+          "frames": 300,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 300,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_011": {
+          "threshold": 0.2,
+          "frames": 308,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 308,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_017": {
+          "threshold": 0.2,
+          "frames": 312,
+          "TP": 0,
+          "FP": 6,
+          "FN": 0,
+          "TN": 306,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.019230769230769232
+        },
+        "V_AIRPLANE_021": {
+          "threshold": 0.2,
+          "frames": 319,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 319,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_022": {
+          "threshold": 0.2,
+          "frames": 311,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 311,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_055": {
+          "threshold": 0.2,
+          "frames": 303,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 303,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_056": {
+          "threshold": 0.2,
+          "frames": 324,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 324,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_004": {
+          "threshold": 0.2,
+          "frames": 315,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 315,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_028": {
+          "threshold": 0.2,
+          "frames": 318,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 318,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_032": {
+          "threshold": 0.2,
+          "frames": 326,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_037": {
+          "threshold": 0.2,
+          "frames": 326,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_038": {
+          "threshold": 0.2,
+          "frames": 328,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 328,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_042": {
+          "threshold": 0.2,
+          "frames": 306,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 306,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_047": {
+          "threshold": 0.2,
+          "frames": 322,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 322,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_005": {
+          "threshold": 0.2,
+          "frames": 305,
+          "TP": 302,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9901639344262295,
+          "f1": 0.9950576606260296,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_016": {
+          "threshold": 0.2,
+          "frames": 310,
+          "TP": 305,
+          "FP": 0,
+          "FN": 5,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9838709677419355,
+          "f1": 0.991869918699187,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_027": {
+          "threshold": 0.2,
+          "frames": 307,
+          "TP": 304,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.990228013029316,
+          "f1": 0.9950900163666121,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_031": {
+          "threshold": 0.2,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_034": {
+          "threshold": 0.2,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_057": {
+          "threshold": 0.2,
+          "frames": 329,
+          "TP": 329,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_062": {
+          "threshold": 0.2,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_067": {
+          "threshold": 0.2,
+          "frames": 325,
+          "TP": 325,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_071": {
+          "threshold": 0.2,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_073": {
+          "threshold": 0.2,
+          "frames": 311,
+          "TP": 303,
+          "FP": 0,
+          "FN": 8,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9742765273311897,
+          "f1": 0.9869706840390879,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_078": {
+          "threshold": 0.2,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_082": {
+          "threshold": 0.2,
+          "frames": 307,
+          "TP": 307,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_087": {
+          "threshold": 0.2,
+          "frames": 312,
+          "TP": 312,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_099": {
+          "threshold": 0.2,
+          "frames": 309,
+          "TP": 309,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_100": {
+          "threshold": 0.2,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_103": {
+          "threshold": 0.2,
+          "frames": 321,
+          "TP": 321,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_HELICOPTER_008": {
+          "threshold": 0.2,
+          "frames": 304,
+          "TP": 0,
+          "FP": 128,
+          "FN": 0,
+          "TN": 176,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.42105263157894735
+        },
+        "V_HELICOPTER_016": {
+          "threshold": 0.2,
+          "frames": 306,
+          "TP": 0,
+          "FP": 37,
+          "FN": 0,
+          "TN": 269,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.12091503267973856
+        },
+        "V_HELICOPTER_061": {
+          "threshold": 0.2,
+          "frames": 307,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 307,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        }
+      },
+      "macro_positive_video_recall": 0.9961587151580419,
+      "macro_negative_video_FPR": 0.033011672558203246,
+      "videos_with_positive_frames": 16,
+      "videos_with_negative_frames": 17,
+      "video_any_frame_presence": {
+        "threshold": 0.2,
+        "TP": 16,
+        "FP": 3,
+        "FN": 0,
+        "TN": 14,
+        "precision": 0.8421052631578947,
+        "recall": 1.0,
+        "f1": 0.9142857142857143,
+        "negative_frame_FPR": 0.17647058823529413,
+        "videos": 33
+      }
+    },
+    "calibrated_fpr10": {
+      "frame_micro": {
+        "threshold": 0.09,
+        "frames": 10357,
+        "TP": 5012,
+        "FP": 321,
+        "FN": 10,
+        "TN": 5014,
+        "precision": 0.9398087380461279,
+        "recall": 0.9980087614496217,
+        "f1": 0.9680347658136166,
+        "negative_frame_FPR": 0.060168697282099344
+      },
+      "per_video": {
+        "V_AIRPLANE_007": {
+          "threshold": 0.09,
+          "frames": 300,
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "TN": 299,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0033333333333333335
+        },
+        "V_AIRPLANE_011": {
+          "threshold": 0.09,
+          "frames": 308,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 308,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_017": {
+          "threshold": 0.09,
+          "frames": 312,
+          "TP": 0,
+          "FP": 40,
+          "FN": 0,
+          "TN": 272,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.1282051282051282
+        },
+        "V_AIRPLANE_021": {
+          "threshold": 0.09,
+          "frames": 319,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 319,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_022": {
+          "threshold": 0.09,
+          "frames": 311,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 311,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_055": {
+          "threshold": 0.09,
+          "frames": 303,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 303,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_AIRPLANE_056": {
+          "threshold": 0.09,
+          "frames": 324,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 324,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_004": {
+          "threshold": 0.09,
+          "frames": 315,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 315,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_028": {
+          "threshold": 0.09,
+          "frames": 318,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 318,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_032": {
+          "threshold": 0.09,
+          "frames": 326,
+          "TP": 0,
+          "FP": 6,
+          "FN": 0,
+          "TN": 320,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.018404907975460124
+        },
+        "V_BIRD_037": {
+          "threshold": 0.09,
+          "frames": 326,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_038": {
+          "threshold": 0.09,
+          "frames": 328,
+          "TP": 0,
+          "FP": 2,
+          "FN": 0,
+          "TN": 326,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.006097560975609756
+        },
+        "V_BIRD_042": {
+          "threshold": 0.09,
+          "frames": 306,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 306,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_BIRD_047": {
+          "threshold": 0.09,
+          "frames": 322,
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "TN": 321,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.003105590062111801
+        },
+        "V_DRONE_005": {
+          "threshold": 0.09,
+          "frames": 305,
+          "TP": 302,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9901639344262295,
+          "f1": 0.9950576606260296,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_016": {
+          "threshold": 0.09,
+          "frames": 310,
+          "TP": 308,
+          "FP": 0,
+          "FN": 2,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9935483870967742,
+          "f1": 0.9967637540453075,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_027": {
+          "threshold": 0.09,
+          "frames": 307,
+          "TP": 306,
+          "FP": 0,
+          "FN": 1,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.996742671009772,
+          "f1": 0.99836867862969,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_031": {
+          "threshold": 0.09,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_034": {
+          "threshold": 0.09,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_057": {
+          "threshold": 0.09,
+          "frames": 329,
+          "TP": 329,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_062": {
+          "threshold": 0.09,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_067": {
+          "threshold": 0.09,
+          "frames": 325,
+          "TP": 325,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_071": {
+          "threshold": 0.09,
+          "frames": 315,
+          "TP": 315,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_073": {
+          "threshold": 0.09,
+          "frames": 311,
+          "TP": 307,
+          "FP": 0,
+          "FN": 4,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9871382636655949,
+          "f1": 0.9935275080906149,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_078": {
+          "threshold": 0.09,
+          "frames": 300,
+          "TP": 300,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_082": {
+          "threshold": 0.09,
+          "frames": 307,
+          "TP": 307,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_087": {
+          "threshold": 0.09,
+          "frames": 312,
+          "TP": 312,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_099": {
+          "threshold": 0.09,
+          "frames": 309,
+          "TP": 309,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_100": {
+          "threshold": 0.09,
+          "frames": 328,
+          "TP": 328,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_DRONE_103": {
+          "threshold": 0.09,
+          "frames": 321,
+          "TP": 321,
+          "FP": 0,
+          "FN": 0,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "negative_frame_FPR": 0.0
+        },
+        "V_HELICOPTER_008": {
+          "threshold": 0.09,
+          "frames": 304,
+          "TP": 0,
+          "FP": 142,
+          "FN": 0,
+          "TN": 162,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.46710526315789475
+        },
+        "V_HELICOPTER_016": {
+          "threshold": 0.09,
+          "frames": 306,
+          "TP": 0,
+          "FP": 122,
+          "FN": 0,
+          "TN": 184,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.39869281045751637
+        },
+        "V_HELICOPTER_061": {
+          "threshold": 0.09,
+          "frames": 307,
+          "TP": 0,
+          "FP": 7,
+          "FN": 0,
+          "TN": 300,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_frame_FPR": 0.02280130293159609
+        }
+      },
+      "macro_positive_video_recall": 0.9979745785123981,
+      "macro_negative_video_FPR": 0.06163211159403826,
+      "videos_with_positive_frames": 16,
+      "videos_with_negative_frames": 17,
+      "video_any_frame_presence": {
+        "threshold": 0.09,
+        "TP": 16,
+        "FP": 8,
+        "FN": 0,
+        "TN": 9,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "negative_frame_FPR": 0.47058823529411764,
+        "videos": 33
+      }
+    }
+  },
+  "per_category_presence": {
+    "AIRPLANE": {
+      "fixed_025": {
+        "threshold": 0.25,
+        "frames": 2177,
+        "TP": 0,
+        "FP": 5,
+        "FN": 0,
+        "TN": 2172,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.0022967386311437757,
+        "f1": 0.0
+      },
+      "calibrated_f1": {
+        "threshold": 0.2,
+        "frames": 2177,
+        "TP": 0,
+        "FP": 6,
+        "FN": 0,
+        "TN": 2171,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.002756086357372531,
+        "f1": 0.0
+      },
+      "calibrated_fpr10": {
+        "threshold": 0.09,
+        "frames": 2177,
+        "TP": 0,
+        "FP": 41,
+        "FN": 0,
+        "TN": 2136,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.018833256775378962,
+        "f1": 0.0
+      }
+    },
+    "BIRD": {
+      "fixed_025": {
+        "threshold": 0.25,
+        "frames": 2241,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 2241,
+        "precision": null,
+        "recall": null,
+        "negative_frame_FPR": 0.0,
+        "f1": null
+      },
+      "calibrated_f1": {
+        "threshold": 0.2,
+        "frames": 2241,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 2241,
+        "precision": null,
+        "recall": null,
+        "negative_frame_FPR": 0.0,
+        "f1": null
+      },
+      "calibrated_fpr10": {
+        "threshold": 0.09,
+        "frames": 2241,
+        "TP": 0,
+        "FP": 9,
+        "FN": 0,
+        "TN": 2232,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.004016064257028112,
+        "f1": 0.0
+      }
+    },
+    "DRONE": {
+      "fixed_025": {
+        "threshold": 0.25,
+        "frames": 5022,
+        "TP": 5001,
+        "FP": 0,
+        "FN": 21,
+        "TN": 0,
+        "precision": 1.0,
+        "recall": 0.9958183990442055,
+        "negative_frame_FPR": null,
+        "f1": 0.9979048189164921
+      },
+      "calibrated_f1": {
+        "threshold": 0.2,
+        "frames": 5022,
+        "TP": 5003,
+        "FP": 0,
+        "FN": 19,
+        "TN": 0,
+        "precision": 1.0,
+        "recall": 0.9962166467542811,
+        "negative_frame_FPR": null,
+        "f1": 0.9981047381546134
+      },
+      "calibrated_fpr10": {
+        "threshold": 0.09,
+        "frames": 5022,
+        "TP": 5012,
+        "FP": 0,
+        "FN": 10,
+        "TN": 0,
+        "precision": 1.0,
+        "recall": 0.9980087614496217,
+        "negative_frame_FPR": null,
+        "f1": 0.9990033884791708
+      }
+    },
+    "HELICOPTER": {
+      "fixed_025": {
+        "threshold": 0.25,
+        "frames": 917,
+        "TP": 0,
+        "FP": 142,
+        "FN": 0,
+        "TN": 775,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.15485278080697928,
+        "f1": 0.0
+      },
+      "calibrated_f1": {
+        "threshold": 0.2,
+        "frames": 917,
+        "TP": 0,
+        "FP": 165,
+        "FN": 0,
+        "TN": 752,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.17993456924754633,
+        "f1": 0.0
+      },
+      "calibrated_fpr10": {
+        "threshold": 0.09,
+        "frames": 917,
+        "TP": 0,
+        "FP": 271,
+        "FN": 0,
+        "TN": 646,
+        "precision": 0.0,
+        "recall": null,
+        "negative_frame_FPR": 0.2955288985823337,
+        "f1": 0.0
+      }
+    }
+  },
+  "failure_diagnostics": {
+    "scope": "Fixed confidence 0.25 post-test diagnosis; not used to choose methods or demo videos",
+    "ranking": "Positive videos by lowest recall, tie more FN; negative-containing videos by highest FPR, tie more FP; final tie sequence name",
+    "examples": "First five chronological error frames, no performance-based segment selection",
+    "worst_positive_video_recall": [
+      {
+        "sequence": "V_DRONE_073",
+        "category": "DRONE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 311,
+          "TP": 303,
+          "FP": 0,
+          "FN": 8,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9742765273311897,
+          "negative_frame_FPR": null,
+          "f1": 0.9869706840390879
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 153,
+            "time_seconds": 5.1,
+            "score": 0.0639001727104187
+          },
+          {
+            "frame": 155,
+            "time_seconds": 5.166666666666667,
+            "score": 0.07343796640634537
+          },
+          {
+            "frame": 156,
+            "time_seconds": 5.2,
+            "score": 0.033063288778066635
+          },
+          {
+            "frame": 157,
+            "time_seconds": 5.233333333333333,
+            "score": 0.1335664540529251
+          },
+          {
+            "frame": 158,
+            "time_seconds": 5.266666666666667,
+            "score": 0.10097882896661758
+          }
+        ]
+      },
+      {
+        "sequence": "V_DRONE_016",
+        "category": "DRONE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 310,
+          "TP": 304,
+          "FP": 0,
+          "FN": 6,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9806451612903225,
+          "negative_frame_FPR": null,
+          "f1": 0.990228013029316
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 175,
+            "time_seconds": 5.833333333333333,
+            "score": 0.05259209871292114
+          },
+          {
+            "frame": 176,
+            "time_seconds": 5.866666666666666,
+            "score": 0.1715148389339447
+          },
+          {
+            "frame": 177,
+            "time_seconds": 5.9,
+            "score": 0.14544641971588135
+          },
+          {
+            "frame": 178,
+            "time_seconds": 5.933333333333334,
+            "score": 0.09459877014160156
+          },
+          {
+            "frame": 180,
+            "time_seconds": 6.0,
+            "score": 0.03584715723991394
+          }
+        ]
+      },
+      {
+        "sequence": "V_DRONE_005",
+        "category": "DRONE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 305,
+          "TP": 302,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9901639344262295,
+          "negative_frame_FPR": null,
+          "f1": 0.9950576606260296
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 253,
+            "time_seconds": 8.433333333333334,
+            "score": 0.013666119426488876
+          },
+          {
+            "frame": 261,
+            "time_seconds": 8.7,
+            "score": 0.02395860105752945
+          },
+          {
+            "frame": 262,
+            "time_seconds": 8.733333333333333,
+            "score": 0.019101539626717567
+          }
+        ]
+      },
+      {
+        "sequence": "V_DRONE_027",
+        "category": "DRONE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 307,
+          "TP": 304,
+          "FP": 0,
+          "FN": 3,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.990228013029316,
+          "negative_frame_FPR": null,
+          "f1": 0.9950900163666121
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 6,
+            "time_seconds": 0.2,
+            "score": 0.17292127013206482
+          },
+          {
+            "frame": 7,
+            "time_seconds": 0.23333333333333334,
+            "score": 0.0513279028236866
+          },
+          {
+            "frame": 8,
+            "time_seconds": 0.26666666666666666,
+            "score": 0.13183671236038208
+          }
+        ]
+      },
+      {
+        "sequence": "V_DRONE_103",
+        "category": "DRONE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 321,
+          "TP": 320,
+          "FP": 0,
+          "FN": 1,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9968847352024922,
+          "negative_frame_FPR": null,
+          "f1": 0.9984399375975039
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 21,
+            "time_seconds": 0.7,
+            "score": 0.20954613387584686
+          }
+        ]
+      }
+    ],
+    "worst_negative_video_FPR": [
+      {
+        "sequence": "V_HELICOPTER_008",
+        "category": "HELICOPTER",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 304,
+          "TP": 0,
+          "FP": 123,
+          "FN": 0,
+          "TN": 181,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.40460526315789475,
+          "f1": 0.0
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 0,
+            "time_seconds": 0.0,
+            "score": 0.5158131718635559
+          },
+          {
+            "frame": 1,
+            "time_seconds": 0.03333333333333333,
+            "score": 0.48347553610801697
+          },
+          {
+            "frame": 2,
+            "time_seconds": 0.06666666666666667,
+            "score": 0.43244558572769165
+          },
+          {
+            "frame": 3,
+            "time_seconds": 0.1,
+            "score": 0.5279754996299744
+          },
+          {
+            "frame": 4,
+            "time_seconds": 0.13333333333333333,
+            "score": 0.5382475852966309
+          }
+        ]
+      },
+      {
+        "sequence": "V_HELICOPTER_016",
+        "category": "HELICOPTER",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 306,
+          "TP": 0,
+          "FP": 19,
+          "FN": 0,
+          "TN": 287,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.06209150326797386,
+          "f1": 0.0
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 121,
+            "time_seconds": 4.033333333333333,
+            "score": 0.27295562624931335
+          },
+          {
+            "frame": 123,
+            "time_seconds": 4.1,
+            "score": 0.25086233019828796
+          },
+          {
+            "frame": 133,
+            "time_seconds": 4.433333333333334,
+            "score": 0.26293110847473145
+          },
+          {
+            "frame": 137,
+            "time_seconds": 4.566666666666666,
+            "score": 0.2785416841506958
+          },
+          {
+            "frame": 145,
+            "time_seconds": 4.833333333333333,
+            "score": 0.26219671964645386
+          }
+        ]
+      },
+      {
+        "sequence": "V_AIRPLANE_017",
+        "category": "AIRPLANE",
+        "presence": {
+          "threshold": 0.25,
+          "frames": 312,
+          "TP": 0,
+          "FP": 5,
+          "FN": 0,
+          "TN": 307,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.016025641025641024,
+          "f1": 0.0
+        },
+        "first_5_error_frames": [
+          {
+            "frame": 179,
+            "time_seconds": 5.966666666666667,
+            "score": 0.3141534924507141
+          },
+          {
+            "frame": 181,
+            "time_seconds": 6.033333333333333,
+            "score": 0.26876792311668396
+          },
+          {
+            "frame": 182,
+            "time_seconds": 6.066666666666666,
+            "score": 0.38294124603271484
+          },
+          {
+            "frame": 185,
+            "time_seconds": 6.166666666666667,
+            "score": 0.3859460949897766
+          },
+          {
+            "frame": 191,
+            "time_seconds": 6.366666666666666,
+            "score": 0.32760170102119446
+          }
+        ]
+      }
+    ]
+  },
+  "figures": {
+    "validation_learning_curve": [
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\validation_learning_curve.png",
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\validation_learning_curve.svg",
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\validation_learning_curve.pdf"
+    ],
+    "continuous_presence_operating_points": [
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\continuous_presence_operating_points.png",
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\continuous_presence_operating_points.svg",
+      "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\single_report_v1\\continuous_presence_operating_points.pdf"
+    ]
+  },
+  "numeric_policy": "JSON retains original float precision; README and bar annotations show 3 decimals",
+  "visual_qa": "pending"
+}

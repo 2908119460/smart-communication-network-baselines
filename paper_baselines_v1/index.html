@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>智能通信网络 · 基线验证与 Demo</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#142838;background:#f3f6f8;font-size:16px}*{box-sizing:border-box}body{margin:0}main{max-width:1260px;margin:auto;padding:42px 28px 80px}h1{font-size:36px;font-weight:650;margin:10px 0 16px}h2{font-size:25px;margin:0 0 14px}h3{font-size:18px;margin:20px 0 10px}p{line-height:1.8;margin:10px 0;color:#485d6b}a{color:#0f4d92;text-decoration:none}a:hover{text-decoration:underline}.eyebrow{font-size:14px;letter-spacing:2px;color:#3775ba}.note{border-left:4px solid #3775ba;padding:10px 18px;background:#e7eff6;margin:22px 0}.nav{display:flex;gap:20px;flex-wrap:wrap;margin:25px 0}.card{background:white;border:1px solid #dbe4ea;border-radius:12px;padding:26px;margin:24px 0;box-shadow:0 4px 18px #14283806}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stat{background:#edf3f7;padding:18px;border-radius:8px}.stat strong{display:block;font-size:24px;color:#0f4d92;margin:7px 0}.badge{display:inline-block;padding:5px 12px;border-radius:20px;background:#e8eff5;color:#0f4d92;font-size:13px}.pending{color:#8c5c16;background:#fff1d6}.done{color:#276438;background:#e5f3e8}table{width:100%;border-collapse:collapse;margin:15px 0}td,th{padding:11px 8px;text-align:left;border-bottom:1px solid #e5edf2;font-size:14px}th{color:#5d7180;font-weight:500}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.media img{width:100%;height:auto;border:1px solid #e7edf1;border-radius:5px}.media video{width:100%;background:#10202a;border-radius:6px}.caption{font-size:13px;color:#607583;padding-top:6px}.muted{font-size:13px;color:#7d8d99}.empty{padding:22px;background:#f7f9fa;border-radius:6px;color:#718591;font-size:14px}details{margin-top:15px}summary{cursor:pointer;color:#0f4d92}footer{font-size:13px;color:#718591}@media(max-width:800px){.summary,.grid{grid-template-columns:1fr}main{padding:25px 16px}h1{font-size:29px}.card{padding:20px}table{display:block;overflow:auto}}
+</style>
+<main>
+<div class="eyebrow">《智能通信网络》课程大作业</div>
+<h1>三方向基线验证与 Demo</h1>
+<p>用可复核的实验判断：基线是否足够强、候选贡献还有多大空间，以及哪一条路线最适合课堂展示。</p>
+<div class="note" id="overall">正在读取真实实验进度。训练、评估与交付审查分别记录；排入队列的实验不计作完成。</div>
+<nav class="nav"><a href="#vision">无人机视觉检测</a><a href="#rl">60 GHz调度</a><a href="#pa">PA / MoE</a><a href="README.md">协议与运行说明</a><a href="../baseline_videos_v1/">此前实验演示</a></nav>
+<section class="summary"><div class="stat">视觉数据<strong>265 段 · 6,360 帧</strong><span>视频互斥 train / val / cal / test</span></div><div class="stat">强化学习测试<strong>4 场景 × 20 种子</strong><span>800 行锁定评价；含反馈 TS 强对照</span></div><div class="stat">PA 传统参考<strong>3 数据集 · 6 条结果</strong><span>MP / 因果 GMP 已完成；神经矩阵暂不扩展</span></div></section>
+<section class="card"><span class="badge done">选题建议</span><h2>首选视觉：针对直升机混淆做轻量复核</h2><p>视觉 baseline 与完整 demo 已完成。147个误报帧中142个来自直升机场景；EMA能减少报警闪烁，但持续混淆仍存在。下一贡献候选是“候选目标＋周围背景”双裁剪复核器，用现有四类标注训练，并与单裁剪复核做消融。该候选尚未训练。</p><table><thead><tr><th>方向</th><th>本轮筛选结论</th><th>适合你们的理由</th></tr></thead><tbody><tr><td>无人机视觉 · 首选</td><td>问题明确；EMA有展示收益，持续直升机误报待解决</td><td>真实视频最易讲清楚；代码/标注可复用；轻量改动适合一人训练</td></tr><tr><td>60 GHz · 网络机制备选</td><td>用户先验场景12略优，场景13存在取舍</td><td>最贴通信网络，已有仿真与回放；环境解释和贡献验证更难</td></tr><tr><td>PA · 实验可控备选</td><td>full适应有效；gate-only创新不成立</td><td>分钟级训练、消融易做；需要换主假设，波形展示解释成本较高</td></tr></tbody></table></section>
+<section class="card" id="vision"><span class="badge pending" id="vision-badge">进行中</span><h2>无人机本体检测</h2><p>当前只保留 YOLO11n seed0：80 轮上限、自然早停；独立验证集选 checkpoint，校准集选阈值，再报告33段测试视频上的 mAP 与误报—召回权衡，并生成四段连续视频 demo。原六模型 paper_v1 计划保留为未完成记录。</p><div id="vision-progress"></div><div class="media" id="vision-media"></div><details><summary>如何判断基线与贡献</summary><p>模型扩大与训练更久属于基线补强。贡献需要在相同数据、训练或推理预算下改善可测的问题，例如复杂背景误报、小目标漏检或报警延迟。当前先用固定时序规则做连续视频诊断，不预设它一定有效。</p><p>当前划分是视频互斥；没有可靠采集场次标签，不能称场次互斥。跨划分完全相同的解码图像为0，不代表所有背景相互独立。单模型 demo 没有多 seed 统计不确定性。</p></details></section>
+<section class="card" id="rl"><span class="badge pending" id="rl-badge">进行中</span><h2>60 GHz MAC / 资源分配</h2><p>标准PPO 360k交互、3个历史训练种子；固定波束、验证集选择波束、反馈型Thompson Sampling。原800行主结果与4段回放保持；本轮新增单seed用户先验短对照。</p><div id="rl-progress"></div><h3>用户级先验：24行单seed探索对照</h3><p>从同一360k模型和Adam继续30k，比较普通PPO、联合动作先验与用户边缘先验；固定β=.02。只约束用户选择，保留同用户下波束/中继/跟踪自由度。</p><table><thead><tr><th>用户先验 vs 同预算PPO</th><th>吞吐变化</th><th>平均队列变化</th><th>pending</th></tr></thead><tbody><tr><td>场景12</td><td>+1.89%</td><td>−2.68%</td><td>6.578% → 5.533%</td></tr><tr><td>场景13</td><td>−0.40%</td><td>−5.01%</td><td>0.554% → 0.707%</td></tr></tbody></table><p>场景12三个配对环境均改善；场景13的队列均值改善主要来自一个环境，其他两个略差。值得继续验证，暂不支持普遍优势。</p><p><a href="../rl_user_prior_demo_v1/REPORT.md">短对照完整报告</a></p><div class="media"><a href="../rl_user_prior_demo_v1/figures/user_prior_mechanism_comparison_v2.png"><img src="../rl_user_prior_demo_v1/figures/user_prior_mechanism_comparison_v2.png" alt="用户级与联合动作先验对照：吞吐、队列、beam2占比"></a></div><h3>原锁定baseline与网络回放</h3><div class="media" id="rl-media"></div><details><summary>如何判断基线与贡献</summary><p>比较新策略时分场景报告吞吐、队列和末尾未交付比例。作者反馈TS拥有更多历史统计，与PPO状态并非完全相同，报告按方法适配解释。</p><p>20秒仿真展示有限窗口表现。固定beam2和验证选beam是动态MaxWeight-like用户选择；原多种子结果与本轮单seed探索分别展示。</p></details></section>
+<section class="card" id="pa"><span class="badge pending" id="pa-badge">进行中</span><h2>功放前向建模 / MoE</h2><p>APA A/B、DPA160 的 MP 与因果 GMP 共6条传统参考已完成。本轮补充单seed GRU、均匀专家、包络MoE的150轮训练，以及 A→B 的有限标签适应；结果包含3条源域、8条适应、3条零适应，共14条。</p><div id="pa-progress"></div><div class="media" id="pa-media"></div><details><summary>如何判断基线与贡献</summary><p>用相同总标签预算比较 full / partial 适应，检查门控收益是否超过强GRU及均匀专家。GRU partial更新58个参数、MoE gate更新48个参数。</p><p>APA A/B输入波形相同、输出不同且条件元数据不足，称跨采集适应。当前结果衡量实测功放输出的前向预测；已有 OpenDPD 级联补偿展示来自冻结 PA surrogate。</p></details></section>
+<footer id="updated"></footer>
+</main>
+<script>
+const label={running:'训练中',completed:'完成',failed:'失败，记录保留',queued:'排队中',neural_completed:'训练矩阵完成',prepared:'协议已锁定',waiting_vision_gpu_release:'等待视觉释放GPU'};
+function table(headers, rows){const t=document.createElement('table');const head=t.createTHead().insertRow();headers.forEach(v=>{const c=document.createElement('th');c.textContent=v;head.append(c)});const b=t.createTBody();rows.forEach(r=>{const row=b.insertRow();r.forEach(v=>{row.insertCell().textContent=v})});return t}
+function fill(id,node){document.getElementById(id).replaceChildren(node)}
+function para(text){const p=document.createElement('p');p.textContent=text;return p}
+function number(v,d=3){return v==null?'—':Number(v).toFixed(d)}
+const seen=new Set();
+function media(direction, value){const root=document.getElementById(direction+'-media');if(value.report&&!seen.has(value.report_path)){seen.add(value.report_path);const p=document.createElement('p');const a=document.createElement('a');a.href='../'+value.report_path;a.textContent='完整结果与证据说明';p.append(a);root.prepend(p)}if(!value.figures.length&&!value.videos.length){if(!root.querySelector('.empty')){const div=document.createElement('div');div.className='empty';div.textContent='新图表与完整演示将在对应实验及审查完成后出现。';root.append(div)}return}const empty=root.querySelector('.empty');if(empty)empty.remove();const grid=root.querySelector('.grid')||root.appendChild(Object.assign(document.createElement('div'),{className:'grid'}));for(const path of value.figures){if(seen.has(path))continue;seen.add(path);const box=document.createElement('div');const a=document.createElement('a');a.href='../'+path;const img=document.createElement('img');img.src=a.href;img.loading='lazy';img.alt=path.split('/').pop();a.append(img);box.append(a);const caption=document.createElement('div');caption.className='caption';caption.textContent=img.alt;box.append(caption);grid.append(box)}for(const path of value.videos){if(seen.has(path))continue;seen.add(path);const box=document.createElement('div');const video=document.createElement('video');video.controls=true;video.preload='metadata';video.src='../'+path;box.append(video);const caption=document.createElement('div');caption.className='caption';caption.textContent=path.split('/').pop();box.append(caption);grid.append(box)}}
+async function refresh(){
+  try{
+    const response=await fetch('status.json',{cache:'no-store'});
+    if(!response.ok)throw Error(response.status);
+    const s=await response.json();
+    document.getElementById('overall').textContent=s.all_complete
+      ?'本轮单种子验证与 demo 已完成。下方展示实际结果；选题建议与创新判断见完整报告。'
+      :'本轮优先单种子验证与 demo，页面每30秒更新。原多种子计划已收窄，旧记录保留。';
+    const vision=document.createElement('div');
+    vision.append(table(['模型','训练种子','状态','轮数 / 上限','最佳验证mAP50'],s.vision.map(v=>[
+      v.model,v.seed,label[v.status]||v.status,v.epochs+' / '+v.max_epochs,number(v.best_val_map50)])));
+    if(s.vision_evaluation){
+      const v=s.vision_evaluation;
+      const c=v.continuous_presence.fixed_025.frame_micro;
+      vision.append(table(['测试 mAP50','测试 mAP50–95','连续帧召回','负帧误报率'],[[
+        number(v.test_mAP50,4),number(v.test_mAP50_95,4),number(c.recall*100,2)+'%',number(c.negative_frame_FPR*100,2)+'%']]));
+      vision.append(para('33段新测试视频，10,357连续帧；固定阈值0.25。EMA对照保持召回，误报率2.44%，报警切换12.17→5.56次/分钟；直升机持续误报仍是改进重点。'));
+    }
+    fill('vision-progress',vision);
+    const rl=document.createElement('div');
+    rl.append(table(['PPO360k训练种子','训练状态','已记录步数','说明'],s.rl.map(v=>[
+      v.seed,label[v.status]||v.status,v.steps==null?'查看运行日志':Number(v.steps).toLocaleString(),v.note||''])));
+    if(s.rl_evaluation)rl.append(para('已完成锁定测试：'+s.rl_evaluation.evaluation_rows_completed+' / '+s.rl_evaluation.evaluation_rows_expected+' 组。'));
+    if(s.rl_prior)rl.append(para('用户级先验短对照：'+(label[s.rl_prior.status]||s.rl_prior.status)));
+    fill('rl-progress',rl);
+    const pa=document.createElement('div');
+    pa.append(para('传统参考：'+s.polynomial.completed_families+' / '+s.polynomial.expected+' 条已完成。'));
+    const ps=s.pa_single||{};
+    pa.append(para('单种子神经验证：'+(label[ps.status]||ps.status||'准备中')+
+      (ps.current_fit?' · '+ps.current_fit+' · epoch '+ps.epoch:'')));
+    if(s.pa_single_results){
+      pa.append(table(['模型','用途','标签预算','适应方式','test NMSE / dB'],s.pa_single_results.rows.map(v=>[
+        v.spec.kind,v.zero_adaptation?'B零适应':v.spec.stage,
+        v.spec.total_label_budget??'—',v.spec.mode??'—',number(v.test_nmse_db,3)])));
+    }
+    fill('pa-progress',pa);
+    for(const direction of ['vision','rl','pa']){
+      const a=s.artifacts[direction];media(direction,a);
+      if(a.summary){const b=document.getElementById(direction+'-badge');b.textContent='结果已生成';b.className='badge done';}
+    }
+    document.getElementById('updated').textContent='最近读取：'+new Date(s.updated_utc).toLocaleString('zh-CN')+
+      ' · 数据、权重、配置、日志和图视频均保留在各run目录。';
+  }catch(error){document.getElementById('overall').textContent='进度服务暂不可读；可通过“协议与运行说明”查看已保存结果。';}
+}
+refresh();setInterval(refresh,30000);
+</script>
+</html>

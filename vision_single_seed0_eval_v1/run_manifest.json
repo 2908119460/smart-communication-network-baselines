@@ -1,0 +1,17 @@
+{
+  "status": "GPU_evaluation_completed",
+  "model": "YOLO11n",
+  "seed": 0,
+  "multiseed_or_yolo11s": "not run by user scope",
+  "protocol_sha256": "032e74506559b99470c15161d36aff0f4fe8cc4ed9892cb758abdd892ad6e119",
+  "split_manifest_sha256": "9dd0b880ff265335ea70b6166df833abc49ca1fe35b21974585b3d5a14b91318",
+  "checkpoint_sha256": "9e99b5c1c9cb5ca0f11c7f6e799c533deeb4e70000a2b2b03ea49dc76debfc56",
+  "training_summary": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\training_summary.json",
+  "started_utc": "2026-10-11T12:53:15Z",
+  "calibration_or_test_started": true,
+  "calibration_completed": true,
+  "frozen_choices": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\frozen_choices_before_test.json",
+  "gpu_metrics_completed_utc": "2026-10-11T12:55:47Z",
+  "gpu_context_release_rule": "This evaluation process must exit before another GPU task is launched",
+  "test_completed": true
+}

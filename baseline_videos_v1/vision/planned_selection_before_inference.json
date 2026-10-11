@@ -1,0 +1,96 @@
+{
+  "status": "planned_before_inference",
+  "source_repository": "https://github.com/DroneDetectionThesis/Drone-detection-dataset",
+  "source_revision": "442d0c6750708cc221636f7a1fd31cbd8cb0aeb8",
+  "selection_rule": "First test sequence in lexical order within DRONE and BIRD; continuous prefix min(15 sec, source duration); no performance-based segment selection",
+  "selection_stage": "after candidate study; deterministic demonstration only, not a new independent test",
+  "checkpoint": {
+    "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_candidate_baseline_seed42\\weights\\best.pt",
+    "sha256": "1440abd71e79a707efae4cc26b980a2a6a77fc1c75ad46e475042e2b14598254",
+    "training_summary_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_candidate_baseline_seed42\\training_summary.json",
+    "training_summary_sha256": "4cdc04d00f2af1ab7a06394ddd94095f26661d19a93bc2001ef44ca808246d83",
+    "selected_by": "calibration mAP50-95, best epoch11 of baseline early-stopped epoch21",
+    "retraining": false
+  },
+  "data_protocol_sha256": "cfa0ea5dc9e11a6ad10a4cb45fbfb54bab69aaaec6a8d4505ece8c3a8dd9deb7",
+  "display_threshold": 0.25,
+  "threshold_semantics": "Fixed display threshold, not an assurance of low false-alarm rate; not tuned on these clips",
+  "inference": {
+    "imgsz": 640,
+    "device": 0,
+    "batch": 8,
+    "prediction_floor": 0.001,
+    "temporal_filtering": false,
+    "tracking": false
+  },
+  "ffmpeg": {
+    "path": "D:\\vs code\\智能通信网络大作业\\experiments\\.venv\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers"
+  },
+  "sequences": [
+    {
+      "sequence": "V_DRONE_001",
+      "category": "DRONE",
+      "source_path": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\raw\\V_DRONE_001.mp4",
+      "source_url": "https://raw.githubusercontent.com/DroneDetectionThesis/Drone-detection-dataset/442d0c6750708cc221636f7a1fd31cbd8cb0aeb8/Data/Video_V/V_DRONE_001.mp4",
+      "source_sha256": "9db5a800377c01db8369dfba808d400ca52cd393e0a32850e1d20a4861eaecbe",
+      "annotation_path": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\raw\\V_DRONE_001_LABELS.mat",
+      "annotation_url": "https://raw.githubusercontent.com/DroneDetectionThesis/Drone-detection-dataset/442d0c6750708cc221636f7a1fd31cbd8cb0aeb8/Data/Video_V/V_DRONE_001_LABELS.mat",
+      "annotation_sha256": "39598c0beded8754d5193f57306897dd9302a309c9e391c37ada23eb94646399",
+      "split": "test",
+      "fps": 30.0,
+      "source_frame_count": 301,
+      "source_size": [
+        640,
+        512
+      ],
+      "source_duration_seconds": 10.033333333333333,
+      "frames_to_render": 301,
+      "start_frame": 0,
+      "end_frame_inclusive": 300,
+      "start_time_seconds": 0,
+      "end_time_exclusive_seconds": 10.033333333333333,
+      "source_scale_factor": 1.0,
+      "frame_sampling": "every consecutive frame, original FPS",
+      "audio": "not included",
+      "prior_smoke_exposure": true
+    },
+    {
+      "sequence": "V_BIRD_021",
+      "category": "BIRD",
+      "source_path": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\raw\\V_BIRD_021.mp4",
+      "source_url": "https://raw.githubusercontent.com/DroneDetectionThesis/Drone-detection-dataset/442d0c6750708cc221636f7a1fd31cbd8cb0aeb8/Data/Video_V/V_BIRD_021.mp4",
+      "source_sha256": "a7fab224f044db9abdd70a297e558b3401682154899dee347bcb402aa6a6df08",
+      "annotation_path": "D:\\vs code\\智能通信网络大作业\\experiments\\data\\vision\\raw\\V_BIRD_021_LABELS.mat",
+      "annotation_url": "https://raw.githubusercontent.com/DroneDetectionThesis/Drone-detection-dataset/442d0c6750708cc221636f7a1fd31cbd8cb0aeb8/Data/Video_V/V_BIRD_021_LABELS.mat",
+      "annotation_sha256": "ff7ac551d898b42b47e8d835740df12a17d3e86aeb9e731c5922c654742a78f2",
+      "split": "test",
+      "fps": 30.0,
+      "source_frame_count": 323,
+      "source_size": [
+        640,
+        512
+      ],
+      "source_duration_seconds": 10.766666666666667,
+      "frames_to_render": 323,
+      "start_frame": 0,
+      "end_frame_inclusive": 322,
+      "start_time_seconds": 0,
+      "end_time_exclusive_seconds": 10.766666666666667,
+      "source_scale_factor": 1.0,
+      "frame_sampling": "every consecutive frame, original FPS",
+      "audio": "not included",
+      "prior_smoke_exposure": true
+    }
+  ],
+  "caveats": [
+    "All source videos had prior smoke exposure and study review",
+    "Dense continuous original video differs from the 24 JPEG samples per sequence used in formal candidate scoring",
+    "Frame-level presence counts are descriptive and do not enforce bounding-box IoU",
+    "This illustrates baseline successes and failures; no innovation or independent generalization claim"
+  ],
+  "visual_review": {
+    "status": "pending",
+    "required_frames": "cover, middle, last for each individual video and combined video"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "D:\\vs code\\\u667a\u80fd\u901a\u4fe1\u7f51\u7edc\u5927\u4f5c\u4e1a\\experiments\\datasets",
+  "weights_dir": "weights",
+  "runs_dir": "runs",
+  "uuid": "71c05a072ac46d638c22a8f980ab1d44ef783dd44f438fe11e3d43b465795560",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

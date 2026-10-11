@@ -1,0 +1,166 @@
+{
+  "status": "completed",
+  "gpu_used": false,
+  "temporal_summary_sha256": "5b020e75fa921412b6964a4dee0e17de8893e0b55143c144335b3c62e51f2b62",
+  "temporal_states_sha256": "67c6022e4bb00e5cb9436b9a9a1dbdb04c8f947f5e9588b3e2de3bbc8c541f0e",
+  "baseline_demo_manifest_sha256": "941b7c0ff7a78cbe1e42b92b004298433842134dcd08271ef50b3d24577a152b",
+  "videos": [
+    {
+      "sequence": "V_DRONE_005",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\V_DRONE_005_fixed_temporal.mp4",
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 305,
+        "expected_frames": 305,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          960
+        ],
+        "duration_seconds": 10.166666666666666,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "e67490f0f8e507a2e6525094f0bfa38159178a3cd446df161cd60227200380ee",
+        "bytes": 752337,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_DRONE_005_fixed_temporal_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_DRONE_005_fixed_temporal_middle.png",
+            "output_frame": 152,
+            "time_seconds": 5.066666666666666
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_DRONE_005_fixed_temporal_last.png",
+            "output_frame": 304,
+            "time_seconds": 10.133333333333333
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_BIRD_004",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\V_BIRD_004_fixed_temporal.mp4",
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 315,
+        "expected_frames": 315,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          960
+        ],
+        "duration_seconds": 10.5,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "2418316aa1e55a3206c52ee29f21ffca38bd59437f1beb25d17b1be93709b4e7",
+        "bytes": 1215914,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_BIRD_004_fixed_temporal_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_BIRD_004_fixed_temporal_middle.png",
+            "output_frame": 157,
+            "time_seconds": 5.233333333333333
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_BIRD_004_fixed_temporal_last.png",
+            "output_frame": 314,
+            "time_seconds": 10.466666666666667
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_AIRPLANE_007",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\V_AIRPLANE_007_fixed_temporal.mp4",
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 300,
+        "expected_frames": 300,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          960
+        ],
+        "duration_seconds": 10.0,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "6f1390779b9af9554de77a01333a62abc5e1e352bce5706cbcb42b2a94dd154a",
+        "bytes": 464322,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_AIRPLANE_007_fixed_temporal_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_AIRPLANE_007_fixed_temporal_middle.png",
+            "output_frame": 150,
+            "time_seconds": 5.0
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_AIRPLANE_007_fixed_temporal_last.png",
+            "output_frame": 299,
+            "time_seconds": 9.966666666666667
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_HELICOPTER_008",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\V_HELICOPTER_008_fixed_temporal.mp4",
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 304,
+        "expected_frames": 304,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          960
+        ],
+        "duration_seconds": 10.133333333333333,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "768926bb570855c29bd359030aca2645dca841e7b0217c8c275d6cb8f3eba9f9",
+        "bytes": 2014921,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_HELICOPTER_008_fixed_temporal_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_HELICOPTER_008_fixed_temporal_middle.png",
+            "output_frame": 152,
+            "time_seconds": 5.066666666666666
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_temporal_exploration_v1\\timeline_demos\\qa\\V_HELICOPTER_008_fixed_temporal_last.png",
+            "output_frame": 303,
+            "time_seconds": 10.1
+          }
+        }
+      }
+    }
+  ],
+  "visual_qa": "pending"
+}

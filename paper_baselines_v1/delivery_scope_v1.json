@@ -1,0 +1,9 @@
+{
+  "scope": "single-seed validation and demo",
+  "updated_utc": "2026-10-11T12:04:34Z",
+  "user_priority": "现阶段不用跑多种子，最重要的是验证以及demo",
+  "vision": {"architecture": "yolo11n", "seed": 0, "attempt": 2, "additional_seeds": false, "larger_model": false},
+  "rl": {"completed_locked_results_preserved": true, "new_innovation_validation": "single seed, fixed recipe, short exploratory run"},
+  "pa": {"multi_seed_queue": "cancelled before neural training", "traditional_references": "completed"},
+  "original_six_model_and_pa_protocols": "preserved; not claimed complete"
+}

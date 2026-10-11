@@ -1,0 +1,2016 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "protocol_sha256": "d9d143a1269940d6d6c649e7499209d0359912f65a883d85686b10067e92532b",
+  "dependency_sha256": {
+    "new_script": "a0f74bcd1ebc4419d71bf8158b4cc66891dddb45899baecbf2f8b8dfef309d3b",
+    "legacy_helpers": "a9b43aadb71ffc1b160b685d78a6ffdccd314eba4be9fa80666dd3d88cbe61db"
+  },
+  "environment_seed": 20000,
+  "ppo_training_seed": 0,
+  "source_repository_sha": "f9e5e93caccf53aa3b2f4a252d3ecda6164a059d",
+  "training_performed": false,
+  "policy_resampling_performed": false,
+  "scenario_selection": "All four locked scenes; first predetermined environment seed20000, without trajectory ranking.",
+  "comparison_scope": "Standard PPO360k seed0, validation-selected fixed beam3, causal-feedback scheme4 TS adaptation. Offline budgets and history state differ; one-trajectory videos do not replace all-policy/all-environment statistics.",
+  "playback": {
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 10,
+    "frames": 200,
+    "video_seconds": 20.0,
+    "full_simulation_seconds": 20,
+    "warmup_seconds": 5,
+    "displayed_simulation_seconds": [
+      5,
+      20
+    ],
+    "sampled_zero_based_slots": [
+      500,
+      508,
+      515,
+      523,
+      530,
+      538,
+      545,
+      553,
+      560,
+      568,
+      575,
+      583,
+      590,
+      598,
+      605,
+      613,
+      621,
+      628,
+      636,
+      643,
+      651,
+      658,
+      666,
+      673,
+      681,
+      688,
+      696,
+      703,
+      711,
+      718,
+      726,
+      734,
+      741,
+      749,
+      756,
+      764,
+      771,
+      779,
+      786,
+      794,
+      801,
+      809,
+      816,
+      824,
+      831,
+      839,
+      847,
+      854,
+      862,
+      869,
+      877,
+      884,
+      892,
+      899,
+      907,
+      914,
+      922,
+      929,
+      937,
+      944,
+      952,
+      959,
+      967,
+      975,
+      982,
+      990,
+      997,
+      1005,
+      1012,
+      1020,
+      1027,
+      1035,
+      1042,
+      1050,
+      1057,
+      1065,
+      1072,
+      1080,
+      1088,
+      1095,
+      1103,
+      1110,
+      1118,
+      1125,
+      1133,
+      1140,
+      1148,
+      1155,
+      1163,
+      1170,
+      1178,
+      1185,
+      1193,
+      1201,
+      1208,
+      1216,
+      1223,
+      1231,
+      1238,
+      1246,
+      1253,
+      1261,
+      1268,
+      1276,
+      1283,
+      1291,
+      1298,
+      1306,
+      1314,
+      1321,
+      1329,
+      1336,
+      1344,
+      1351,
+      1359,
+      1366,
+      1374,
+      1381,
+      1389,
+      1396,
+      1404,
+      1411,
+      1419,
+      1427,
+      1434,
+      1442,
+      1449,
+      1457,
+      1464,
+      1472,
+      1479,
+      1487,
+      1494,
+      1502,
+      1509,
+      1517,
+      1524,
+      1532,
+      1540,
+      1547,
+      1555,
+      1562,
+      1570,
+      1577,
+      1585,
+      1592,
+      1600,
+      1607,
+      1615,
+      1622,
+      1630,
+      1637,
+      1645,
+      1652,
+      1660,
+      1668,
+      1675,
+      1683,
+      1690,
+      1698,
+      1705,
+      1713,
+      1720,
+      1728,
+      1735,
+      1743,
+      1750,
+      1758,
+      1765,
+      1773,
+      1781,
+      1788,
+      1796,
+      1803,
+      1811,
+      1818,
+      1826,
+      1833,
+      1841,
+      1848,
+      1856,
+      1863,
+      1871,
+      1878,
+      1886,
+      1894,
+      1901,
+      1909,
+      1916,
+      1924,
+      1931,
+      1939,
+      1946,
+      1954,
+      1961,
+      1969,
+      1976,
+      1984,
+      1991,
+      1999
+    ],
+    "sampling": "Uniform 7/8-slot jumps; only selected-slot action shown; intermediate actions omitted.",
+    "simulation_seconds_per_video_second": 0.75
+  },
+  "metric_definitions": {
+    "cumulative_throughput": "Completed bits from slots500..current inclusive / elapsed simulated postwarmup seconds; older arrivals completed after warmup are included.",
+    "pending_fraction": "Postservice queue / all cumulative arrivals through displayed slot, not packet loss.",
+    "queue": "Postservice Queue[slot]; next-slot arrivals excluded.",
+    "aggregation": "One seed trajectory, not a multi-seed mean."
+  },
+  "visual_semantics": {
+    "geometry_blockage_pathloss": "Actual pre-step fields. Source copies service-used Pathloss before position/pathloss update; displayed geometry follows that timing.",
+    "map_padding": "Display-only projection box y370..585 reserves 29px marker/beam clearance from the map label and caption; all post-warmup recorded positions checked.",
+    "solid_arrow": "Recorded AP attempt to relay or direct UE, not guaranteed delivery.",
+    "purple_dashed_arrow": "Actual active D2D link this slot from previous recorded action.",
+    "orange_dashed_arrow": "Recorded relay-to-target plan for next slot, not simultaneous delivery.",
+    "beam_wedge": "Actual codebook TX width; central direction is schematic, not recorded steering.",
+    "blockage": "Actual simulator blocked links only; no invented physical blockers.",
+    "nodes": "UE1..5 map source0..4; nearby markers shrink without changing actual positions."
+  },
+  "resource_use": "Stream one frame at a time; retain only first/mid/end source frames; handle one scene's three traces at a time. Encoder/decoder codec thread limits <=2; filter threads1.",
+  "visual_qa_status": "Completed agent inspection of all four scenes: source and decoded frames 0,100,199 (24 PNGs). The map-label contact found in V1 is resolved; methods, metrics, actions, queue bars, captions and encoded frames remain legible. Truly adjacent AP/UE markers can overlap because recorded coordinates are kept exact; action text and all five queue labels remain explicit.",
+  "visual_qa": {
+    "review_type": "Codex agent visual inspection; not a human-read or hardware-validation attestation",
+    "scenes_inspected": ["test12_load11_block12", "test13_load10_block10", "shift12_load115_block13", "shift13_load105_block11"],
+    "frame_indices_per_scene": [0, 100, 199],
+    "source_pngs_inspected": 12,
+    "decoded_pngs_inspected": 12,
+    "checks": ["Chinese titles and budget disclosures fit", "Metrics and queue labels remain legible", "Sampled actions and queue curves change across time", "Map markers remain clear of the label and lower caption", "Source and decoded key frames preserve the same visible content"],
+    "known_display_limitations": ["The AP and nearby UE4 overlap at the start of shift13; positions are not moved for display, and the explicit route/queue labels identify the user.", "The beam width is from the recorded codebook, but central steering direction is schematic.", "Only 200 uniformly sampled slots are shown; intermediate actions are omitted."]
+  },
+  "movies": [
+    {
+      "scenario": {
+        "name": "test12_load11_block12",
+        "topology": 12,
+        "load": 1.1,
+        "block_scale": 1.2,
+        "split": "test"
+      },
+      "video_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test12_load11_block12_seed20000.mp4",
+      "poster_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test12_load11_block12_seed20000_poster.png",
+      "poster_frame": 100,
+      "poster_selection": "Predetermined midpoint, no outcome-based choice.",
+      "source_runs": [
+        {
+          "method_id": "ppo360k_seed0",
+          "method": "ppo",
+          "offline_training_steps": 360000,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\trajectory_test12_load11_block12_seed20000.npz",
+          "original_trajectory_sha256": "7048633b0824cc8eb35ff26062fc58630671cbc56fed29479d71809bd5ac7381",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\result.json",
+          "result_sha256": "5c79b42a3914fbdf329ebc13e1cc7355d444d6ede9fa3dd5bbf4d830205483b8",
+          "metadata_sha256": "9e0f82d072712e9627b79a9d209e49e61c0adc5a4c7fabe9f598bd9dedc9724e",
+          "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed0_v1\\checkpoint_360000.pt",
+          "checkpoint_sha256": "23ecf035362924716481988750d8f59507cdba593ca53cce8712921a093da269",
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_ppo360k_seed0_test12_load11_block12_seed20000.npz",
+          "replay_trace_sha256": "6f73501f240d2f693f3bd61c2bcac6b8e2978ae76c611c5a6c384f0b2e65e63a",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9382293290666667,
+            "pending_fraction": 0.16669146106229277,
+            "mean_queue_packets_per_ue": 23096.231733333334
+          },
+          "reference_row": {
+            "method": "ppo",
+            "scenario": "test12_load11_block12",
+            "split": "test",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.22,
+              0.22,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              146963,
+              153914,
+              175805,
+              117273,
+              166936
+            ],
+            "total_arrivals_per_ue": [
+              237869,
+              237757,
+              238423,
+              237589,
+              238147
+            ],
+            "end_pending_packets_per_ue": [
+              44449,
+              39838,
+              14947,
+              86262,
+              12831
+            ],
+            "throughput_gbps": 0.9382293290666667,
+            "throughput_per_ue_gbps": [
+              0.18121517653333333,
+              0.18978622293333333,
+              0.21677928533333335,
+              0.1446054272,
+              0.20584321706666667
+            ],
+            "mean_queue_packets_per_ue": 23096.231733333334,
+            "final_queue_packets_per_ue": 39665.4,
+            "delivered_packet_mean_delay_ms": 1710.7027419170417,
+            "delivered_packet_p95_delay_ms": 5940,
+            "pending_packet_mean_age_ms": 2411.551730223318,
+            "end_pending_fraction_of_total_arrivals": 0.16669146106229277,
+            "delivered_packets_after_warmup": 760891,
+            "jain_throughput": 0.9828154997975148,
+            "jain_demand_normalized_service": 0.982815499797515,
+            "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "ppo360k_seed0",
+            "training_seed": 0,
+            "training_steps": 360000
+          }
+        },
+        {
+          "method_id": "validation_selected_beam",
+          "method": "maxweight_like",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\trajectory_test12_load11_block12_seed20000.npz",
+          "original_trajectory_sha256": "e2231a60d5c14b0b54b398aacd06091be8f310e65c2d64a053837680a2d5d9c3",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\result.json",
+          "result_sha256": "12797ce1d7d3d3375059610b6555251207c2b6db99e2f108dbef034f1e408479",
+          "metadata_sha256": "a32d9d1c86b651dfee28250dec2cd3e0f66ff05a63b775c7cf47156d973e293e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_validation_selected_beam_test12_load11_block12_seed20000.npz",
+          "replay_trace_sha256": "935e425fc5d774ef6cdd011fd885f6f977c43c4b4e462b85f7f8041afe6a3c9a",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.8660838314666667,
+            "pending_fraction": 0.25404253709703856,
+            "mean_queue_packets_per_ue": 42630.49453333333
+          },
+          "reference_row": {
+            "method": "maxweight_like",
+            "scenario": "test12_load11_block12",
+            "split": "test",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.22,
+              0.22,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              165750,
+              150524,
+              158852,
+              58766,
+              168490
+            ],
+            "total_arrivals_per_ue": [
+              237869,
+              237757,
+              238423,
+              237589,
+              238147
+            ],
+            "end_pending_packets_per_ue": [
+              15433,
+              33535,
+              79559,
+              163040,
+              10689
+            ],
+            "throughput_gbps": 0.8660838314666668,
+            "throughput_per_ue_gbps": [
+              0.2043808,
+              0.18560612693333334,
+              0.19587510613333334,
+              0.07246239573333334,
+              0.20775940266666665
+            ],
+            "mean_queue_packets_per_ue": 42630.49453333333,
+            "final_queue_packets_per_ue": 60451.2,
+            "delivered_packet_mean_delay_ms": 2818.520448986449,
+            "delivered_packet_p95_delay_ms": 8470,
+            "pending_packet_mean_age_ms": 4778.346203218463,
+            "end_pending_fraction_of_total_arrivals": 0.25404253709703856,
+            "delivered_packets_after_warmup": 702382,
+            "jain_throughput": 0.9203527982309659,
+            "jain_demand_normalized_service": 0.9203527982309659,
+            "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "validation_selected_beam",
+            "training_seed": null,
+            "training_steps": 0
+          }
+        },
+        {
+          "method_id": "feedback_mab",
+          "method": "feedback_mab_scheme4",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 2000,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\trajectory_test12_load11_block12_seed20000.npz",
+          "original_trajectory_sha256": "2b63c9b9129410e1a29ae97f461eaa183cdf1d5bb3ba2cfc5d15dc0f679c3561",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\result.json",
+          "result_sha256": "8374ec34b9c832a895179aeb8f04746c92630a9fc00d6d4e96de514e0408b9bd",
+          "metadata_sha256": "8793a8b37891625bc78e30e85e56b53a9778f9afa0d33847a74bb20c11c730b3",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_feedback_mab_test12_load11_block12_seed20000.npz",
+          "replay_trace_sha256": "a12990da316a37249ad1906456f3a18a8f5d79c67a6688d1e163763377ce6a24",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist",
+            "feedback_coefficient"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions",
+            "feedback_coefficient",
+            "codebook_posterior"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.8075217962666666,
+            "pending_fraction": 0.27685422156103834,
+            "mean_queue_packets_per_ue": 43455.9576
+          },
+          "reference_row": {
+            "method": "feedback_mab_scheme4",
+            "scenario": "test12_load11_block12",
+            "split": "test",
+            "environment_seed": 20000,
+            "policy_seed": 1019983,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.22,
+              0.22,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              161547,
+              141546,
+              104738,
+              79153,
+              167905
+            ],
+            "total_arrivals_per_ue": [
+              237869,
+              237757,
+              238423,
+              237589,
+              238147
+            ],
+            "end_pending_packets_per_ue": [
+              21342,
+              44490,
+              94881,
+              156845,
+              11839
+            ],
+            "throughput_gbps": 0.8075217962666668,
+            "throughput_per_ue_gbps": [
+              0.19919822080000002,
+              0.17453565440000002,
+              0.12914893653333334,
+              0.09760092586666666,
+              0.20703805866666666
+            ],
+            "mean_queue_packets_per_ue": 43455.9576,
+            "final_queue_packets_per_ue": 65879.4,
+            "delivered_packet_mean_delay_ms": 2900.071554110697,
+            "delivered_packet_p95_delay_ms": 12340.0,
+            "pending_packet_mean_age_ms": 4609.0070340652765,
+            "end_pending_fraction_of_total_arrivals": 0.27685422156103834,
+            "delivered_packets_after_warmup": 654889,
+            "jain_throughput": 0.9368270476980222,
+            "jain_demand_normalized_service": 0.9368270476980219,
+            "exogenous_trace_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "offline_training_steps": 0,
+            "online_adaptation_slots": 2000,
+            "source_scheme_id": 4,
+            "exact_author_reproduction": false,
+            "rng_restore_checks": 4000,
+            "tracking_suppressed_during_initial_exploration_slots": 75,
+            "feedback_coefficient_min": 0.0,
+            "feedback_coefficient_max": 0.996,
+            "codebook_use_counts_by_beam_and_user": [
+              [
+                22.0,
+                52.0,
+                77.0,
+                75.0,
+                12.0
+              ],
+              [
+                21.0,
+                43.0,
+                81.0,
+                82.0,
+                8.0
+              ],
+              [
+                31.0,
+                86.0,
+                80.0,
+                87.0,
+                13.0
+              ],
+              [
+                96.0,
+                80.0,
+                118.0,
+                90.0,
+                85.0
+              ],
+              [
+                47.0,
+                86.0,
+                142.0,
+                107.0,
+                13.0
+              ],
+              [
+                14.0,
+                59.0,
+                142.0,
+                143.0,
+                8.0
+              ]
+            ],
+            "valid_actions_checked": 2000,
+            "method_id": "feedback_mab",
+            "training_steps": 0,
+            "training_seed": null
+          }
+        }
+      ],
+      "paired_fields_exact": [
+        "positions_before",
+        "positions_after",
+        "blockage_before",
+        "blockage_after",
+        "arrivals",
+        "pathloss_used_before_step"
+      ],
+      "paired_exogenous_sha256": "e7f20ef391467a1fb1622ccbdf6566a940199fd47ec6758ec470a5afd9b6baf2",
+      "queue_scale_shared_across_methods_and_time": 170000,
+      "mean_queue_scale_shared_across_methods_and_time": 71261.20800000001,
+      "geometry_bounds_shared": [
+        [
+          -7.620387034652832,
+          -3.6412788515256294
+        ],
+        [
+          27.14581634813668,
+          38.83748081317945
+        ]
+      ],
+      "decode_audit": {
+        "all_frames_decoded": true,
+        "decoded_frames": 200,
+        "distinct_decoded_frame_hashes": 200,
+        "decoder_metadata": {
+          "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+          "codec": "h264",
+          "pix_fmt": "yuv420p(progressive)",
+          "fps": 10.0,
+          "source_size": [
+            1920,
+            1080
+          ],
+          "size": [
+            1920,
+            1080
+          ],
+          "rotate": 0,
+          "duration": 20.0
+        },
+        "minimum_frame_mean_brightness": 46.25485612782922,
+        "decoded_key_frame_checks": [
+          {
+            "frame": 0,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test12_load11_block12_seed20000_qa_decoded_000.png",
+            "mean_absolute_rgb_error": 1.3284263610839844
+          },
+          {
+            "frame": 100,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test12_load11_block12_seed20000_qa_decoded_100.png",
+            "mean_absolute_rgb_error": 1.3754676580429077
+          },
+          {
+            "frame": 199,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test12_load11_block12_seed20000_qa_decoded_199.png",
+            "mean_absolute_rgb_error": 1.4128341674804688
+          }
+        ],
+        "file_bytes": 2933712,
+        "video_sha256": "9aef3a8ee3f5efe8cadb73d57c4d890fc6d9da4f05a5fc5bf6e81ae38aabe3b5"
+      }
+    },
+    {
+      "scenario": {
+        "name": "test13_load10_block10",
+        "topology": 13,
+        "load": 1.0,
+        "block_scale": 1.0,
+        "split": "test"
+      },
+      "video_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test13_load10_block10_seed20000.mp4",
+      "poster_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test13_load10_block10_seed20000_poster.png",
+      "poster_frame": 100,
+      "poster_selection": "Predetermined midpoint, no outcome-based choice.",
+      "source_runs": [
+        {
+          "method_id": "ppo360k_seed0",
+          "method": "ppo",
+          "offline_training_steps": 360000,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\trajectory_test13_load10_block10_seed20000.npz",
+          "original_trajectory_sha256": "b5b7d2cdc5928d51da616b74c7d1312894fc66a0ca13c6877acca5e0be28555d",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\result.json",
+          "result_sha256": "5c79b42a3914fbdf329ebc13e1cc7355d444d6ede9fa3dd5bbf4d830205483b8",
+          "metadata_sha256": "9e0f82d072712e9627b79a9d209e49e61c0adc5a4c7fabe9f598bd9dedc9724e",
+          "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed0_v1\\checkpoint_360000.pt",
+          "checkpoint_sha256": "23ecf035362924716481988750d8f59507cdba593ca53cce8712921a093da269",
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_ppo360k_seed0_test13_load10_block10_seed20000.npz",
+          "replay_trace_sha256": "0692fff1c8ca700b661506ad41d0f1fc5634a7b1ef86ba276abd2a3c44129877",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9517412736,
+            "pending_fraction": 0.04585814819848933,
+            "mean_queue_packets_per_ue": 5309.342266666667
+          },
+          "reference_row": {
+            "method": "ppo",
+            "scenario": "test13_load10_block10",
+            "split": "test",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              160479,
+              155164,
+              151095,
+              164162,
+              140949
+            ],
+            "total_arrivals_per_ue": [
+              216772,
+              216750,
+              215395,
+              216838,
+              215754
+            ],
+            "end_pending_packets_per_ue": [
+              2466,
+              7225,
+              11166,
+              874,
+              27865
+            ],
+            "throughput_gbps": 0.9517412736,
+            "throughput_per_ue_gbps": [
+              0.1978813056,
+              0.19132755626666667,
+              0.186310208,
+              0.20242269013333333,
+              0.17379951359999998
+            ],
+            "mean_queue_packets_per_ue": 5309.342266666667,
+            "final_queue_packets_per_ue": 9919.2,
+            "delivered_packet_mean_delay_ms": 461.64641011389534,
+            "delivered_packet_p95_delay_ms": 2050,
+            "pending_packet_mean_age_ms": 889.9370917009436,
+            "end_pending_fraction_of_total_arrivals": 0.04585814819848933,
+            "delivered_packets_after_warmup": 771849,
+            "jain_throughput": 0.9972824203211234,
+            "jain_demand_normalized_service": 0.9972824203211236,
+            "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "ppo360k_seed0",
+            "training_seed": 0,
+            "training_steps": 360000
+          }
+        },
+        {
+          "method_id": "validation_selected_beam",
+          "method": "maxweight_like",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\trajectory_test13_load10_block10_seed20000.npz",
+          "original_trajectory_sha256": "e8f02dbf4ea796eddb8d152fc1d2002c52744aedd3bd291681141a55baf553ca",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\result.json",
+          "result_sha256": "12797ce1d7d3d3375059610b6555251207c2b6db99e2f108dbef034f1e408479",
+          "metadata_sha256": "a32d9d1c86b651dfee28250dec2cd3e0f66ff05a63b775c7cf47156d973e293e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_validation_selected_beam_test13_load10_block10_seed20000.npz",
+          "replay_trace_sha256": "676cd3a1dcd996b97e36bec890585a2a76a2726c2a1963927c7d9e3129e2050c",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9933572736,
+            "pending_fraction": 0.007811308088975681,
+            "mean_queue_packets_per_ue": 1401.3246666666666
+          },
+          "reference_row": {
+            "method": "maxweight_like",
+            "scenario": "test13_load10_block10",
+            "split": "test",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              162143,
+              162199,
+              161473,
+              162687,
+              157097
+            ],
+            "total_arrivals_per_ue": [
+              216772,
+              216750,
+              215395,
+              216838,
+              215754
+            ],
+            "end_pending_packets_per_ue": [
+              584,
+              1069,
+              651,
+              430,
+              5714
+            ],
+            "throughput_gbps": 0.9933572736,
+            "throughput_per_ue_gbps": [
+              0.19993312853333334,
+              0.2000021802666667,
+              0.19910697386666668,
+              0.2006039168,
+              0.19371107413333333
+            ],
+            "mean_queue_packets_per_ue": 1401.3246666666666,
+            "final_queue_packets_per_ue": 1689.6,
+            "delivered_packet_mean_delay_ms": 128.59200421053154,
+            "delivered_packet_p95_delay_ms": 600,
+            "pending_packet_mean_age_ms": 184.44720643939394,
+            "end_pending_fraction_of_total_arrivals": 0.007811308088975681,
+            "delivered_packets_after_warmup": 805599,
+            "jain_throughput": 0.9998384257397399,
+            "jain_demand_normalized_service": 0.9998384257397398,
+            "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "validation_selected_beam",
+            "training_seed": null,
+            "training_steps": 0
+          }
+        },
+        {
+          "method_id": "feedback_mab",
+          "method": "feedback_mab_scheme4",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 2000,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\trajectory_test13_load10_block10_seed20000.npz",
+          "original_trajectory_sha256": "8fd1837b440e8adb78260e5c2d7bd61fca02314e89f422370e5eb1e80192e553",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\result.json",
+          "result_sha256": "8374ec34b9c832a895179aeb8f04746c92630a9fc00d6d4e96de514e0408b9bd",
+          "metadata_sha256": "8793a8b37891625bc78e30e85e56b53a9778f9afa0d33847a74bb20c11c730b3",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_feedback_mab_test13_load10_block10_seed20000.npz",
+          "replay_trace_sha256": "92a0610aa2184bf74382d4633c62214574d847f82bff230d626694e73ba2b16d",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist",
+            "feedback_coefficient"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions",
+            "feedback_coefficient",
+            "codebook_posterior"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9979788074666667,
+            "pending_fraction": 0.005719785965720119,
+            "mean_queue_packets_per_ue": 1591.5525333333333
+          },
+          "reference_row": {
+            "method": "feedback_mab_scheme4",
+            "scenario": "test13_load10_block10",
+            "split": "test",
+            "environment_seed": 20000,
+            "policy_seed": 1019983,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.2,
+              0.2,
+              0.2,
+              0.2,
+              0.2
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              162474,
+              162668,
+              161474,
+              162921,
+              159810
+            ],
+            "total_arrivals_per_ue": [
+              216772,
+              216750,
+              215395,
+              216838,
+              215754
+            ],
+            "end_pending_packets_per_ue": [
+              253,
+              852,
+              540,
+              0,
+              4541
+            ],
+            "throughput_gbps": 0.9979788074666667,
+            "throughput_per_ue_gbps": [
+              0.20034127359999998,
+              0.20058048853333332,
+              0.19910820693333334,
+              0.2008924544,
+              0.197056384
+            ],
+            "mean_queue_packets_per_ue": 1591.5525333333333,
+            "final_queue_packets_per_ue": 1237.2,
+            "delivered_packet_mean_delay_ms": 146.76633137578813,
+            "delivered_packet_p95_delay_ms": 600.0,
+            "pending_packet_mean_age_ms": 155.88425476883282,
+            "end_pending_fraction_of_total_arrivals": 0.005719785965720119,
+            "delivered_packets_after_warmup": 809347,
+            "jain_throughput": 0.999950336723193,
+            "jain_demand_normalized_service": 0.9999503367231934,
+            "exogenous_trace_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "offline_training_steps": 0,
+            "online_adaptation_slots": 2000,
+            "source_scheme_id": 4,
+            "exact_author_reproduction": false,
+            "rng_restore_checks": 4000,
+            "tracking_suppressed_during_initial_exploration_slots": 75,
+            "feedback_coefficient_min": 0.0,
+            "feedback_coefficient_max": 0.996,
+            "codebook_use_counts_by_beam_and_user": [
+              [
+                22.0,
+                23.0,
+                10.0,
+                10.0,
+                90.0
+              ],
+              [
+                29.0,
+                24.0,
+                13.0,
+                18.0,
+                104.0
+              ],
+              [
+                42.0,
+                38.0,
+                21.0,
+                32.0,
+                119.0
+              ],
+              [
+                67.0,
+                43.0,
+                211.0,
+                280.0,
+                155.0
+              ],
+              [
+                80.0,
+                103.0,
+                37.0,
+                6.0,
+                202.0
+              ],
+              [
+                24.0,
+                31.0,
+                6.0,
+                5.0,
+                155.0
+              ]
+            ],
+            "valid_actions_checked": 2000,
+            "method_id": "feedback_mab",
+            "training_steps": 0,
+            "training_seed": null
+          }
+        }
+      ],
+      "paired_fields_exact": [
+        "positions_before",
+        "positions_after",
+        "blockage_before",
+        "blockage_after",
+        "arrivals",
+        "pathloss_used_before_step"
+      ],
+      "paired_exogenous_sha256": "c126634f2c88aa606c1a7c17b8f9e4d2aaad54cb5b7d57748b374a2531cbd409",
+      "queue_scale_shared_across_methods_and_time": 30000,
+      "mean_queue_scale_shared_across_methods_and_time": 11516.904,
+      "geometry_bounds_shared": [
+        [
+          -6.973604822397068,
+          -7.969352417736904
+        ],
+        [
+          31.147982211527875,
+          37.54137018111188
+        ]
+      ],
+      "decode_audit": {
+        "all_frames_decoded": true,
+        "decoded_frames": 200,
+        "distinct_decoded_frame_hashes": 200,
+        "decoder_metadata": {
+          "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+          "codec": "h264",
+          "pix_fmt": "yuv420p(progressive)",
+          "fps": 10.0,
+          "source_size": [
+            1920,
+            1080
+          ],
+          "size": [
+            1920,
+            1080
+          ],
+          "rotate": 0,
+          "duration": 20.0
+        },
+        "minimum_frame_mean_brightness": 45.9959408757716,
+        "decoded_key_frame_checks": [
+          {
+            "frame": 0,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test13_load10_block10_seed20000_qa_decoded_000.png",
+            "mean_absolute_rgb_error": 1.3110301494598389
+          },
+          {
+            "frame": 100,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test13_load10_block10_seed20000_qa_decoded_100.png",
+            "mean_absolute_rgb_error": 1.3396611213684082
+          },
+          {
+            "frame": 199,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_test13_load10_block10_seed20000_qa_decoded_199.png",
+            "mean_absolute_rgb_error": 1.3829830884933472
+          }
+        ],
+        "file_bytes": 2661782,
+        "video_sha256": "89d4cc022a6c9939276dc9a5d419a404a8b80727f5a87136df206e24f1c2c05b"
+      }
+    },
+    {
+      "scenario": {
+        "name": "shift12_load115_block13",
+        "topology": 12,
+        "load": 1.15,
+        "block_scale": 1.3,
+        "split": "locked_parameter_shift"
+      },
+      "video_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift12_load115_block13_seed20000.mp4",
+      "poster_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift12_load115_block13_seed20000_poster.png",
+      "poster_frame": 100,
+      "poster_selection": "Predetermined midpoint, no outcome-based choice.",
+      "source_runs": [
+        {
+          "method_id": "ppo360k_seed0",
+          "method": "ppo",
+          "offline_training_steps": 360000,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\trajectory_shift12_load115_block13_seed20000.npz",
+          "original_trajectory_sha256": "9ee3234b36385eb396f9843889cbfcda21466fb62f30a98285c2ece645516d77",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\result.json",
+          "result_sha256": "5c79b42a3914fbdf329ebc13e1cc7355d444d6ede9fa3dd5bbf4d830205483b8",
+          "metadata_sha256": "9e0f82d072712e9627b79a9d209e49e61c0adc5a4c7fabe9f598bd9dedc9724e",
+          "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed0_v1\\checkpoint_360000.pt",
+          "checkpoint_sha256": "23ecf035362924716481988750d8f59507cdba593ca53cce8712921a093da269",
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_ppo360k_seed0_shift12_load115_block13_seed20000.npz",
+          "replay_trace_sha256": "72a04a3321f9866c4c6df616f97a7b4ee1e467d277f0e4dcd5bf176cb3733d0a",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9778625578666666,
+            "pending_fraction": 0.14906187367692394,
+            "mean_queue_packets_per_ue": 22617.016266666666
+          },
+          "reference_row": {
+            "method": "ppo",
+            "scenario": "shift12_load115_block13",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.23,
+              0.23,
+              0.23,
+              0.23,
+              0.23
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              162623,
+              154570,
+              174342,
+              131090,
+              170408
+            ],
+            "total_arrivals_per_ue": [
+              248388,
+              249209,
+              248479,
+              248234,
+              248060
+            ],
+            "end_pending_packets_per_ue": [
+              34261,
+              42600,
+              20416,
+              71330,
+              16583
+            ],
+            "throughput_gbps": 0.9778625578666668,
+            "throughput_per_ue_gbps": [
+              0.20052500053333333,
+              0.19059511466666665,
+              0.21497530880000001,
+              0.16164270933333336,
+              0.21012442453333333
+            ],
+            "mean_queue_packets_per_ue": 22617.016266666666,
+            "final_queue_packets_per_ue": 37038.0,
+            "delivered_packet_mean_delay_ms": 1721.0279773981663,
+            "delivered_packet_p95_delay_ms": 4400,
+            "pending_packet_mean_age_ms": 1899.9314757816296,
+            "end_pending_fraction_of_total_arrivals": 0.14906187367692394,
+            "delivered_packets_after_warmup": 793033,
+            "jain_throughput": 0.99073334107215,
+            "jain_demand_normalized_service": 0.9907333410721499,
+            "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "ppo360k_seed0",
+            "training_seed": 0,
+            "training_steps": 360000
+          }
+        },
+        {
+          "method_id": "validation_selected_beam",
+          "method": "maxweight_like",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\trajectory_shift12_load115_block13_seed20000.npz",
+          "original_trajectory_sha256": "bad04431ea997fb2c5a122ac2864991ce2b2953dc3d95233adb6e5974ae44190",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\result.json",
+          "result_sha256": "12797ce1d7d3d3375059610b6555251207c2b6db99e2f108dbef034f1e408479",
+          "metadata_sha256": "a32d9d1c86b651dfee28250dec2cd3e0f66ff05a63b775c7cf47156d973e293e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_validation_selected_beam_shift12_load115_block13_seed20000.npz",
+          "replay_trace_sha256": "49f4f163b03bab6455b0fc4945799201d6748464e2d339b4352543a1fd399f62",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.7807876778666667,
+            "pending_fraction": 0.301889936170384,
+            "mean_queue_packets_per_ue": 44937.51586666667
+          },
+          "reference_row": {
+            "method": "maxweight_like",
+            "scenario": "shift12_load115_block13",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.23,
+              0.23,
+              0.23,
+              0.23,
+              0.23
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              177946,
+              153974,
+              105201,
+              19703,
+              176384
+            ],
+            "total_arrivals_per_ue": [
+              248388,
+              249209,
+              248479,
+              248234,
+              248060
+            ],
+            "end_pending_packets_per_ue": [
+              11213,
+              41119,
+              96106,
+              214692,
+              11929
+            ],
+            "throughput_gbps": 0.7807876778666667,
+            "throughput_per_ue_gbps": [
+              0.21941928106666667,
+              0.18986020693333333,
+              0.1297198464,
+              0.024295112533333336,
+              0.21749323093333334
+            ],
+            "mean_queue_packets_per_ue": 44937.51586666667,
+            "final_queue_packets_per_ue": 75011.8,
+            "delivered_packet_mean_delay_ms": 1843.594837715253,
+            "delivered_packet_p95_delay_ms": 6760,
+            "pending_packet_mean_age_ms": 6145.3797669166715,
+            "end_pending_fraction_of_total_arrivals": 0.301889936170384,
+            "delivered_packets_after_warmup": 633208,
+            "jain_throughput": 0.8187752323542642,
+            "jain_demand_normalized_service": 0.8187752323542643,
+            "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "validation_selected_beam",
+            "training_seed": null,
+            "training_steps": 0
+          }
+        },
+        {
+          "method_id": "feedback_mab",
+          "method": "feedback_mab_scheme4",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 2000,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\trajectory_shift12_load115_block13_seed20000.npz",
+          "original_trajectory_sha256": "0a0c8a4e2546b3a81e019369583f2839dbb028b59e368efc19c27f71a45f2919",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\result.json",
+          "result_sha256": "8374ec34b9c832a895179aeb8f04746c92630a9fc00d6d4e96de514e0408b9bd",
+          "metadata_sha256": "8793a8b37891625bc78e30e85e56b53a9778f9afa0d33847a74bb20c11c730b3",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_feedback_mab_shift12_load115_block13_seed20000.npz",
+          "replay_trace_sha256": "f2742fa5d0cfdcfc6756d40105ac70bd1e6054d634170a28c3d046b97b5a03c6",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist",
+            "feedback_coefficient"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions",
+            "feedback_coefficient",
+            "codebook_posterior"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.7301098709333332,
+            "pending_fraction": 0.3473095776620492,
+            "mean_queue_packets_per_ue": 52072.7868
+          },
+          "reference_row": {
+            "method": "feedback_mab_scheme4",
+            "scenario": "shift12_load115_block13",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "policy_seed": 1019983,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.23,
+              0.23,
+              0.23,
+              0.23,
+              0.23
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              172715,
+              141916,
+              79439,
+              24725,
+              173314
+            ],
+            "total_arrivals_per_ue": [
+              248388,
+              249209,
+              248479,
+              248234,
+              248060
+            ],
+            "end_pending_packets_per_ue": [
+              17931,
+              59104,
+              130732,
+              208235,
+              15485
+            ],
+            "throughput_gbps": 0.7301098709333333,
+            "throughput_per_ue_gbps": [
+              0.21296910933333335,
+              0.17499188906666666,
+              0.09795358293333334,
+              0.030487573333333334,
+              0.21370771626666668
+            ],
+            "mean_queue_packets_per_ue": 52072.7868,
+            "final_queue_packets_per_ue": 86297.4,
+            "delivered_packet_mean_delay_ms": 2408.050021195422,
+            "delivered_packet_p95_delay_ms": 8760.0,
+            "pending_packet_mean_age_ms": 6014.152964052219,
+            "end_pending_fraction_of_total_arrivals": 0.3473095776620492,
+            "delivered_packets_after_warmup": 592109,
+            "jain_throughput": 0.8066077968183164,
+            "jain_demand_normalized_service": 0.8066077968183162,
+            "exogenous_trace_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "offline_training_steps": 0,
+            "online_adaptation_slots": 2000,
+            "source_scheme_id": 4,
+            "exact_author_reproduction": false,
+            "rng_restore_checks": 4000,
+            "tracking_suppressed_during_initial_exploration_slots": 75,
+            "feedback_coefficient_min": 0.0,
+            "feedback_coefficient_max": 0.996,
+            "codebook_use_counts_by_beam_and_user": [
+              [
+                16.0,
+                67.0,
+                91.0,
+                53.0,
+                16.0
+              ],
+              [
+                22.0,
+                62.0,
+                89.0,
+                55.0,
+                20.0
+              ],
+              [
+                34.0,
+                77.0,
+                102.0,
+                58.0,
+                33.0
+              ],
+              [
+                83.0,
+                118.0,
+                131.0,
+                66.0,
+                33.0
+              ],
+              [
+                22.0,
+                108.0,
+                137.0,
+                78.0,
+                72.0
+              ],
+              [
+                24.0,
+                85.0,
+                161.0,
+                73.0,
+                14.0
+              ]
+            ],
+            "valid_actions_checked": 2000,
+            "method_id": "feedback_mab",
+            "training_steps": 0,
+            "training_seed": null
+          }
+        }
+      ],
+      "paired_fields_exact": [
+        "positions_before",
+        "positions_after",
+        "blockage_before",
+        "blockage_after",
+        "arrivals",
+        "pathloss_used_before_step"
+      ],
+      "paired_exogenous_sha256": "47d27c2b312de43a5e11cebfa89e53ae0b89789d2d4f0f2f517258bd4d7cab51",
+      "queue_scale_shared_across_methods_and_time": 220000,
+      "mean_queue_scale_shared_across_methods_and_time": 93201.192,
+      "geometry_bounds_shared": [
+        [
+          -6.331600225431405,
+          -7.973468581145213
+        ],
+        [
+          24.357641932972566,
+          41.76730340737697
+        ]
+      ],
+      "decode_audit": {
+        "all_frames_decoded": true,
+        "decoded_frames": 200,
+        "distinct_decoded_frame_hashes": 200,
+        "decoder_metadata": {
+          "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+          "codec": "h264",
+          "pix_fmt": "yuv420p(progressive)",
+          "fps": 10.0,
+          "source_size": [
+            1920,
+            1080
+          ],
+          "size": [
+            1920,
+            1080
+          ],
+          "rotate": 0,
+          "duration": 20.0
+        },
+        "minimum_frame_mean_brightness": 46.16171891075103,
+        "decoded_key_frame_checks": [
+          {
+            "frame": 0,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift12_load115_block13_seed20000_qa_decoded_000.png",
+            "mean_absolute_rgb_error": 1.3348108530044556
+          },
+          {
+            "frame": 100,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift12_load115_block13_seed20000_qa_decoded_100.png",
+            "mean_absolute_rgb_error": 1.3737356662750244
+          },
+          {
+            "frame": 199,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift12_load115_block13_seed20000_qa_decoded_199.png",
+            "mean_absolute_rgb_error": 1.4132064580917358
+          }
+        ],
+        "file_bytes": 2967152,
+        "video_sha256": "3096ba52dc54cc17286758fc31086f48a206a41b9134679f8e3c119ab7cc6383"
+      }
+    },
+    {
+      "scenario": {
+        "name": "shift13_load105_block11",
+        "topology": 13,
+        "load": 1.05,
+        "block_scale": 1.1,
+        "split": "locked_parameter_shift"
+      },
+      "video_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift13_load105_block11_seed20000.mp4",
+      "poster_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift13_load105_block11_seed20000_poster.png",
+      "poster_frame": 100,
+      "poster_selection": "Predetermined midpoint, no outcome-based choice.",
+      "source_runs": [
+        {
+          "method_id": "ppo360k_seed0",
+          "method": "ppo",
+          "offline_training_steps": 360000,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\trajectory_shift13_load105_block11_seed20000.npz",
+          "original_trajectory_sha256": "1c405cc4ef7c8b5e347057f77746bb86b7945b7fef90496013c0d779fec4da27",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\ppo360k_seed0\\result.json",
+          "result_sha256": "5c79b42a3914fbdf329ebc13e1cc7355d444d6ede9fa3dd5bbf4d830205483b8",
+          "metadata_sha256": "9e0f82d072712e9627b79a9d209e49e61c0adc5a4c7fabe9f598bd9dedc9724e",
+          "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed0_v1\\checkpoint_360000.pt",
+          "checkpoint_sha256": "23ecf035362924716481988750d8f59507cdba593ca53cce8712921a093da269",
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_ppo360k_seed0_shift13_load105_block11_seed20000.npz",
+          "replay_trace_sha256": "1e13faa19ffc7b202f3f037c73e9ded6599506be1cb7ec022b7e9a7f97c9d060",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 0.9864779946666666,
+            "pending_fraction": 0.04862489966625829,
+            "mean_queue_packets_per_ue": 3870.228666666667
+          },
+          "reference_row": {
+            "method": "ppo",
+            "scenario": "shift13_load105_block11",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.21,
+              0.21,
+              0.21,
+              0.21,
+              0.21
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              164049,
+              163812,
+              157553,
+              169187,
+              145419
+            ],
+            "total_arrivals_per_ue": [
+              226751,
+              226835,
+              227615,
+              227671,
+              227336
+            ],
+            "end_pending_packets_per_ue": [
+              6906,
+              6880,
+              14447,
+              1503,
+              25512
+            ],
+            "throughput_gbps": 0.9864779946666666,
+            "throughput_per_ue_gbps": [
+              0.2022833536,
+              0.2019911168,
+              0.19427335253333333,
+              0.20861885013333334,
+              0.1793113216
+            ],
+            "mean_queue_packets_per_ue": 3870.228666666667,
+            "final_queue_packets_per_ue": 11049.6,
+            "delivered_packet_mean_delay_ms": 310.2352316192095,
+            "delivered_packet_p95_delay_ms": 1260,
+            "pending_packet_mean_age_ms": 753.4091731827397,
+            "end_pending_fraction_of_total_arrivals": 0.04862489966625829,
+            "delivered_packets_after_warmup": 800020,
+            "jain_throughput": 0.9973981675923711,
+            "jain_demand_normalized_service": 0.9973981675923713,
+            "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "ppo360k_seed0",
+            "training_seed": 0,
+            "training_steps": 360000
+          }
+        },
+        {
+          "method_id": "validation_selected_beam",
+          "method": "maxweight_like",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 0,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\trajectory_shift13_load105_block11_seed20000.npz",
+          "original_trajectory_sha256": "9ec09cc055e5ec85e3a23c6948bc08521924c3dfaf7046e368104e1b74a4bb55",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\validation_selected_beam\\result.json",
+          "result_sha256": "12797ce1d7d3d3375059610b6555251207c2b6db99e2f108dbef034f1e408479",
+          "metadata_sha256": "a32d9d1c86b651dfee28250dec2cd3e0f66ff05a63b775c7cf47156d973e293e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_validation_selected_beam_shift13_load105_block11_seed20000.npz",
+          "replay_trace_sha256": "126c93dbe340ef959a703ba9681b24ca4a807096b401e3f4a1ea0cc181b25a06",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 1.0449512490666668,
+            "pending_fraction": 0.006762846239420951,
+            "mean_queue_packets_per_ue": 872.634
+          },
+          "reference_row": {
+            "method": "maxweight_like",
+            "scenario": "shift13_load105_block11",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.21,
+              0.21,
+              0.21,
+              0.21,
+              0.21
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              169595,
+              170085,
+              170200,
+              170697,
+              166864
+            ],
+            "total_arrivals_per_ue": [
+              226751,
+              226835,
+              227615,
+              227671,
+              227336
+            ],
+            "end_pending_packets_per_ue": [
+              724,
+              617,
+              825,
+              323,
+              5195
+            ],
+            "throughput_gbps": 1.0449512490666666,
+            "throughput_per_ue_gbps": [
+              0.20912194133333334,
+              0.209726144,
+              0.20986794666666667,
+              0.21048078080000002,
+              0.20575443626666667
+            ],
+            "mean_queue_packets_per_ue": 872.634,
+            "final_queue_packets_per_ue": 1536.8,
+            "delivered_packet_mean_delay_ms": 75.88181360118286,
+            "delivered_packet_p95_delay_ms": 310,
+            "pending_packet_mean_age_ms": 158.2496095783446,
+            "end_pending_fraction_of_total_arrivals": 0.006762846239420951,
+            "delivered_packets_after_warmup": 847441,
+            "jain_throughput": 0.9999357990216812,
+            "jain_demand_normalized_service": 0.9999357990216815,
+            "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "method_id": "validation_selected_beam",
+            "training_seed": null,
+            "training_steps": 0
+          }
+        },
+        {
+          "method_id": "feedback_mab",
+          "method": "feedback_mab_scheme4",
+          "offline_training_steps": 0,
+          "online_adaptation_slots": 2000,
+          "original_trajectory": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\trajectory_shift13_load105_block11_seed20000.npz",
+          "original_trajectory_sha256": "ce9aab526c96431c2128e267a85ae29a89db1da4ac9d9bd9a6252d76b0f4b173",
+          "result_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\feedback_mab\\result.json",
+          "result_sha256": "8374ec34b9c832a895179aeb8f04746c92630a9fc00d6d4e96de514e0408b9bd",
+          "metadata_sha256": "8793a8b37891625bc78e30e85e56b53a9778f9afa0d33847a74bb20c11c730b3",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "replay_trace": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\replay_feedback_mab_shift13_load105_block11_seed20000.npz",
+          "replay_trace_sha256": "a4bff86bdc82784a8acd2efd7adc6b802ae65b663747d9b04d6275f78b4a5182",
+          "replay_mode": "Recorded action replay only; no checkpoint loaded, policy sampled, posterior fitted or new evaluation generated.",
+          "independently_rederived_arrays": [
+            "queues",
+            "departure",
+            "arrivals",
+            "delivered_hist",
+            "pending_hist",
+            "feedback_coefficient"
+          ],
+          "all_original_arrays_preserved_bit_exact": [
+            "queues",
+            "delivered_hist",
+            "pending_hist",
+            "departure",
+            "arrivals",
+            "actions",
+            "feedback_coefficient",
+            "codebook_posterior"
+          ],
+          "mab_posterior_caveat": "Final codebook_posterior, when present, is preserved bit-exactly from its audited source NPZ; it is not recomputed or used in the visualization.",
+          "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+          "every_slot_feasible_and_conserved": true,
+          "final_metric_checks": {
+            "throughput_gbps": 1.0447638229333334,
+            "pending_fraction": 0.006353590187712109,
+            "mean_queue_packets_per_ue": 1128.9732
+          },
+          "reference_row": {
+            "method": "feedback_mab_scheme4",
+            "scenario": "shift13_load105_block11",
+            "split": "locked_parameter_shift",
+            "environment_seed": 20000,
+            "policy_seed": 1019983,
+            "slots": 2000,
+            "warmup": 500,
+            "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+            "packet_size_bits": 18496.0,
+            "slot_duration_seconds": 0.01,
+            "measured_duration_seconds": 15.0,
+            "demand_per_ue_gbps": [
+              0.21,
+              0.21,
+              0.21,
+              0.21,
+              0.21
+            ],
+            "delivered_packets_per_ue_after_warmup": [
+              169647,
+              168823,
+              170653,
+              170467,
+              167699
+            ],
+            "total_arrivals_per_ue": [
+              226751,
+              226835,
+              227615,
+              227671,
+              227336
+            ],
+            "end_pending_packets_per_ue": [
+              1005,
+              1519,
+              561,
+              223,
+              3911
+            ],
+            "throughput_gbps": 1.0447638229333334,
+            "throughput_per_ue_gbps": [
+              0.20918606080000002,
+              0.20817001386666667,
+              0.21042652586666669,
+              0.21019717546666666,
+              0.20678404693333333
+            ],
+            "mean_queue_packets_per_ue": 1128.9732,
+            "final_queue_packets_per_ue": 1443.8,
+            "delivered_packet_mean_delay_ms": 99.01568414083034,
+            "delivered_packet_p95_delay_ms": 380.0,
+            "pending_packet_mean_age_ms": 109.63568361268874,
+            "end_pending_fraction_of_total_arrivals": 0.006353590187712109,
+            "delivered_packets_after_warmup": 847289,
+            "jain_throughput": 0.9999583584408219,
+            "jain_demand_normalized_service": 0.9999583584408218,
+            "exogenous_trace_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+            "delivered_delay_is_conditioned_on_delivery": true,
+            "offline_training_steps": 0,
+            "online_adaptation_slots": 2000,
+            "source_scheme_id": 4,
+            "exact_author_reproduction": false,
+            "rng_restore_checks": 4000,
+            "tracking_suppressed_during_initial_exploration_slots": 75,
+            "feedback_coefficient_min": 0.0,
+            "feedback_coefficient_max": 0.996,
+            "codebook_use_counts_by_beam_and_user": [
+              [
+                26.0,
+                31.0,
+                13.0,
+                5.0,
+                64.0
+              ],
+              [
+                29.0,
+                33.0,
+                18.0,
+                6.0,
+                78.0
+              ],
+              [
+                58.0,
+                51.0,
+                12.0,
+                10.0,
+                96.0
+              ],
+              [
+                82.0,
+                72.0,
+                252.0,
+                431.0,
+                134.0
+              ],
+              [
+                44.0,
+                65.0,
+                19.0,
+                7.0,
+                180.0
+              ],
+              [
+                19.0,
+                26.0,
+                7.0,
+                6.0,
+                126.0
+              ]
+            ],
+            "valid_actions_checked": 2000,
+            "method_id": "feedback_mab",
+            "training_steps": 0,
+            "training_seed": null
+          }
+        }
+      ],
+      "paired_fields_exact": [
+        "positions_before",
+        "positions_after",
+        "blockage_before",
+        "blockage_after",
+        "arrivals",
+        "pathloss_used_before_step"
+      ],
+      "paired_exogenous_sha256": "a92c2021a6cd8efae4fb515393b45c2e5cbc53a6683a23426f35c12200f23521",
+      "queue_scale_shared_across_methods_and_time": 30000,
+      "mean_queue_scale_shared_across_methods_and_time": 12142.224,
+      "geometry_bounds_shared": [
+        [
+          -4.935517499741446,
+          -7.104378579937148
+        ],
+        [
+          32.60172230374194,
+          37.46586983116989
+        ]
+      ],
+      "decode_audit": {
+        "all_frames_decoded": true,
+        "decoded_frames": 200,
+        "distinct_decoded_frame_hashes": 200,
+        "decoder_metadata": {
+          "ffmpeg_version": "7.1-essentials_build-www.gyan.dev built with gcc 14.2.0 (Rev1, Built by MSYS2 project)",
+          "codec": "h264",
+          "pix_fmt": "yuv420p(progressive)",
+          "fps": 10.0,
+          "source_size": [
+            1920,
+            1080
+          ],
+          "size": [
+            1920,
+            1080
+          ],
+          "rotate": 0,
+          "duration": 20.0
+        },
+        "minimum_frame_mean_brightness": 45.77032455632716,
+        "decoded_key_frame_checks": [
+          {
+            "frame": 0,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift13_load105_block11_seed20000_qa_decoded_000.png",
+            "mean_absolute_rgb_error": 1.3091533184051514
+          },
+          {
+            "frame": 100,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift13_load105_block11_seed20000_qa_decoded_100.png",
+            "mean_absolute_rgb_error": 1.337642788887024
+          },
+          {
+            "frame": 199,
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\rl_locked_shift13_load105_block11_seed20000_qa_decoded_199.png",
+            "mean_absolute_rgb_error": 1.3836506605148315
+          }
+        ],
+        "file_bytes": 2640367,
+        "video_sha256": "d8c2350578f81051dc4c4b5a6c80ba837862a9fbef515863964ef13522da3745"
+      }
+    }
+  ],
+  "total_seconds": 127.99056369997561,
+  "all_800_video_frames_decoded": true,
+  "ffmpeg_executable": "D:\\vs code\\智能通信网络大作业\\experiments\\.venv\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_version": "7.1-essentials_build-www.gyan.dev"
+}

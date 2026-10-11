@@ -1,0 +1,51 @@
+{
+  "status": "frozen_before_single_model_test_inference",
+  "frozen_utc": "2026-10-11T12:53:23Z",
+  "protocol_sha256": "032e74506559b99470c15161d36aff0f4fe8cc4ed9892cb758abdd892ad6e119",
+  "evaluation_plan_sha256": "17585204239f8287e0a703e9a6079a1410e2349633cad900289a4ffc07a53fed",
+  "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\weights\\best.pt",
+  "checkpoint_sha256": "9e99b5c1c9cb5ca0f11c7f6e799c533deeb4e70000a2b2b03ea49dc76debfc56",
+  "training_summary_sha256": "297068f14c0d8017f5258fcfaeec2f9cf5f9d19b68d0f63ddc3a32914d8fc244",
+  "best_validation_epoch": 43,
+  "best_validation_mAP50_95": 0.38789,
+  "threshold_f1": 0.2,
+  "threshold_fpr10": 0.09,
+  "calibration_selected_f1": {
+    "threshold": 0.2,
+    "frames": 480,
+    "TP": 239,
+    "FP": 0,
+    "FN": 1,
+    "TN": 240,
+    "precision": 1.0,
+    "recall": 0.9958333333333333,
+    "f1": 0.9979123173277662,
+    "negative_frame_FPR": 0.0
+  },
+  "calibration_selected_fpr10": {
+    "threshold": 0.09,
+    "frames": 480,
+    "TP": 240,
+    "FP": 9,
+    "FN": 0,
+    "TN": 231,
+    "precision": 0.963855421686747,
+    "recall": 1.0,
+    "f1": 0.9815950920245399,
+    "negative_frame_FPR": 0.0375
+  },
+  "calibration_fixed_025": {
+    "threshold": 0.25,
+    "frames": 480,
+    "TP": 238,
+    "FP": 0,
+    "FN": 2,
+    "TN": 240,
+    "precision": 1.0,
+    "recall": 0.9916666666666667,
+    "f1": 0.99581589958159,
+    "negative_frame_FPR": 0.0
+  },
+  "test_inference_started": false,
+  "scope_statement": "Only YOLO11n seed0 was trained/evaluated; no YOLO11s or additional seeds."
+}

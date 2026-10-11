@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智能通信网络 · Baseline 视频</title>
+  <style>
+    :root { color-scheme: light; --ink:#192b34; --muted:#586b73; --accent:#146b70; --line:#d7e1e2; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:#f3f6f5; color:var(--ink); font:16px/1.7 "Microsoft YaHei", system-ui, sans-serif; }
+    main { max-width:1220px; margin:0 auto; padding:42px 28px 64px; }
+    .eyebrow { margin:0 0 12px; font-size:13px; color:var(--accent); letter-spacing:2px; }
+    h1 { margin:0; font-size:clamp(28px, 4vw, 42px); line-height:1.3; font-weight:650; }
+    .intro { max-width:900px; color:var(--muted); margin:18px 0 20px; }
+    nav { display:flex; flex-wrap:wrap; gap:10px; padding:0 0 24px; }
+    nav a { padding:7px 18px; border:1px solid var(--line); border-radius:24px; text-decoration:none; background:white; color:var(--ink); }
+    section { margin:20px 0 34px; background:white; border:1px solid var(--line); border-radius:16px; overflow:hidden; scroll-margin-top:20px; }
+    .section-head { padding:24px 26px 16px; }
+    .label { color:var(--accent); font-size:13px; margin:0 0 4px; }
+    h2 { margin:0 0 8px; font-size:25px; line-height:1.4; }
+    .summary { margin:0; color:var(--muted); }
+    .stats { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0; }
+    .stat { border-radius:5px; background:#edf4f3; padding:4px 10px; color:#2a5359; font-size:13px; }
+    .clip { margin:0; padding:12px 26px 24px; }
+    h3 { margin:4px 0 10px; font-size:18px; font-weight:600; }
+    video { width:100%; display:block; aspect-ratio:auto; background:#111c25; border-radius:8px; max-height:740px; }
+    .caption { color:var(--muted); font-size:14px; margin:10px 0 0; }
+    .links { display:flex; flex-wrap:wrap; gap:18px; margin-top:8px; font-size:14px; }
+    a { color:var(--accent); }
+    details { border-top:1px solid var(--line); margin:0 26px 20px; padding-top:10px; font-size:14px; color:var(--muted); }
+    summary { cursor:pointer; color:var(--ink); }
+    .boundary { color:var(--muted); max-width:930px; font-size:14px; }
+    .error { background:#fff2e6; padding:16px; border-radius:8px; }
+    footer { border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
+    @media(max-width:640px) { main {padding:24px 12px;} .section-head, .clip {padding-left:14px;padding-right:14px;} details {margin-left:14px;margin-right:14px;} }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">《智能通信网络》课程大作业 · 本机实验</p>
+  <h1>Baseline 视频：直接看模型效果</h1>
+  <p class="intro">三条正在比较的路线：无人机检测、60 GHz 调度、功放建模与预失真。视频来自已保存模型或仿真轨迹；包含失败现象。动画用于解释行为，完整指标见实验记录。</p>
+  <nav aria-label="方向导航"><a href="#vision">无人机检测</a><a href="#rl">60 GHz 调度</a><a href="#pa">PA / DPD</a></nav>
+  <div id="gallery" aria-live="polite">正在读取视频目录…</div>
+  <p class="boundary">这些是 baseline 演示。训练预算增加、视频看起来更平滑或单个成功片段，都不能直接作为创新收益。YOLO 是当前小规模视频数据的模型；RL 是标准 PPO 配方；DPD 补偿输出来自功放 surrogate 的预测。</p>
+  <footer id="footer">本地文件保存在 experiments/runs/baseline_videos_v1/，原始训练结果独立保留。</footer>
+</main>
+<script>
+  const element = (tag, text, cls) => {
+    const el = document.createElement(tag);
+    if (text !== undefined) el.textContent = text;
+    if (cls) el.className = cls;
+    return el;
+  };
+  const link = (text, href) => {
+    const el = element('a', text); el.href = href; return el;
+  };
+  async function render() {
+    const response = await fetch('gallery.json');
+    if (!response.ok) throw new Error('视频目录尚未生成');
+    const catalog = await response.json();
+    const gallery = document.getElementById('gallery'); gallery.replaceChildren();
+    for (const item of catalog.directions) {
+      const section = element('section'); section.id = item.id;
+      const head = element('div', undefined, 'section-head');
+      head.append(element('p', item.label, 'label'), element('h2', item.title), element('p', item.summary, 'summary'));
+      const stats = element('div', undefined, 'stats');
+      for (const stat of item.stats) stats.append(element('span', stat, 'stat'));
+      head.append(stats); section.append(head);
+      for (const clip of item.clips) {
+        const body = element('div', undefined, 'clip'); body.append(element('h3', clip.title));
+        const video = element('video'); video.controls = true; video.preload = 'metadata';
+        video.playsInline = true; video.muted = true;
+        if (clip.poster) video.poster = clip.poster;
+        const source = element('source'); source.src = clip.file; source.type = 'video/mp4';
+        video.append(source, element('p', '浏览器无法播放时，请下载 MP4。'));
+        body.append(video, element('p', clip.caption, 'caption'));
+        const links = element('div', undefined, 'links');
+        links.append(link('打开 / 下载 MP4', clip.file));
+        if (clip.manifest) links.append(link('来源与播放核验', clip.manifest));
+        body.append(links); section.append(body);
+      }
+      const details = element('details'); details.append(element('summary', '数据范围与评价边界'));
+      for (const text of item.boundaries) details.append(element('p', text));
+      section.append(details); gallery.append(section);
+    }
+    document.getElementById('footer').textContent = `${catalog.created_date} · ${catalog.verification_summary} · 文件保存在 experiments/runs/baseline_videos_v1/`;
+  }
+  render().catch(error => {
+    const gallery = document.getElementById('gallery'); gallery.className = 'error';
+    gallery.textContent = `${error.message}。请通过本地预览服务打开此页面，或直接播放各方向目录内的 MP4。`;
+  });
+</script>
+</body>
+</html>

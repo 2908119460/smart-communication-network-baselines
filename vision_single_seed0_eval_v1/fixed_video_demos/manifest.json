@@ -1,0 +1,191 @@
+{
+  "status": "completed",
+  "gpu_used": false,
+  "evaluation_summary": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\summary.json",
+  "frozen_choices_sha256": "db40637dec6c96b0c040c74bc247e49ec7a3347b8a49e8d167dc147f4e3a18fc",
+  "evaluation_plan_sha256": "17585204239f8287e0a703e9a6079a1410e2349633cad900289a4ffc07a53fed",
+  "continuous_test_scores_sha256": "d505e5d0e2ba18ee6feb76954ed77562e100fae11171a80326a569f374ba51c1",
+  "videos": [
+    {
+      "sequence": "V_DRONE_005",
+      "category": "DRONE",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\V_DRONE_005_yolo11n_seed0.mp4",
+      "source_sha256": "77c872f4799892a17e6b31e30622e0728840a7f7b95111c3096368369dcda317",
+      "annotation_sha256": "ce15d5ed1517c79f8f1c0e5c1b48d8752dd559c638a18b12e61892f1bd4b322b",
+      "frames_rendered": 305,
+      "GT_positive_frames": 305,
+      "displayed_prediction_frames": 302,
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 305,
+        "expected_frames": 305,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          720
+        ],
+        "duration_seconds": 10.166666666666666,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "2c1454d593e6813e4682fc2f106f9d170d5e574aadbe2a8c58e4469579498c49",
+        "bytes": 617725,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_DRONE_005_yolo11n_seed0_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_DRONE_005_yolo11n_seed0_middle.png",
+            "output_frame": 152,
+            "time_seconds": 5.066666666666666
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_DRONE_005_yolo11n_seed0_last.png",
+            "output_frame": 304,
+            "time_seconds": 10.133333333333333
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_BIRD_004",
+      "category": "BIRD",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\V_BIRD_004_yolo11n_seed0.mp4",
+      "source_sha256": "8e34b28eb0ea0fc31a9b01c0045fb99e4f8e70298a626de284204608ce414d8e",
+      "annotation_sha256": "7df8517e6a3edd24cb3060df16edbe64fa0892c0a0b95b66b56e3a4cbcaa0d9d",
+      "frames_rendered": 315,
+      "GT_positive_frames": 0,
+      "displayed_prediction_frames": 0,
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 315,
+        "expected_frames": 315,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          720
+        ],
+        "duration_seconds": 10.5,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "11455a3db87deab165a70afd1b7fd69ced3880e1cc9a39aab3f65f1484981ce9",
+        "bytes": 1141322,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_BIRD_004_yolo11n_seed0_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_BIRD_004_yolo11n_seed0_middle.png",
+            "output_frame": 157,
+            "time_seconds": 5.233333333333333
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_BIRD_004_yolo11n_seed0_last.png",
+            "output_frame": 314,
+            "time_seconds": 10.466666666666667
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_AIRPLANE_007",
+      "category": "AIRPLANE",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\V_AIRPLANE_007_yolo11n_seed0.mp4",
+      "source_sha256": "1eeb5cc4d5511e1e79ecfc8f2b582a69753f63654494cc79f1dec432232cee7a",
+      "annotation_sha256": "5cacd8162a7269683109be2058ecd67490957d2b430a1a4da24058ebb8ad879d",
+      "frames_rendered": 300,
+      "GT_positive_frames": 0,
+      "displayed_prediction_frames": 0,
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 300,
+        "expected_frames": 300,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          720
+        ],
+        "duration_seconds": 10.0,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "43010e6ba09bccbe95c7ed264a5f2ecdfe2527d8aaee44ce41c124edf0d00ab4",
+        "bytes": 357118,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_AIRPLANE_007_yolo11n_seed0_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_AIRPLANE_007_yolo11n_seed0_middle.png",
+            "output_frame": 150,
+            "time_seconds": 5.0
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_AIRPLANE_007_yolo11n_seed0_last.png",
+            "output_frame": 299,
+            "time_seconds": 9.966666666666667
+          }
+        }
+      }
+    },
+    {
+      "sequence": "V_HELICOPTER_008",
+      "category": "HELICOPTER",
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\V_HELICOPTER_008_yolo11n_seed0.mp4",
+      "source_sha256": "43fb8f8241de36c6227b0c0db2eaf95a513c43036e77f95ba1d0e58d2a139311",
+      "annotation_sha256": "e2bba0c528b1be99c067857102994810ae85c4f529c575ad29b2155e3e83db45",
+      "frames_rendered": 304,
+      "GT_positive_frames": 0,
+      "displayed_prediction_frames": 123,
+      "validation": {
+        "status": "passed",
+        "opencv_decoded_every_frame": true,
+        "decoded_frames": 304,
+        "expected_frames": 304,
+        "fps": 30.0,
+        "width_height": [
+          1280,
+          720
+        ],
+        "duration_seconds": 10.133333333333333,
+        "ffmpeg_full_decode_exit_code": 0,
+        "codec": "H264",
+        "pixel_format": "yuv420p",
+        "faststart": true,
+        "mp4_sha256": "8940664ffbbcd3adbb93ef40d70737ff4303aabc6ec700d09621ffacdf111908",
+        "bytes": 1921508,
+        "snapshots": {
+          "cover": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_HELICOPTER_008_yolo11n_seed0_cover.png",
+            "output_frame": 0,
+            "time_seconds": 0.0
+          },
+          "middle": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_HELICOPTER_008_yolo11n_seed0_middle.png",
+            "output_frame": 152,
+            "time_seconds": 5.066666666666666
+          },
+          "last": {
+            "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_seed0_eval_v1\\fixed_video_demos\\qa\\V_HELICOPTER_008_yolo11n_seed0_last.png",
+            "output_frame": 303,
+            "time_seconds": 10.1
+          }
+        }
+      }
+    }
+  ],
+  "visual_qa": "pending"
+}

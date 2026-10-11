@@ -1,0 +1,598 @@
+{
+  "status": "completed",
+  "updated_utc": "2026-10-11T10:22:35.214018+00:00",
+  "baseline_only": true,
+  "novel_contribution_demonstrated": false,
+  "statement": "完整有限时域基线与强对照完成；三seed PPO表现不支持所有场景稳定胜出或创新方法结论。",
+  "evaluation_rows": 800,
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "policy_parameters": 98613,
+  "unique_training_steps_per_final_policy": 360000,
+  "optimizer_updates_per_final_policy": 5636,
+  "scenario_results": [
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "ppo30k",
+      "label": "PPO 30k（三训练种子，预算诊断）",
+      "throughput_gbps": 0.8955192495644444,
+      "mean_queue_packets_per_ue": 29677.698866666662,
+      "pending_percent": 19.42265951837212,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.89778085824,
+          "mean_queue_packets_per_ue": 28923.58626666667,
+          "pending_percent": 19.136517696351554
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.8727049062399999,
+          "mean_queue_packets_per_ue": 32203.494879999995,
+          "pending_percent": 21.184652334440777
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.9160719842133334,
+          "mean_queue_packets_per_ue": 27906.015453333333,
+          "pending_percent": 17.946808524324034
+        }
+      ]
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "ppo360k",
+      "label": "PPO 360k（三训练种子）",
+      "throughput_gbps": 0.9146817015466668,
+      "mean_queue_packets_per_ue": 28195.20292666667,
+      "pending_percent": 18.233393415507578,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.9790485830400002,
+          "mean_queue_packets_per_ue": 19946.480526666663,
+          "pending_percent": 12.677244094287033
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.8867983650133333,
+          "mean_queue_packets_per_ue": 31687.784613333333,
+          "pending_percent": 20.717563687445086
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.8781981565866668,
+          "mean_queue_packets_per_ue": 32951.34364000001,
+          "pending_percent": 21.305372464790615
+        }
+      ]
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "fixed_beam2",
+      "label": "固定码本2启发式",
+      "throughput_gbps": 0.7332982114133333,
+      "mean_queue_packets_per_ue": 52478.220160000004,
+      "pending_percent": 34.5080476377347,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.7332982114133333,
+          "mean_queue_packets_per_ue": 52478.220160000004,
+          "pending_percent": 34.5080476377347
+        }
+      ]
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "validation_selected_beam",
+      "label": "验证选码本3启发式",
+      "throughput_gbps": 0.7575966532266666,
+      "mean_queue_packets_per_ue": 48767.34351333333,
+      "pending_percent": 32.01200559143461,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.7575966532266666,
+          "mean_queue_packets_per_ue": 48767.34351333333,
+          "pending_percent": 32.01200559143461
+        }
+      ]
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "feedback_mab",
+      "label": "反馈型作者scheme4 TS（在线）",
+      "throughput_gbps": 0.8102730762666667,
+      "mean_queue_packets_per_ue": 40944.147953333326,
+      "pending_percent": 26.955310026365286,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.8102730762666667,
+          "mean_queue_packets_per_ue": 40944.147953333326,
+          "pending_percent": 26.955310026365286
+        }
+      ]
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "method_group": "privileged_greedy",
+      "label": "特权信息逐槽贪心参考",
+      "throughput_gbps": 1.0781958361600001,
+      "mean_queue_packets_per_ue": 5578.34622,
+      "pending_percent": 3.006756894104836,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.0781958361600001,
+          "mean_queue_packets_per_ue": 5578.34622,
+          "pending_percent": 3.006756894104836
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "ppo30k",
+      "label": "PPO 30k（三训练种子，预算诊断）",
+      "throughput_gbps": 0.9182842907733333,
+      "mean_queue_packets_per_ue": 12830.983428888889,
+      "pending_percent": 8.788128664182643,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.9184224558933332,
+          "mean_queue_packets_per_ue": 12900.409206666667,
+          "pending_percent": 8.835885614768461
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.8996742937600001,
+          "mean_queue_packets_per_ue": 15051.60698,
+          "pending_percent": 10.543900467525155
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.9367561226666667,
+          "mean_queue_packets_per_ue": 10540.9341,
+          "pending_percent": 6.9845999102543175
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "ppo360k",
+      "label": "PPO 360k（三训练种子）",
+      "throughput_gbps": 0.9531743642311111,
+      "mean_queue_packets_per_ue": 8468.892017777778,
+      "pending_percent": 5.34995386487149,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.97992899264,
+          "mean_queue_packets_per_ue": 5845.314466666667,
+          "pending_percent": 3.0726062151127156
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.9318491338666668,
+          "mean_queue_packets_per_ue": 11227.054473333334,
+          "pending_percent": 7.433476592101133
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.9477449661866666,
+          "mean_queue_packets_per_ue": 8334.307113333332,
+          "pending_percent": 5.543778787400622
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "fixed_beam2",
+      "label": "固定码本2启发式",
+      "throughput_gbps": 0.9771737668266665,
+      "mean_queue_packets_per_ue": 5703.343586666667,
+      "pending_percent": 3.10446648768483,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.9771737668266665,
+          "mean_queue_packets_per_ue": 5703.343586666667,
+          "pending_percent": 3.10446648768483
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "validation_selected_beam",
+      "label": "验证选码本3启发式",
+      "throughput_gbps": 0.9999736627200001,
+      "mean_queue_packets_per_ue": 1263.99326,
+      "pending_percent": 0.49953825439224936,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.9999736627200001,
+          "mean_queue_packets_per_ue": 1263.99326,
+          "pending_percent": 0.49953825439224936
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "feedback_mab",
+      "label": "反馈型作者scheme4 TS（在线）",
+      "throughput_gbps": 1.00300719168,
+      "mean_queue_packets_per_ue": 1353.4285866666667,
+      "pending_percent": 0.44106768114045447,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.00300719168,
+          "mean_queue_packets_per_ue": 1353.4285866666667,
+          "pending_percent": 0.44106768114045447
+        }
+      ]
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "method_group": "privileged_greedy",
+      "label": "特权信息逐槽贪心参考",
+      "throughput_gbps": 1.00037391616,
+      "mean_queue_packets_per_ue": 359.3195199999999,
+      "pending_percent": 0.13930053382014224,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.00037391616,
+          "mean_queue_packets_per_ue": 359.3195199999999,
+          "pending_percent": 0.13930053382014224
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "ppo30k",
+      "label": "PPO 30k（三训练种子，预算诊断）",
+      "throughput_gbps": 0.9194290082133332,
+      "mean_queue_packets_per_ue": 34105.91814,
+      "pending_percent": 20.932360919692737,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.9240956106666666,
+          "mean_queue_packets_per_ue": 33336.18871333334,
+          "pending_percent": 20.500700525404305
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.9013836324266666,
+          "mean_queue_packets_per_ue": 35995.16865333334,
+          "pending_percent": 22.307253128560838
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.9328077815466667,
+          "mean_queue_packets_per_ue": 32986.397053333334,
+          "pending_percent": 19.989129105113065
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "ppo360k",
+      "label": "PPO 360k（三训练种子）",
+      "throughput_gbps": 0.9159496845511113,
+      "mean_queue_packets_per_ue": 35436.98363555557,
+      "pending_percent": 21.63948633134404,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.9811397408000001,
+          "mean_queue_packets_per_ue": 26874.071653333336,
+          "pending_percent": 16.02974321661627
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.8975566250666667,
+          "mean_queue_packets_per_ue": 37498.07540000001,
+          "pending_percent": 23.273905975433944
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.8691526877866667,
+          "mean_queue_packets_per_ue": 41938.80385333334,
+          "pending_percent": 25.61480980198191
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "fixed_beam2",
+      "label": "固定码本2启发式",
+      "throughput_gbps": 0.7455760411733332,
+      "mean_queue_packets_per_ue": 57141.190686666676,
+      "pending_percent": 36.28932841961813,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.7455760411733332,
+          "mean_queue_packets_per_ue": 57141.190686666676,
+          "pending_percent": 36.28932841961813
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "validation_selected_beam",
+      "label": "验证选码本3启发式",
+      "throughput_gbps": 0.77230380928,
+      "mean_queue_packets_per_ue": 53977.778460000016,
+      "pending_percent": 33.97385069057932,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.77230380928,
+          "mean_queue_packets_per_ue": 53977.778460000016,
+          "pending_percent": 33.97385069057932
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "feedback_mab",
+      "label": "反馈型作者scheme4 TS（在线）",
+      "throughput_gbps": 0.8032284430933332,
+      "mean_queue_packets_per_ue": 47846.991753333336,
+      "pending_percent": 30.470745885202366,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 0.8032284430933332,
+          "mean_queue_packets_per_ue": 47846.991753333336,
+          "pending_percent": 30.470745885202366
+        }
+      ]
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "method_group": "privileged_greedy",
+      "label": "特权信息逐槽贪心参考",
+      "throughput_gbps": 1.1188862346666666,
+      "mean_queue_packets_per_ue": 7656.137526666667,
+      "pending_percent": 3.7231929982070944,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.1188862346666666,
+          "mean_queue_packets_per_ue": 7656.137526666667,
+          "pending_percent": 3.7231929982070944
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "ppo30k",
+      "label": "PPO 30k（三训练种子，预算诊断）",
+      "throughput_gbps": 0.9567638623999999,
+      "mean_queue_packets_per_ue": 14428.471340000002,
+      "pending_percent": 9.533095955962168,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 0.9617891022933331,
+          "mean_queue_packets_per_ue": 14225.546153333333,
+          "pending_percent": 9.19068668067001
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.9319621444266666,
+          "mean_queue_packets_per_ue": 17554.125900000003,
+          "pending_percent": 11.809613091038036
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.97654034048,
+          "mean_queue_packets_per_ue": 11505.741966666666,
+          "pending_percent": 7.598988096178452
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "ppo360k",
+      "label": "PPO 360k（三训练种子）",
+      "throughput_gbps": 0.9932347889777775,
+      "mean_queue_packets_per_ue": 9660.854879999999,
+      "pending_percent": 6.119294956282167,
+      "policy_seed_means": [
+        {
+          "training_seed": 0,
+          "throughput_gbps": 1.0261122099199997,
+          "mean_queue_packets_per_ue": 6296.536253333334,
+          "pending_percent": 3.5002633886187136
+        },
+        {
+          "training_seed": 1,
+          "throughput_gbps": 0.96246044544,
+          "mean_queue_packets_per_ue": 13072.631686666666,
+          "pending_percent": 8.583435003575332
+        },
+        {
+          "training_seed": 2,
+          "throughput_gbps": 0.9911317115733331,
+          "mean_queue_packets_per_ue": 9613.396699999998,
+          "pending_percent": 6.274186476652457
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "fixed_beam2",
+      "label": "固定码本2启发式",
+      "throughput_gbps": 1.0235232014933335,
+      "mean_queue_packets_per_ue": 5311.31246,
+      "pending_percent": 3.153247476949865,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.0235232014933335,
+          "mean_queue_packets_per_ue": 5311.31246,
+          "pending_percent": 3.153247476949865
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "validation_selected_beam",
+      "label": "验证选码本3启发式",
+      "throughput_gbps": 1.04725110336,
+      "mean_queue_packets_per_ue": 1133.3899266666665,
+      "pending_percent": 0.5785034867751196,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.04725110336,
+          "mean_queue_packets_per_ue": 1133.3899266666665,
+          "pending_percent": 0.5785034867751196
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "feedback_mab",
+      "label": "反馈型作者scheme4 TS（在线）",
+      "throughput_gbps": 1.0506031950933334,
+      "mean_queue_packets_per_ue": 1265.0327000000002,
+      "pending_percent": 0.5290901860902467,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.0506031950933334,
+          "mean_queue_packets_per_ue": 1265.0327000000002,
+          "pending_percent": 0.5290901860902467
+        }
+      ]
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "method_group": "privileged_greedy",
+      "label": "特权信息逐槽贪心参考",
+      "throughput_gbps": 1.0491834421333333,
+      "mean_queue_packets_per_ue": 373.91309333333334,
+      "pending_percent": 0.192390985384044,
+      "policy_seed_means": [
+        {
+          "training_seed": null,
+          "throughput_gbps": 1.0491834421333333,
+          "mean_queue_packets_per_ue": 373.91309333333334,
+          "pending_percent": 0.192390985384044
+        }
+      ]
+    }
+  ],
+  "ppo_vs_stronger_baselines": [
+    {
+      "scenario": "test12_load11_block12",
+      "comparison": "ppo360k versus validation_selected_beam",
+      "percent_difference": {
+        "throughput_gbps": 20.734654469626037,
+        "mean_queue_packets_per_ue": -42.18425508668952,
+        "end_pending_fraction_of_total_arrivals": -43.04201477340034
+      }
+    },
+    {
+      "scenario": "test12_load11_block12",
+      "comparison": "ppo360k versus feedback_mab",
+      "percent_difference": {
+        "throughput_gbps": 12.885609597330184,
+        "mean_queue_packets_per_ue": -31.13740464497502,
+        "end_pending_fraction_of_total_arrivals": -32.356951570309164
+      }
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "comparison": "ppo360k versus validation_selected_beam",
+      "percent_difference": {
+        "throughput_gbps": -4.680053108758042,
+        "mean_queue_packets_per_ue": 570.0108525719337,
+        "end_pending_fraction_of_total_arrivals": 970.9798134239742
+      }
+    },
+    {
+      "scenario": "test13_load10_block10",
+      "comparison": "ppo360k versus feedback_mab",
+      "percent_difference": {
+        "throughput_gbps": -4.968341988198588,
+        "mean_queue_packets_per_ue": 525.7361563963748,
+        "end_pending_fraction_of_total_arrivals": 1112.9553113114719
+      }
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "comparison": "ppo360k versus validation_selected_beam",
+      "percent_difference": {
+        "throughput_gbps": 18.599659038977002,
+        "mean_queue_packets_per_ue": -34.348940162819076,
+        "end_pending_fraction_of_total_arrivals": -36.30546466920072
+      }
+    },
+    {
+      "scenario": "shift12_load115_block13",
+      "comparison": "ppo360k versus feedback_mab",
+      "percent_difference": {
+        "throughput_gbps": 14.033522147656342,
+        "mean_queue_packets_per_ue": -25.936861781729892,
+        "end_pending_fraction_of_total_arrivals": -28.9827481976642
+      }
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "comparison": "ppo360k versus validation_selected_beam",
+      "percent_difference": {
+        "throughput_gbps": -5.157914296668354,
+        "mean_queue_packets_per_ue": 752.3858076287003,
+        "end_pending_fraction_of_total_arrivals": 957.7801337714161
+      }
+    },
+    {
+      "scenario": "shift13_load105_block11",
+      "comparison": "ppo360k versus feedback_mab",
+      "percent_difference": {
+        "throughput_gbps": -5.460520811614266,
+        "mean_queue_packets_per_ue": 663.6842019973079,
+        "end_pending_fraction_of_total_arrivals": 1056.5693556898448
+      }
+    }
+  ],
+  "checks": {
+    "all_expected_rows": true,
+    "all_exogenous_hashes_paired": true,
+    "packet_counts_float64_rates_recomputed": true,
+    "training_unit_is_three_policies": true
+  },
+  "report_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\REPORT.md",
+  "comparison_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\comparison.json",
+  "progress_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\progress.json",
+  "status_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_paper_baseline_locked_v1\\completion_v2\\status.json",
+  "seed2_original_status_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed2_v2\\status.json",
+  "seed2_training_completion_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_ppo_360k_seed2_v2\\training_completion.json",
+  "video_manifest_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\baseline_videos_locked_v2\\rl\\manifest.json",
+  "scope_cautions": [
+    "Original test scene parameters previously observed; random draws here are fresh. Two shifted load/blockage combinations were locked before their evaluation; topology families previously observed.",
+    "20 simulated seconds with 5-second warmup. This cannot certify queue stability, asymptotic throughput, or long-duration robustness.",
+    "Pending fraction is end queued/all cumulative arrivals, not loss probability. Delivered-only latency censors unfinished packets; report queue/pending metrics alongside it.",
+    "PPO30k is a budget diagnostic, not an equal-budget competing algorithm.",
+    "Heuristics have zero offline training; feedback MAB adapts online when present.",
+    "Privileged-information reference is not a mathematically guaranteed upper bound.",
+    "Author-provided blockage estimate has unverified deployment observability.",
+    "Measurement-window deliveries may include packets that arrived during warmup; throughput above nominal offered load can reflect finite-window backlog drainage, not a demonstrated capacity increase.",
+    "Standard PPO here is a rewritten baseline, not exact reproduction of the author's DRL configuration.",
+    "Original failed attempt plus replay prefix consumes extra computation; total recovery resource use differs, while final policy has the same unique 360k seeded training trajectory budget."
+  ],
+  "visual_qa": "pending parent inspection; video QA separately carried in manifest"
+}

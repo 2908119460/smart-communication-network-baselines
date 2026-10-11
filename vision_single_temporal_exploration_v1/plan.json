@@ -1,0 +1,37 @@
+{
+  "status": "running",
+  "gpu_used": false,
+  "neural_inference": false,
+  "source_summary_sha256": "64610a6d49e098c82aa328a21282be56c54963dd2cb451a552acda7dbf9a3e6f",
+  "rules": {
+    "threshold": 0.25,
+    "causal_2of3": {
+      "votes": 2,
+      "window_frames": 3
+    },
+    "causal_3of5": {
+      "votes": 3,
+      "window_frames": 5
+    },
+    "ema_060": {
+      "current_score_weight": 0.6,
+      "initial_score": 0.0
+    },
+    "initialization": "Zero-padding before frame0; independent reset per video",
+    "causality": "Current and past frames only; no future frames",
+    "selection": "All constants fixed in the script; no test-driven optimization"
+  },
+  "source_cache_sha256": {
+    "calibration_scores.json": "15cfe6549da87fab9c18875b5b522f8216d11066affb487ca0a59b49aa68f55f",
+    "sampled_test_scores.json": "ff7fe255a77a361685bfa06ab12376d9416732e158b9fb454c66adf8e749d2e0",
+    "continuous_test_scores.json": "d505e5d0e2ba18ee6feb76954ed77562e100fae11171a80326a569f374ba51c1"
+  },
+  "demo_selection": {
+    "DRONE": "V_DRONE_005",
+    "BIRD": "V_BIRD_004",
+    "AIRPLANE": "V_AIRPLANE_007",
+    "HELICOPTER": "V_HELICOPTER_008"
+  },
+  "started_utc": "2026-10-11T12:57:24Z",
+  "scope": "Exploratory single-seed classical temporal filtering; no claimed algorithmic novelty"
+}

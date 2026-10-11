@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "review_date": "2026-10-11",
+  "scope": "artifact readability and video decode; not model effectiveness",
+  "actual_review": "Viewed cover, middle and last snapshots for every baseline and timeline video, plus both single_report_v1 PNG figures.",
+  "sequences": ["V_DRONE_005", "V_BIRD_004", "V_AIRPLANE_007", "V_HELICOPTER_008"],
+  "baseline_snapshots_reviewed": 12,
+  "timeline_snapshots_reviewed": 12,
+  "video_decode": "Both saved manifests report every frame decoded by OpenCV and full FFmpeg decode exit code 0 for all eight videos.",
+  "checks": {
+    "chinese_text_readable": true,
+    "raw_rgb_and_prediction_aligned": true,
+    "GT_and_prediction_colors_clear": true,
+    "no_visible_clipping_or_blank_figures": true,
+    "timeline_cursor_moves_from_start_to_end": true,
+    "plots_labels_and_legends_readable": true
+  },
+  "observations": [
+    "Drone demo shows green GT and red predictions around the drone.",
+    "Bird and airplane demos show no drone alarm at reviewed snapshots.",
+    "Helicopter first frame is a visible false positive; it is retained and explained.",
+    "The timeline shows the whole recorded sequence for offline replay; the temporal algorithm uses causal rules, not the future curve."
+  ],
+  "sources": [
+    "fixed_video_demos/manifest.json",
+    "../vision_single_temporal_exploration_v1/timeline_demos/manifest.json",
+    "single_report_v1/validation_learning_curve.png",
+    "single_report_v1/continuous_presence_operating_points.png"
+  ]
+}

@@ -1,0 +1,13 @@
+# Browser pages do not need replay caches or local diagnostic logs.
+*.npz
+*.log
+
+# Never publish trained weights or raw dataset material if an export is
+# regenerated with a broader experiment tree.
+*.pt
+*.pth
+*.onnx
+*.ckpt
+datasets/
+weights/
+raw_data/
