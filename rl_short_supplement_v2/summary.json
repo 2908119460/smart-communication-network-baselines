@@ -1,0 +1,1625 @@
+{
+  "status": "completed",
+  "protocol": {
+    "run_id": "rl_short_supplement_v2",
+    "created_utc": "2026-10-11T15:22:06.501906+00:00",
+    "parent_locked_protocol_sha256": "d9d143a1269940d6d6c649e7499209d0359912f65a883d85686b10067e92532b",
+    "source_mechanism_run": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1",
+    "scenarios": [
+      {
+        "name": "validation_demo12_load11_block12",
+        "topology": 12,
+        "load": 1.1,
+        "block_scale": 1.2,
+        "split": "exploratory_validation"
+      },
+      {
+        "name": "validation_demo13_load10_block10",
+        "topology": 13,
+        "load": 1.0,
+        "block_scale": 1.0,
+        "split": "exploratory_validation"
+      }
+    ],
+    "environment_seeds": [
+      40000
+    ],
+    "slots": 2000,
+    "warmup": 500,
+    "methods": [
+      "anchor_360k",
+      "continued_ppo",
+      "joint_prior",
+      "user_marginal_prior",
+      "fixed_beam2",
+      "validation_beam3",
+      "rr_tdma_beam2",
+      "feedback_mab"
+    ],
+    "source_files_sha256": {
+      "evaluator": "8f60f8944b944e4da60861a8f9e2b983f3e2ccafee577f95323ff565a5afaba6",
+      "environment": "22dc144f6460257762bc74564d2b3220f9bd8ecabe1fb64411d8ac1011cf9531",
+      "state_action": "a640d8fdd050e7914cb4e5d363cea42466e10305a49f61f545b2dcb984df081c",
+      "feedback_adapter": "4456533ac62dfb3da4569fb99792b3e31206a1670a3eb4df3be8cffd508ff5eb"
+    },
+    "scope": "Single environment draw per scenario; paired exploratory supplemental baseline, not a new formal test.",
+    "rr_contract": "u = slot mod 5, fixed beam 2, direct-only, relay==UE, tracking bit clear; one UE is offered one action per slot.",
+    "feedback_scope": "Existing causal-feedback scheme-4 adaptation, no offline training; evaluated only to complete a same-draw visual comparison.",
+    "caveats": [
+      "One training seed for learned methods; one environment draw per scene.",
+      "RR is a strict lower reference and not an optimized TDMA scheduler.",
+      "Feedback MAB is online-adaptive and does not have the same state/budget as PPO.",
+      "Short finite horizon cannot establish stability or generalization."
+    ]
+  },
+  "evaluations": [
+    {
+      "method": "ppo",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        167437,
+        162691,
+        178864,
+        169739,
+        177777
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        12412,
+        20069,
+        1091,
+        19643,
+        2691
+      ],
+      "throughput_gbps": 1.0561314645333333,
+      "throughput_per_ue_gbps": [
+        0.20646098346666666,
+        0.20060884906666665,
+        0.22055123626666667,
+        0.20929950293333333,
+        0.2192108928
+      ],
+      "mean_queue_packets_per_ue": 5902.9808,
+      "final_queue_packets_per_ue": 11181.2,
+      "delivered_packet_mean_delay_ms": 477.53377668393057,
+      "delivered_packet_p95_delay_ms": 1590,
+      "pending_packet_mean_age_ms": 715.2348585125031,
+      "end_pending_fraction_of_total_arrivals": 0.04704775465756445,
+      "delivered_packets_after_warmup": 856508,
+      "jain_throughput": 0.9987023510484685,
+      "jain_demand_normalized_service": 0.9987023510484686,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        74,
+        155,
+        459,
+        197,
+        461,
+        154
+      ],
+      "target_ue_counts": [
+        197,
+        327,
+        308,
+        513,
+        155
+      ],
+      "relay_fraction": 0.408,
+      "tracking_request_fraction": 0.026,
+      "method_id": "anchor_360k",
+      "training_seed": 0,
+      "adaptation_steps": 0,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\anchor_360k\\trajectory_validation_demo12_load11_block12_seed40000.npz",
+      "trajectory_sha256": "6ecea4010a5ff6fdbd30444f1f863f7221657d196b53f673b9ce7dcf343537a7",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        158646,
+        163644,
+        162465,
+        161975,
+        164800
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        5308,
+        962,
+        780,
+        1385,
+        2466
+      ],
+      "throughput_gbps": 1.000670592,
+      "throughput_per_ue_gbps": [
+        0.1956210944,
+        0.2017839616,
+        0.200330176,
+        0.19972597333333333,
+        0.20320938666666666
+      ],
+      "mean_queue_packets_per_ue": 1566.5706666666667,
+      "final_queue_packets_per_ue": 2180.2,
+      "delivered_packet_mean_delay_ms": 144.8539795201656,
+      "delivered_packet_p95_delay_ms": 420,
+      "pending_packet_mean_age_ms": 153.50059627557104,
+      "end_pending_fraction_of_total_arrivals": 0.010075038286254565,
+      "delivered_packets_after_warmup": 811530,
+      "jain_throughput": 0.9998364878294206,
+      "jain_demand_normalized_service": 0.9998364878294205,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        113,
+        228,
+        326,
+        223,
+        471,
+        139
+      ],
+      "target_ue_counts": [
+        260,
+        287,
+        309,
+        309,
+        335
+      ],
+      "relay_fraction": 0.4673333333333333,
+      "tracking_request_fraction": 0.05533333333333333,
+      "method_id": "anchor_360k",
+      "training_seed": 0,
+      "adaptation_steps": 0,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\anchor_360k\\trajectory_validation_demo13_load10_block10_seed40000.npz",
+      "trajectory_sha256": "7b9ee341356dfd946e38782551f775e5242b61ad35d6ead375edeaa55fcc54d5",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        166321,
+        169573,
+        175993,
+        174527,
+        178737
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        13241,
+        11065,
+        2009,
+        15019,
+        354
+      ],
+      "throughput_gbps": 1.0667888597333333,
+      "throughput_per_ue_gbps": [
+        0.20508488106666667,
+        0.20909481386666667,
+        0.21701110186666667,
+        0.21520342613333332,
+        0.22039463680000002
+      ],
+      "mean_queue_packets_per_ue": 3890.8170666666665,
+      "final_queue_packets_per_ue": 8337.6,
+      "delivered_packet_mean_delay_ms": 318.2131327363663,
+      "delivered_packet_p95_delay_ms": 1130,
+      "pending_packet_mean_age_ms": 531.4073594319709,
+      "end_pending_fraction_of_total_arrivals": 0.035082581407443685,
+      "delivered_packets_after_warmup": 865151,
+      "jain_throughput": 0.9993287501201972,
+      "jain_demand_normalized_service": 0.9993287501201975,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        67,
+        150,
+        278,
+        205,
+        664,
+        136
+      ],
+      "target_ue_counts": [
+        174,
+        327,
+        333,
+        454,
+        212
+      ],
+      "relay_fraction": 0.4013333333333333,
+      "tracking_request_fraction": 0.021333333333333333,
+      "method_id": "continued_ppo",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\continued_ppo\\trajectory_validation_demo12_load11_block12_seed40000.npz",
+      "trajectory_sha256": "271d7c4ef82d049b4179e817f91f4e7cf53c305591897f2f4eba285ba37863ff",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        161477,
+        163298,
+        162133,
+        162332,
+        166417
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        2454,
+        962,
+        671,
+        2120,
+        571
+      ],
+      "throughput_gbps": 1.0057594581333333,
+      "throughput_per_ue_gbps": [
+        0.19911190613333332,
+        0.20135732053333333,
+        0.19992079786666667,
+        0.20016617813333332,
+        0.20520325546666668
+      ],
+      "mean_queue_packets_per_ue": 1048.5352,
+      "final_queue_packets_per_ue": 1355.6,
+      "delivered_packet_mean_delay_ms": 97.79143684171166,
+      "delivered_packet_p95_delay_ms": 270,
+      "pending_packet_mean_age_ms": 75.90734730008852,
+      "end_pending_fraction_of_total_arrivals": 0.0062644353274225704,
+      "delivered_packets_after_warmup": 815657,
+      "jain_throughput": 0.9998858097584779,
+      "jain_demand_normalized_service": 0.9998858097584779,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        118,
+        241,
+        261,
+        196,
+        530,
+        154
+      ],
+      "target_ue_counts": [
+        255,
+        299,
+        308,
+        277,
+        361
+      ],
+      "relay_fraction": 0.44733333333333336,
+      "tracking_request_fraction": 0.06466666666666666,
+      "method_id": "continued_ppo",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\continued_ppo\\trajectory_validation_demo13_load10_block10_seed40000.npz",
+      "trajectory_sha256": "493fd3d263e17c549a02c62d060489bd2b5ed960c8ac715f00ac8e207e3c64db",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        171298,
+        174672,
+        166754,
+        170380,
+        178134
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        7213,
+        4609,
+        22346,
+        13563,
+        114
+      ],
+      "throughput_gbps": 1.0619638698666667,
+      "throughput_per_ue_gbps": [
+        0.21122185386666667,
+        0.21538222080000002,
+        0.20561879893333335,
+        0.21008989866666666,
+        0.21965109759999998
+      ],
+      "mean_queue_packets_per_ue": 6619.4412,
+      "final_queue_packets_per_ue": 9569.0,
+      "delivered_packet_mean_delay_ms": 546.5854502472023,
+      "delivered_packet_p95_delay_ms": 1740,
+      "pending_packet_mean_age_ms": 670.5346431184032,
+      "end_pending_fraction_of_total_arrivals": 0.040264011404700234,
+      "delivered_packets_after_warmup": 861238,
+      "jain_throughput": 0.9994940298749728,
+      "jain_demand_normalized_service": 0.9994940298749727,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        61,
+        154,
+        545,
+        181,
+        413,
+        146
+      ],
+      "target_ue_counts": [
+        218,
+        372,
+        270,
+        477,
+        163
+      ],
+      "relay_fraction": 0.37733333333333335,
+      "tracking_request_fraction": 0.029333333333333333,
+      "method_id": "joint_prior",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\joint_prior_attempt2\\trajectory_validation_demo12_load11_block12_seed40000.npz",
+      "trajectory_sha256": "1435b6777a68fc5476a4e3e86d80e538709c5a75060614edf0d06fae2fb7e82c",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        162622,
+        162431,
+        164313,
+        162466,
+        163890
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        542,
+        205,
+        3138,
+        1988,
+        593
+      ],
+      "throughput_gbps": 1.0058396074666667,
+      "throughput_per_ue_gbps": [
+        0.20052376746666667,
+        0.2002882517333333,
+        0.20260888319999998,
+        0.20033140906666666,
+        0.202087296
+      ],
+      "mean_queue_packets_per_ue": 1123.798,
+      "final_queue_packets_per_ue": 1293.2,
+      "delivered_packet_mean_delay_ms": 104.75997950282081,
+      "delivered_packet_p95_delay_ms": 340,
+      "pending_packet_mean_age_ms": 98.84627281163006,
+      "end_pending_fraction_of_total_arrivals": 0.005976075365463904,
+      "delivered_packets_after_warmup": 815722,
+      "jain_throughput": 0.9999762283838715,
+      "jain_demand_normalized_service": 0.9999762283838713,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        69,
+        177,
+        508,
+        184,
+        447,
+        115
+      ],
+      "target_ue_counts": [
+        264,
+        395,
+        265,
+        238,
+        338
+      ],
+      "relay_fraction": 0.38533333333333336,
+      "tracking_request_fraction": 0.034,
+      "method_id": "joint_prior",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\joint_prior_attempt2\\trajectory_validation_demo13_load10_block10_seed40000.npz",
+      "trajectory_sha256": "4fdae26531f80527f3ab6acad294dd03c1f2f025dc5de63d00916228139fb09a",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        172340,
+        174210,
+        177434,
+        180262,
+        177894
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        6171,
+        5435,
+        1767,
+        6673,
+        711
+      ],
+      "throughput_gbps": 1.0877374293333333,
+      "throughput_per_ue_gbps": [
+        0.21250670933333335,
+        0.214812544,
+        0.21878795093333334,
+        0.22227506346666667,
+        0.2193551616
+      ],
+      "mean_queue_packets_per_ue": 3495.4737333333333,
+      "final_queue_packets_per_ue": 4151.4,
+      "delivered_packet_mean_delay_ms": 295.54922121205254,
+      "delivered_packet_p95_delay_ms": 920,
+      "pending_packet_mean_age_ms": 232.8313340078046,
+      "end_pending_fraction_of_total_arrivals": 0.017468075759794394,
+      "delivered_packets_after_warmup": 882140,
+      "jain_throughput": 0.9997463154080589,
+      "jain_demand_normalized_service": 0.999746315408059,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        76,
+        166,
+        375,
+        214,
+        564,
+        105
+      ],
+      "target_ue_counts": [
+        192,
+        399,
+        297,
+        379,
+        233
+      ],
+      "relay_fraction": 0.3973333333333333,
+      "tracking_request_fraction": 0.018666666666666668,
+      "method_id": "user_marginal_prior",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\user_marginal_prior\\trajectory_validation_demo12_load11_block12_seed40000.npz",
+      "trajectory_sha256": "178c9b523fd8b37d762bd6489895ef0270848321a504fa38b82634869731f6a6",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "ppo",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        162315,
+        162906,
+        161136,
+        162033,
+        163386
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        1294,
+        0,
+        1681,
+        1998,
+        332
+      ],
+      "throughput_gbps": 1.0009739264000002,
+      "throughput_per_ue_gbps": [
+        0.200145216,
+        0.2008739584,
+        0.1986914304,
+        0.19979749119999998,
+        0.20146583040000002
+      ],
+      "mean_queue_packets_per_ue": 1197.4890666666668,
+      "final_queue_packets_per_ue": 1061.0,
+      "delivered_packet_mean_delay_ms": 110.55065683144119,
+      "delivered_packet_p95_delay_ms": 310,
+      "pending_packet_mean_age_ms": 68.95381715362865,
+      "end_pending_fraction_of_total_arrivals": 0.004903043583944635,
+      "delivered_packets_after_warmup": 811776,
+      "jain_throughput": 0.9999775582021393,
+      "jain_demand_normalized_service": 0.9999775582021392,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "beam_counts": [
+        100,
+        233,
+        319,
+        210,
+        495,
+        143
+      ],
+      "target_ue_counts": [
+        253,
+        363,
+        286,
+        230,
+        368
+      ],
+      "relay_fraction": 0.4246666666666667,
+      "tracking_request_fraction": 0.04,
+      "method_id": "user_marginal_prior",
+      "training_seed": 0,
+      "adaptation_steps": 30000,
+      "trajectory_path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1\\user_marginal_prior\\trajectory_validation_demo13_load10_block10_seed40000.npz",
+      "trajectory_sha256": "e02a572bd9fba9849092acd1c5d833b2f5da38ba5deed29baa368f3c0993275a",
+      "video_cache_scope": "Recorded actions/queues/arrivals/departures/delay arrays. Geometry requires unchanged-source action replay; no video rendered here."
+    },
+    {
+      "method": "maxweight_like",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        167964,
+        152273,
+        13678,
+        66157,
+        173189
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        11176,
+        32560,
+        223551,
+        143868,
+        5416
+      ],
+      "throughput_gbps": 0.7068690304,
+      "throughput_per_ue_gbps": [
+        0.2071108096,
+        0.18776276053333332,
+        0.016865885866666666,
+        0.08157599146666666,
+        0.21355358293333335
+      ],
+      "mean_queue_packets_per_ue": 50559.1016,
+      "final_queue_packets_per_ue": 83314.2,
+      "delivered_packet_mean_delay_ms": 1652.6174116153027,
+      "delivered_packet_p95_delay_ms": 9510,
+      "pending_packet_mean_age_ms": 7282.136754598856,
+      "end_pending_fraction_of_total_arrivals": 0.35056577479083245,
+      "delivered_packets_after_warmup": 573261,
+      "jain_throughput": 0.7646317686094156,
+      "jain_demand_normalized_service": 0.7646317686094155,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "method_id": "fixed_beam2",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "maxweight_like",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        0,
+        150404,
+        93790,
+        104616,
+        0
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        237016,
+        33685,
+        98065,
+        90754,
+        237707
+      ],
+      "throughput_gbps": 0.430105984,
+      "throughput_per_ue_gbps": [
+        0.0,
+        0.18545815893333334,
+        0.11564932266666667,
+        0.1289985024,
+        0.0
+      ],
+      "mean_queue_packets_per_ue": 83915.35093333333,
+      "final_queue_packets_per_ue": 139445.4,
+      "delivered_packet_mean_delay_ms": 3031.240904790574,
+      "delivered_packet_p95_delay_ms": 7640,
+      "pending_packet_mean_age_ms": 7958.078258587231,
+      "end_pending_fraction_of_total_arrivals": 0.5867521345943135,
+      "delivered_packets_after_warmup": 348810,
+      "jain_throughput": 0.5744165402901644,
+      "jain_demand_normalized_service": 0.5744165402901643,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "method_id": "validation_beam3",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "rr_tdma",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        177810,
+        166328,
+        20799,
+        24432,
+        177995
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        468,
+        13464,
+        203546,
+        206081,
+        0
+      ],
+      "throughput_gbps": 0.6995976362666667,
+      "throughput_per_ue_gbps": [
+        0.219251584,
+        0.20509351253333333,
+        0.0256465536,
+        0.0301262848,
+        0.21947970133333333
+      ],
+      "mean_queue_packets_per_ue": 51838.683066666665,
+      "final_queue_packets_per_ue": 84711.8,
+      "delivered_packet_mean_delay_ms": 956.6840335305026,
+      "delivered_packet_p95_delay_ms": 9350.0,
+      "pending_packet_mean_age_ms": 8375.850920414867,
+      "end_pending_fraction_of_total_arrivals": 0.35644653373525814,
+      "delivered_packets_after_warmup": 567364,
+      "jain_throughput": 0.6998389356588789,
+      "jain_demand_normalized_service": 0.6998389356588787,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "offline_training_steps": 0,
+      "online_adaptation_slots": 0,
+      "beam_id": 2,
+      "strict_single_ue_per_slot": true,
+      "valid_actions_checked": 2000,
+      "beam_counts": [
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      "target_ue_counts": [
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "relay_fraction": 0.0,
+      "tracking_request_fraction": 0.0,
+      "method_id": "rr_tdma_beam2",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "feedback_mab_scheme4",
+      "scenario": "validation_demo12_load11_block12",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "policy_seed": 1039983,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.22,
+        0.22,
+        0.22,
+        0.22,
+        0.22
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        163455,
+        137953,
+        70753,
+        66940,
+        169986
+      ],
+      "total_arrivals_per_ue": [
+        237016,
+        238652,
+        237268,
+        237639,
+        237707
+      ],
+      "end_pending_packets_per_ue": [
+        18825,
+        53542,
+        128277,
+        145218,
+        9632
+      ],
+      "throughput_gbps": 0.7510448768,
+      "throughput_per_ue_gbps": [
+        0.201550912,
+        0.17010524586666667,
+        0.08724316586666667,
+        0.08254148266666667,
+        0.2096040704
+      ],
+      "mean_queue_packets_per_ue": 41552.10546666667,
+      "final_queue_packets_per_ue": 71098.8,
+      "delivered_packet_mean_delay_ms": 2401.8474536478366,
+      "delivered_packet_p95_delay_ms": 9150.0,
+      "pending_packet_mean_age_ms": 4854.213010627464,
+      "end_pending_fraction_of_total_arrivals": 0.2991663595005226,
+      "delivered_packets_after_warmup": 609087,
+      "jain_throughput": 0.8819294684044656,
+      "jain_demand_normalized_service": 0.8819294684044657,
+      "exogenous_trace_sha256": "a3033e5ec7afb4bd84307d959317ff1ba28c1c0a245e0bb4725f1bedb4ad5dc5",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "offline_training_steps": 0,
+      "online_adaptation_slots": 2000,
+      "source_scheme_id": 4,
+      "exact_author_reproduction": false,
+      "rng_restore_checks": 4000,
+      "tracking_suppressed_during_initial_exploration_slots": 75,
+      "feedback_coefficient_min": 0.0,
+      "feedback_coefficient_max": 0.996,
+      "codebook_use_counts_by_beam_and_user": [
+        [
+          17.0,
+          54.0,
+          73.0,
+          76.0,
+          6.0
+        ],
+        [
+          22.0,
+          61.0,
+          79.0,
+          73.0,
+          5.0
+        ],
+        [
+          42.0,
+          88.0,
+          84.0,
+          86.0,
+          5.0
+        ],
+        [
+          48.0,
+          77.0,
+          103.0,
+          100.0,
+          19.0
+        ],
+        [
+          43.0,
+          91.0,
+          152.0,
+          144.0,
+          89.0
+        ],
+        [
+          30.0,
+          75.0,
+          138.0,
+          115.0,
+          5.0
+        ]
+      ],
+      "valid_actions_checked": 2000,
+      "method_id": "feedback_mab",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "maxweight_like",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        163370,
+        162863,
+        161887,
+        162750,
+        164443
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        329,
+        620,
+        405,
+        229,
+        686
+      ],
+      "throughput_gbps": 1.0053352832,
+      "throughput_per_ue_gbps": [
+        0.20144610133333335,
+        0.20082093653333333,
+        0.19961746346666667,
+        0.2006816,
+        0.20276918186666668
+      ],
+      "mean_queue_packets_per_ue": 787.7830666666666,
+      "final_queue_packets_per_ue": 453.8,
+      "delivered_packet_mean_delay_ms": 73.19949516320726,
+      "delivered_packet_p95_delay_ms": 270,
+      "pending_packet_mean_age_ms": 20.03085059497576,
+      "end_pending_fraction_of_total_arrivals": 0.0020970793387314565,
+      "delivered_packets_after_warmup": 815313,
+      "jain_throughput": 0.9999735270558843,
+      "jain_demand_normalized_service": 0.9999735270558847,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "method_id": "fixed_beam2",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "maxweight_like",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        162514,
+        162336,
+        162393,
+        162802,
+        161656
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        106,
+        403,
+        0,
+        327,
+        1920
+      ],
+      "throughput_gbps": 1.0008814464,
+      "throughput_per_ue_gbps": [
+        0.2003905962666667,
+        0.20017111040000002,
+        0.20024139519999998,
+        0.20074571946666667,
+        0.19933262506666666
+      ],
+      "mean_queue_packets_per_ue": 496.1564,
+      "final_queue_packets_per_ue": 551.2,
+      "delivered_packet_mean_delay_ms": 45.79877319357743,
+      "delivered_packet_p95_delay_ms": 160,
+      "pending_packet_mean_age_ms": 64.9709724238026,
+      "end_pending_fraction_of_total_arrivals": 0.0025471796639682212,
+      "delivered_packets_after_warmup": 811701,
+      "jain_throughput": 0.9999945785254925,
+      "jain_demand_normalized_service": 0.9999945785254925,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "method_id": "validation_beam3",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "rr_tdma",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        162504,
+        162522,
+        162086,
+        162867,
+        115213
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        443,
+        314,
+        206,
+        112,
+        69592
+      ],
+      "throughput_gbps": 0.9435327487999999,
+      "throughput_per_ue_gbps": [
+        0.2003782656,
+        0.2004004608,
+        0.19986284373333332,
+        0.2008258688,
+        0.14206530986666668
+      ],
+      "mean_queue_packets_per_ue": 9078.094933333334,
+      "final_queue_packets_per_ue": 14133.4,
+      "delivered_packet_mean_delay_ms": 628.379857604366,
+      "delivered_packet_p95_delay_ms": 4790.0,
+      "pending_packet_mean_age_ms": 3169.665897802369,
+      "end_pending_fraction_of_total_arrivals": 0.06531260715299067,
+      "delivered_packets_after_warmup": 765192,
+      "jain_throughput": 0.9849548346100527,
+      "jain_demand_normalized_service": 0.9849548346100534,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "offline_training_steps": 0,
+      "online_adaptation_slots": 0,
+      "beam_id": 2,
+      "strict_single_ue_per_slot": true,
+      "valid_actions_checked": 2000,
+      "beam_counts": [
+        0,
+        0,
+        1500,
+        0,
+        0,
+        0
+      ],
+      "target_ue_counts": [
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "relay_fraction": 0.0,
+      "tracking_request_fraction": 0.0,
+      "method_id": "rr_tdma_beam2",
+      "training_steps": 0,
+      "training_seed": null
+    },
+    {
+      "method": "feedback_mab_scheme4",
+      "scenario": "validation_demo13_load10_block10",
+      "split": "exploratory_validation",
+      "environment_seed": 40000,
+      "policy_seed": 1039983,
+      "slots": 2000,
+      "warmup": 500,
+      "evaluation_metric_version": "int64_counts_float64_throughput_v2",
+      "packet_size_bits": 18496.0,
+      "slot_duration_seconds": 0.01,
+      "measured_duration_seconds": 15.0,
+      "demand_per_ue_gbps": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "delivered_packets_per_ue_after_warmup": [
+        162505,
+        162336,
+        161856,
+        162951,
+        163437
+      ],
+      "total_arrivals_per_ue": [
+        216642,
+        216597,
+        216255,
+        216675,
+        215812
+      ],
+      "end_pending_packets_per_ue": [
+        542,
+        403,
+        316,
+        229,
+        180
+      ],
+      "throughput_gbps": 1.0025880106666667,
+      "throughput_per_ue_gbps": [
+        0.20037949866666666,
+        0.20017111040000002,
+        0.1995792384,
+        0.20092944640000002,
+        0.2015287168
+      ],
+      "mean_queue_packets_per_ue": 611.8473333333334,
+      "final_queue_packets_per_ue": 334.0,
+      "delivered_packet_mean_delay_ms": 56.62190299907144,
+      "delivered_packet_p95_delay_ms": 190.0,
+      "pending_packet_mean_age_ms": 13.047904191616766,
+      "end_pending_fraction_of_total_arrivals": 0.0015434651809967089,
+      "delivered_packets_after_warmup": 813085,
+      "jain_throughput": 0.9999889990158913,
+      "jain_demand_normalized_service": 0.9999889990158913,
+      "exogenous_trace_sha256": "516f228c5cf2cca0b6d41f0c5b30dc5955da5f2b3dcb15f7cfd3e4182428c7af",
+      "delivered_delay_is_conditioned_on_delivery": true,
+      "offline_training_steps": 0,
+      "online_adaptation_slots": 2000,
+      "source_scheme_id": 4,
+      "exact_author_reproduction": false,
+      "rng_restore_checks": 4000,
+      "tracking_suppressed_during_initial_exploration_slots": 75,
+      "feedback_coefficient_min": 0.0,
+      "feedback_coefficient_max": 0.996,
+      "codebook_use_counts_by_beam_and_user": [
+        [
+          25.0,
+          18.0,
+          14.0,
+          8.0,
+          45.0
+        ],
+        [
+          34.0,
+          20.0,
+          21.0,
+          8.0,
+          51.0
+        ],
+        [
+          64.0,
+          22.0,
+          17.0,
+          525.0,
+          84.0
+        ],
+        [
+          105.0,
+          45.0,
+          271.0,
+          9.0,
+          67.0
+        ],
+        [
+          32.0,
+          162.0,
+          40.0,
+          7.0,
+          160.0
+        ],
+        [
+          23.0,
+          13.0,
+          12.0,
+          5.0,
+          93.0
+        ]
+      ],
+      "valid_actions_checked": 2000,
+      "method_id": "feedback_mab",
+      "training_steps": 0,
+      "training_seed": null
+    }
+  ],
+  "scenario_summaries": [
+    {
+      "method": "anchor_360k",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0561314645333333,
+      "mean_queue_packets_per_ue": 5902.9808,
+      "end_pending_fraction_of_total_arrivals": 0.04704775465756445,
+      "beam_fraction": [
+        0.04933333333333333,
+        0.10333333333333333,
+        0.306,
+        0.13133333333333333,
+        0.30733333333333335,
+        0.10266666666666667
+      ],
+      "relay_fraction": 0.408,
+      "tracking_request_fraction": 0.026
+    },
+    {
+      "method": "continued_ppo",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0667888597333333,
+      "mean_queue_packets_per_ue": 3890.8170666666665,
+      "end_pending_fraction_of_total_arrivals": 0.035082581407443685,
+      "beam_fraction": [
+        0.04466666666666667,
+        0.1,
+        0.18533333333333332,
+        0.13666666666666666,
+        0.44266666666666665,
+        0.09066666666666667
+      ],
+      "relay_fraction": 0.4013333333333333,
+      "tracking_request_fraction": 0.021333333333333333
+    },
+    {
+      "method": "joint_prior",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0619638698666667,
+      "mean_queue_packets_per_ue": 6619.4412,
+      "end_pending_fraction_of_total_arrivals": 0.040264011404700234,
+      "beam_fraction": [
+        0.04066666666666666,
+        0.10266666666666667,
+        0.36333333333333334,
+        0.12066666666666667,
+        0.2753333333333333,
+        0.09733333333333333
+      ],
+      "relay_fraction": 0.37733333333333335,
+      "tracking_request_fraction": 0.029333333333333333
+    },
+    {
+      "method": "user_marginal_prior",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0877374293333333,
+      "mean_queue_packets_per_ue": 3495.4737333333333,
+      "end_pending_fraction_of_total_arrivals": 0.017468075759794394,
+      "beam_fraction": [
+        0.050666666666666665,
+        0.11066666666666666,
+        0.25,
+        0.14266666666666666,
+        0.376,
+        0.07
+      ],
+      "relay_fraction": 0.3973333333333333,
+      "tracking_request_fraction": 0.018666666666666668
+    },
+    {
+      "method": "fixed_beam2",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 0.7068690304,
+      "mean_queue_packets_per_ue": 50559.1016,
+      "end_pending_fraction_of_total_arrivals": 0.35056577479083245,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    },
+    {
+      "method": "validation_beam3",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 0.430105984,
+      "mean_queue_packets_per_ue": 83915.35093333333,
+      "end_pending_fraction_of_total_arrivals": 0.5867521345943135,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    },
+    {
+      "method": "rr_tdma_beam2",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 0.6995976362666667,
+      "mean_queue_packets_per_ue": 51838.683066666665,
+      "end_pending_fraction_of_total_arrivals": 0.35644653373525814,
+      "beam_fraction": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relay_fraction": 0.0,
+      "tracking_request_fraction": 0.0
+    },
+    {
+      "method": "feedback_mab",
+      "scene": "validation_demo12_load11_block12",
+      "environment_repeats": 1,
+      "throughput_gbps": 0.7510448768,
+      "mean_queue_packets_per_ue": 41552.10546666667,
+      "end_pending_fraction_of_total_arrivals": 0.2991663595005226,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    },
+    {
+      "method": "anchor_360k",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.000670592,
+      "mean_queue_packets_per_ue": 1566.5706666666667,
+      "end_pending_fraction_of_total_arrivals": 0.010075038286254565,
+      "beam_fraction": [
+        0.07533333333333334,
+        0.152,
+        0.21733333333333332,
+        0.14866666666666667,
+        0.314,
+        0.09266666666666666
+      ],
+      "relay_fraction": 0.4673333333333333,
+      "tracking_request_fraction": 0.05533333333333333
+    },
+    {
+      "method": "continued_ppo",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0057594581333333,
+      "mean_queue_packets_per_ue": 1048.5352,
+      "end_pending_fraction_of_total_arrivals": 0.0062644353274225704,
+      "beam_fraction": [
+        0.07866666666666666,
+        0.16066666666666668,
+        0.174,
+        0.13066666666666665,
+        0.35333333333333333,
+        0.10266666666666667
+      ],
+      "relay_fraction": 0.44733333333333336,
+      "tracking_request_fraction": 0.06466666666666666
+    },
+    {
+      "method": "joint_prior",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0058396074666667,
+      "mean_queue_packets_per_ue": 1123.798,
+      "end_pending_fraction_of_total_arrivals": 0.005976075365463904,
+      "beam_fraction": [
+        0.046,
+        0.118,
+        0.33866666666666667,
+        0.12266666666666666,
+        0.298,
+        0.07666666666666666
+      ],
+      "relay_fraction": 0.38533333333333336,
+      "tracking_request_fraction": 0.034
+    },
+    {
+      "method": "user_marginal_prior",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0009739264000002,
+      "mean_queue_packets_per_ue": 1197.4890666666668,
+      "end_pending_fraction_of_total_arrivals": 0.004903043583944635,
+      "beam_fraction": [
+        0.06666666666666667,
+        0.15533333333333332,
+        0.21266666666666667,
+        0.14,
+        0.33,
+        0.09533333333333334
+      ],
+      "relay_fraction": 0.4246666666666667,
+      "tracking_request_fraction": 0.04
+    },
+    {
+      "method": "fixed_beam2",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0053352832,
+      "mean_queue_packets_per_ue": 787.7830666666666,
+      "end_pending_fraction_of_total_arrivals": 0.0020970793387314565,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    },
+    {
+      "method": "validation_beam3",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0008814464,
+      "mean_queue_packets_per_ue": 496.1564,
+      "end_pending_fraction_of_total_arrivals": 0.0025471796639682212,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    },
+    {
+      "method": "rr_tdma_beam2",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 0.9435327487999999,
+      "mean_queue_packets_per_ue": 9078.094933333334,
+      "end_pending_fraction_of_total_arrivals": 0.06531260715299067,
+      "beam_fraction": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relay_fraction": 0.0,
+      "tracking_request_fraction": 0.0
+    },
+    {
+      "method": "feedback_mab",
+      "scene": "validation_demo13_load10_block10",
+      "environment_repeats": 1,
+      "throughput_gbps": 1.0025880106666667,
+      "mean_queue_packets_per_ue": 611.8473333333334,
+      "end_pending_fraction_of_total_arrivals": 0.0015434651809967089,
+      "beam_fraction": null,
+      "relay_fraction": null,
+      "tracking_request_fraction": null
+    }
+  ],
+  "checks": {
+    "all_16_rows": true,
+    "same_exogenous_trace_within_scene": true,
+    "rr_legal_actions": true,
+    "rr_single_ue_fixed_beam_contract": true,
+    "cached_policy_hashes_verified": true,
+    "locked_800_files_untouched": true,
+    "source_hashes_before_after_equal": true
+  },
+  "duration_seconds": 27.217333600157872,
+  "source_hashes_after": {
+    "evaluator": "8f60f8944b944e4da60861a8f9e2b983f3e2ccafee577f95323ff565a5afaba6",
+    "environment": "22dc144f6460257762bc74564d2b3220f9bd8ecabe1fb64411d8ac1011cf9531",
+    "state_action": "a640d8fdd050e7914cb4e5d363cea42466e10305a49f61f545b2dcb984df081c",
+    "feedback_adapter": "4456533ac62dfb3da4569fb99792b3e31206a1670a3eb4df3be8cffd508ff5eb"
+  }
+}

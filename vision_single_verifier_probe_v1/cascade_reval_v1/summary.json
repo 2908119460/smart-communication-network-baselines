@@ -1,0 +1,275 @@
+{
+  "status": "completed",
+  "scope": "train/validation candidates only; calibration and test not read",
+  "evaluation": {
+    "detector_confidence_threshold": 0.25,
+    "verifier_probability_threshold": 0.5,
+    "cascade_rule": "detector_score >= 0.25 AND verifier_probability >= 0.50",
+    "context_semantics": "single verifier branch fed one expanded 3x crop"
+  },
+  "checkpoint": {
+    "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\weights\\best.pt",
+    "sha256": "9e99b5c1c9cb5ca0f11c7f6e799c533deeb4e70000a2b2b03ea49dc76debfc56"
+  },
+  "validation_frames": 792,
+  "train_frames": 4296,
+  "candidates": {
+    "validation": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_verifier_probe_v1\\validation_candidates.json",
+    "validation_sha256": "c6495856dc94da4c2e83322956d4fdf19d449d820b2d36871993f9008366affc",
+    "detector_candidate_count": 438
+  },
+  "verifier": {
+    "target": {
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_verifier_probe_v1\\verifier_target.pt",
+      "sha256": "e3c5b68915c0035b73425c98d6a00df84cc2428302f1d3b1077a17ae41b0f911",
+      "parameter_count": 19105,
+      "threshold": 0.5,
+      "input": "target crop"
+    },
+    "context": {
+      "path": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_verifier_probe_v1\\verifier_context.pt",
+      "sha256": "ff261fa20f3a956d461a5c74659cc61c34f84ac90a86365c0b7c127634020eb3",
+      "parameter_count": 19105,
+      "threshold": 0.5,
+      "input": "single expanded 3x crop"
+    }
+  },
+  "validation": {
+    "yolo": {
+      "frames": 792,
+      "TP": 367,
+      "FP": 16,
+      "FN": 17,
+      "TN": 392,
+      "precision": 0.95822454308094,
+      "recall": 0.9557291666666666,
+      "negative_frame_FPR": 0.0392156862745098,
+      "f1": 0.9569752281616688
+    },
+    "yolo_ema_060": {
+      "frames": 792,
+      "TP": 360,
+      "FP": 10,
+      "FN": 24,
+      "TN": 398,
+      "precision": 0.972972972972973,
+      "recall": 0.9375,
+      "negative_frame_FPR": 0.024509803921568627,
+      "f1": 0.9549071618037135
+    },
+    "target_crop_cascade": {
+      "frames": 792,
+      "TP": 366,
+      "FP": 16,
+      "FN": 18,
+      "TN": 392,
+      "precision": 0.9581151832460733,
+      "recall": 0.953125,
+      "negative_frame_FPR": 0.0392156862745098,
+      "f1": 0.9556135770234987
+    },
+    "expanded_3x_crop_cascade": {
+      "frames": 792,
+      "TP": 290,
+      "FP": 9,
+      "FN": 94,
+      "TN": 399,
+      "precision": 0.9698996655518395,
+      "recall": 0.7552083333333334,
+      "negative_frame_FPR": 0.022058823529411766,
+      "f1": 0.849194729136164
+    },
+    "per_category": {
+      "AIRPLANE": {
+        "baseline": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        },
+        "ema_060": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        },
+        "target": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        },
+        "context": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        }
+      },
+      "BIRD": {
+        "baseline": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 160,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.047619047619047616,
+          "f1": 0.0
+        },
+        "ema_060": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 3,
+          "FN": 0,
+          "TN": 165,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.017857142857142856,
+          "f1": 0.0
+        },
+        "target": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 160,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.047619047619047616,
+          "f1": 0.0
+        },
+        "context": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "TN": 167,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.005952380952380952,
+          "f1": 0.0
+        }
+      },
+      "DRONE": {
+        "baseline": {
+          "frames": 384,
+          "TP": 367,
+          "FP": 0,
+          "FN": 17,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9557291666666666,
+          "negative_frame_FPR": null,
+          "f1": 0.9773635153129161
+        },
+        "ema_060": {
+          "frames": 384,
+          "TP": 360,
+          "FP": 0,
+          "FN": 24,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9375,
+          "negative_frame_FPR": null,
+          "f1": 0.967741935483871
+        },
+        "target": {
+          "frames": 384,
+          "TP": 366,
+          "FP": 0,
+          "FN": 18,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.953125,
+          "negative_frame_FPR": null,
+          "f1": 0.976
+        },
+        "context": {
+          "frames": 384,
+          "TP": 290,
+          "FP": 0,
+          "FN": 94,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.7552083333333334,
+          "negative_frame_FPR": null,
+          "f1": 0.8605341246290801
+        }
+      },
+      "HELICOPTER": {
+        "baseline": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 64,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1111111111111111,
+          "f1": 0.0
+        },
+        "ema_060": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 7,
+          "FN": 0,
+          "TN": 65,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.09722222222222222,
+          "f1": 0.0
+        },
+        "target": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 64,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1111111111111111,
+          "f1": 0.0
+        },
+        "context": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 64,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1111111111111111,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "limitations": [
+    "This is a fixed-weight re-evaluation; no verifier training was run.",
+    "The verifier cannot recover detector misses below conf=.25.",
+    "The expanded context model is a single enlarged crop, not a two-branch target/context network.",
+    "Validation is a feasibility diagnostic; no held-out test or calibration data were read."
+  ]
+}

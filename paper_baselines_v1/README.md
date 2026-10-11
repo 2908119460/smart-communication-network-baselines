@@ -2,7 +2,7 @@
 
 > 当前范围更新（2026-10-11）：用户要求优先验证与 demo，不再扩展多种子。YOLO 仅保留 YOLO11n seed0，80 轮上限与自然早停；PA 原多种子等待队列已取消，改为单seed3源模型/8适应验证；RL 原800行结果保留，新增先验机制仅做单seed探索。下方原计划表用于追踪历史，不能把计划矩阵当作已完成结果。
 
-**最新选题结论：[单种子验证与选题结论](../../notes/单种子验证与选题结论.md)。** 方法来源：[真实方法清单](../../notes/baseline_methods_verified_v1.md)。结果与demo：[YOLO](../vision_single_seed0_eval_v1/README.md)、[时序诊断](../vision_single_temporal_exploration_v1/README.md)、[PA](../pa_single_demo_v1/README.md)、[RL用户先验24行对照](../rl_user_prior_demo_v1/REPORT.md)。旧RL中断状态保留，完成状态以continuation_status.json为准。
+**最新选题结论：[单种子验证与选题结论](../../notes/单种子验证与选题结论.md)，[续测与正式实验建议](../../notes/续测结果与正式实验建议_v1.md)。** 方法来源：[真实方法清单](../../notes/baseline_methods_verified_v1.md)。结果与demo：[YOLO](../vision_single_seed0_eval_v1/README.md)、[时序诊断](../vision_single_temporal_exploration_v1/README.md)、[YOLO二阶段复核短测](../vision_single_verifier_probe_v1/README.md)、[PA](../pa_single_demo_v1/README.md)、[RL用户先验对照](../rl_user_prior_demo_v1/REPORT.md)、[RL补充对照](../rl_short_supplement_v2/REPORT.md)。旧RL中断状态保留，完成状态以continuation_status.json为准。
 
 更新：2026-10-11。此目录是统一入口，训练、数据和检查记录保留在各方向独立目录。本轮单seed训练与测试已经完成；交付核验见delivery_audit.json。
 

@@ -1,0 +1,34 @@
+{
+  "status": "verified_full_decode",
+  "file": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_single_demo_v1\\videos\\apa_b_residual_demo.mp4",
+  "sha256": "b17e36e1997388bcb9ecb4737e4d1d7ea2e0426cec256b1ba3ff4deebc42c927",
+  "frames": 180,
+  "fps": 12,
+  "seconds": 15.0,
+  "width": 1600,
+  "height": 900,
+  "window": 512,
+  "fixed_choices": [
+    {
+      "kind": "gru",
+      "mode": "partial",
+      "total_label_budget": 4096
+    },
+    {
+      "kind": "envelope_moe",
+      "mode": "partial",
+      "total_label_budget": 4096
+    }
+  ],
+  "decoded_frames": 180,
+  "unique_frame_count": 180,
+  "decoded_fps": 12.0,
+  "decoded_width": 1600,
+  "decoded_height": 900,
+  "snapshots": [
+    "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_single_demo_v1\\videos\\frame_000.png",
+    "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_single_demo_v1\\videos\\frame_090.png",
+    "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\pa_single_demo_v1\\videos\\frame_179.png"
+  ],
+  "animation_time_is_not_physical_time": true
+}

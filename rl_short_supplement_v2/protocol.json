@@ -1,0 +1,52 @@
+{
+  "run_id": "rl_short_supplement_v2",
+  "created_utc": "2026-10-11T15:22:06.501906+00:00",
+  "parent_locked_protocol_sha256": "d9d143a1269940d6d6c649e7499209d0359912f65a883d85686b10067e92532b",
+  "source_mechanism_run": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\rl_user_prior_demo_v1",
+  "scenarios": [
+    {
+      "name": "validation_demo12_load11_block12",
+      "topology": 12,
+      "load": 1.1,
+      "block_scale": 1.2,
+      "split": "exploratory_validation"
+    },
+    {
+      "name": "validation_demo13_load10_block10",
+      "topology": 13,
+      "load": 1.0,
+      "block_scale": 1.0,
+      "split": "exploratory_validation"
+    }
+  ],
+  "environment_seeds": [
+    40000
+  ],
+  "slots": 2000,
+  "warmup": 500,
+  "methods": [
+    "anchor_360k",
+    "continued_ppo",
+    "joint_prior",
+    "user_marginal_prior",
+    "fixed_beam2",
+    "validation_beam3",
+    "rr_tdma_beam2",
+    "feedback_mab"
+  ],
+  "source_files_sha256": {
+    "evaluator": "8f60f8944b944e4da60861a8f9e2b983f3e2ccafee577f95323ff565a5afaba6",
+    "environment": "22dc144f6460257762bc74564d2b3220f9bd8ecabe1fb64411d8ac1011cf9531",
+    "state_action": "a640d8fdd050e7914cb4e5d363cea42466e10305a49f61f545b2dcb984df081c",
+    "feedback_adapter": "4456533ac62dfb3da4569fb99792b3e31206a1670a3eb4df3be8cffd508ff5eb"
+  },
+  "scope": "Single environment draw per scenario; paired exploratory supplemental baseline, not a new formal test.",
+  "rr_contract": "u = slot mod 5, fixed beam 2, direct-only, relay==UE, tracking bit clear; one UE is offered one action per slot.",
+  "feedback_scope": "Existing causal-feedback scheme-4 adaptation, no offline training; evaluated only to complete a same-draw visual comparison.",
+  "caveats": [
+    "One training seed for learned methods; one environment draw per scene.",
+    "RR is a strict lower reference and not an optimized TDMA scheduler.",
+    "Feedback MAB is online-adaptive and does not have the same state/budget as PPO.",
+    "Short finite horizon cannot establish stability or generalization."
+  ]
+}

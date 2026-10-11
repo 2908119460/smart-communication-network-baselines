@@ -1,0 +1,331 @@
+{
+  "status": "completed",
+  "scope": "train/validation only; test and calibration not read",
+  "seed": 20261013,
+  "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\weights\\best.pt",
+  "checkpoint_sha256": "9e99b5c1c9cb5ca0f11c7f6e799c533deeb4e70000a2b2b03ea49dc76debfc56",
+  "split_manifest_sha256": "9dd0b880ff265335ea70b6166df833abc49ca1fe35b21974585b3d5a14b91318",
+  "train_frames": 4296,
+  "validation_frames": 792,
+  "candidate_generation": {
+    "confidence": 0.001,
+    "negative_min_score": 0.05,
+    "iou_match": 0.3,
+    "max_candidates_per_frame": 5
+  },
+  "verifier": {
+    "epochs": 4,
+    "threshold": 0.5,
+    "image_size": 64,
+    "train_samples": {
+      "samples": 4411,
+      "positive": 3814,
+      "negative": 597
+    },
+    "target": {
+      "mode": "target",
+      "samples": 4411,
+      "class_counts": {
+        "0": 597,
+        "1": 3814
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 0.6535840034755118,
+          "sample_accuracy": 0.6236681024710949
+        },
+        {
+          "epoch": 2,
+          "loss": 0.6121524627774623,
+          "sample_accuracy": 0.6712763545681252
+        },
+        {
+          "epoch": 3,
+          "loss": 0.5842468304932456,
+          "sample_accuracy": 0.70006801178871
+        },
+        {
+          "epoch": 4,
+          "loss": 0.5576150552320037,
+          "sample_accuracy": 0.72636590342326
+        }
+      ],
+      "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_verifier_probe_v1\\verifier_target.pt",
+      "checkpoint_sha256": "e3c5b68915c0035b73425c98d6a00df84cc2428302f1d3b1077a17ae41b0f911",
+      "elapsed_seconds": 178.96899999980815
+    },
+    "context": {
+      "mode": "context",
+      "samples": 4411,
+      "class_counts": {
+        "0": 597,
+        "1": 3814
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 0.6626961454461961,
+          "sample_accuracy": 0.5819542053956019
+        },
+        {
+          "epoch": 2,
+          "loss": 0.6520901740313495,
+          "sample_accuracy": 0.6016776241215144
+        },
+        {
+          "epoch": 3,
+          "loss": 0.6411782460833212,
+          "sample_accuracy": 0.6030378598957152
+        },
+        {
+          "epoch": 4,
+          "loss": 0.6314654475138372,
+          "sample_accuracy": 0.6236681024710949
+        }
+      ],
+      "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_single_verifier_probe_v1\\verifier_context.pt",
+      "checkpoint_sha256": "ff261fa20f3a956d461a5c74659cc61c34f84ac90a86365c0b7c127634020eb3",
+      "elapsed_seconds": 193.03099999995902
+    }
+  },
+  "validation": {
+    "yolo": {
+      "frames": 792,
+      "TP": 367,
+      "FP": 16,
+      "FN": 17,
+      "TN": 392,
+      "precision": 0.95822454308094,
+      "recall": 0.9557291666666666,
+      "negative_frame_FPR": 0.0392156862745098,
+      "f1": 0.9569752281616688
+    },
+    "yolo_ema_060": {
+      "frames": 792,
+      "TP": 364,
+      "FP": 13,
+      "FN": 20,
+      "TN": 395,
+      "precision": 0.9655172413793104,
+      "recall": 0.9479166666666666,
+      "negative_frame_FPR": 0.031862745098039214,
+      "f1": 0.9566360052562418
+    },
+    "target_verifier": {
+      "frames": 792,
+      "TP": 379,
+      "FP": 57,
+      "FN": 5,
+      "TN": 351,
+      "precision": 0.8692660550458715,
+      "recall": 0.9869791666666666,
+      "negative_frame_FPR": 0.13970588235294118,
+      "f1": 0.9243902439024391
+    },
+    "context_verifier": {
+      "frames": 792,
+      "TP": 298,
+      "FP": 15,
+      "FN": 86,
+      "TN": 393,
+      "precision": 0.952076677316294,
+      "recall": 0.7760416666666666,
+      "negative_frame_FPR": 0.03676470588235294,
+      "f1": 0.8550932568149211
+    },
+    "per_category": {
+      "AIRPLANE": {
+        "baseline": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        },
+        "ema_060": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 168,
+          "precision": null,
+          "recall": null,
+          "negative_frame_FPR": 0.0,
+          "f1": null
+        },
+        "target": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 6,
+          "FN": 0,
+          "TN": 162,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.03571428571428571,
+          "f1": 0.0
+        },
+        "context": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 1,
+          "FN": 0,
+          "TN": 167,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.005952380952380952,
+          "f1": 0.0
+        }
+      },
+      "BIRD": {
+        "baseline": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 160,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.047619047619047616,
+          "f1": 0.0
+        },
+        "ema_060": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 5,
+          "FN": 0,
+          "TN": 163,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.02976190476190476,
+          "f1": 0.0
+        },
+        "target": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 38,
+          "FN": 0,
+          "TN": 130,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.2261904761904762,
+          "f1": 0.0
+        },
+        "context": {
+          "frames": 168,
+          "TP": 0,
+          "FP": 4,
+          "FN": 0,
+          "TN": 164,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.023809523809523808,
+          "f1": 0.0
+        }
+      },
+      "DRONE": {
+        "baseline": {
+          "frames": 384,
+          "TP": 367,
+          "FP": 0,
+          "FN": 17,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9557291666666666,
+          "negative_frame_FPR": null,
+          "f1": 0.9773635153129161
+        },
+        "ema_060": {
+          "frames": 384,
+          "TP": 364,
+          "FP": 0,
+          "FN": 20,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9479166666666666,
+          "negative_frame_FPR": null,
+          "f1": 0.9732620320855615
+        },
+        "target": {
+          "frames": 384,
+          "TP": 379,
+          "FP": 0,
+          "FN": 5,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.9869791666666666,
+          "negative_frame_FPR": null,
+          "f1": 0.9934469200524246
+        },
+        "context": {
+          "frames": 384,
+          "TP": 298,
+          "FP": 0,
+          "FN": 86,
+          "TN": 0,
+          "precision": 1.0,
+          "recall": 0.7760416666666666,
+          "negative_frame_FPR": null,
+          "f1": 0.873900293255132
+        }
+      },
+      "HELICOPTER": {
+        "baseline": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 64,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1111111111111111,
+          "f1": 0.0
+        },
+        "ema_060": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 8,
+          "FN": 0,
+          "TN": 64,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1111111111111111,
+          "f1": 0.0
+        },
+        "target": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 13,
+          "FN": 0,
+          "TN": 59,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.18055555555555555,
+          "f1": 0.0
+        },
+        "context": {
+          "frames": 72,
+          "TP": 0,
+          "FP": 10,
+          "FN": 0,
+          "TN": 62,
+          "precision": 0.0,
+          "recall": null,
+          "negative_frame_FPR": 0.1388888888888889,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Validation is a feasibility result; no held-out test or calibration data were read.",
+    "The verifier receives frozen YOLO candidates and cannot recover detector misses.",
+    "Targets are small; crop/context classifier is a short engineering probe, not a claimed novel method.",
+    "Validation frame sampling is 24 frames per video; temporal EMA is diagnostic on sparse sampled frames.",
+    "Candidate labels use detector-box IoU>=0.30 against DRONE GT; background/near-miss labels are noisy."
+  ]
+}

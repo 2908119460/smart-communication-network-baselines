@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "thresholds": {
+    "detector": 0.25,
+    "verifier": 0.5
+  },
+  "weights_sha256_unchanged": {
+    "target": true,
+    "context": true
+  },
+  "methods": {
+    "target": {
+      "metric_recompute_matches": true,
+      "recomputed_metrics": {
+        "frames": 792,
+        "TP": 366,
+        "FP": 16,
+        "FN": 18,
+        "TN": 392,
+        "precision": 0.9581151832460733,
+        "recall": 0.953125,
+        "negative_frame_FPR": 0.0392156862745098,
+        "f1": 0.9556135770234987
+      },
+      "errors": []
+    },
+    "context": {
+      "metric_recompute_matches": true,
+      "recomputed_metrics": {
+        "frames": 792,
+        "TP": 290,
+        "FP": 9,
+        "FN": 94,
+        "TN": 399,
+        "precision": 0.9698996655518395,
+        "recall": 0.7552083333333334,
+        "negative_frame_FPR": 0.022058823529411766,
+        "f1": 0.849194729136164
+      },
+      "errors": []
+    }
+  }
+}

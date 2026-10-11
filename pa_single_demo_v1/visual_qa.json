@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "status": "passed_after_layout_repairs",
+  "reviewed_on": "2026-10-11",
+  "review_method": "actual image viewing of both final PNG figures and decoded frame 0/90/179 snapshots",
+  "checked_files": [
+    "figures/adaptation_full_test_nmse.png",
+    "figures/full_test_reference_comparison.png",
+    "videos/frame_000.png",
+    "videos/frame_090.png",
+    "videos/frame_179.png"
+  ],
+  "observations": [
+    "Adaptation figure has readable separate full and partial curves, fixed seed 0, total-label budgets, and 58/48 updated-parameter labels.",
+    "Reference figure has readable method names and full-test values; MP/GMP target-trained reference rows are open square markers with explicit full target fit labels.",
+    "All three video snapshots show measured/predicted I and separate residuals; the GRU output-head residual is visibly smaller than the MoE gate residual.",
+    "Video coordinate labels, full-test NMSE line and scope footer have separate vertical space after the layout repair."
+  ],
+  "repairs": [
+    "Moved adaptation figure legends outside the curve area to stop covering the MoE partial line and value label.",
+    "Increased bottom space in video and separated the test-sample axis label from the full-test NMSE line."
+  ],
+  "numeric_verification": {
+    "actual_neural_result_rows": 14,
+    "full_test_points_per_row": 19662,
+    "all_prediction_values_finite": true,
+    "max_recomputed_full_test_nmse_abs_error_db": 0.0,
+    "source_fit_count": 3,
+    "source_epochs_per_fit": 150,
+    "adapt_fit_count": 8,
+    "adapt_epochs_per_fit": 20,
+    "zero_adaptation_updated_parameters": [0, 0, 0]
+  },
+  "video_decode": {
+    "manifest": "videos/manifest.json",
+    "decoded_frames": 180,
+    "unique_frame_count": 180,
+    "fps": 12.0,
+    "seconds": 15.0,
+    "width": 1600,
+    "height": 900
+  },
+  "hashes_sha256": {
+    "frozen_training_module": "fa91fc2b4d39b987cc2001c71c639c589f1f87213e01a56dabb3fc5a595812e4",
+    "final_demo_runner": "178cf529d0379679d5f515440eb63c4200e81cd5903730a7b4883290ea841efd",
+    "neural_results.json": "effc258aa0351eed4919d25c22717b1a1739cb2cf1152468eecea6c2f5346014",
+    "figures/adaptation_full_test_nmse.png": "e2adbf35b137c98daf68104787c7ac6c410d3c9bb030f7e5b6dca5dd6f19cf82",
+    "figures/full_test_reference_comparison.png": "68df3807624b16365ad9f1c64c85410c603569fe7adb2c8de472f9a3890d2eff",
+    "videos/apa_b_residual_demo.mp4": "b17e36e1997388bcb9ecb4737e4d1d7ea2e0426cec256b1ba3ff4deebc42c927"
+  },
+  "provenance_notes": [
+    "Renderer layout and zero-adaptation metadata were clarified after the GPU process completed; no fit, checkpoint selection, prediction or NMSE value was changed.",
+    "Zero-adaptation rows retain source-checkpoint training history; target updated parameters are explicitly zero and source_folder identifies the checkpoint provenance.",
+    "Preparatory data manifests hashed/count test files; the freeze marker means no test arrays were loaded for model evaluation during this run before choices were frozen. Earlier APA exploratory tests had already been observed."
+  ],
+  "claim_limits": [
+    "single seed; no standard deviation or significance claim",
+    "cross-capture transfer without device or temperature metadata",
+    "forward PA modeling; no RF measured DPD improvement",
+    "no supported MoE gate innovation: source advantage over uniform experts is only 0.0034 dB and gate-only target adaptation is weak"
+  ]
+}

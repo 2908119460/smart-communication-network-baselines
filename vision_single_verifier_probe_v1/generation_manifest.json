@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "gpu_used": true,
+  "checkpoint": "D:\\vs code\\智能通信网络大作业\\experiments\\runs\\vision_paper_v1_yolo11n_seed0_attempt2\\weights\\best.pt",
+  "checkpoint_sha256": "9e99b5c1c9cb5ca0f11c7f6e799c533deeb4e70000a2b2b03ea49dc76debfc56",
+  "split_manifest_sha256": "9dd0b880ff265335ea70b6166df833abc49ca1fe35b21974585b3d5a14b91318",
+  "entries": {
+    "train": 4296,
+    "validation": 792
+  },
+  "conf_generation": 0.001,
+  "max_candidates_per_frame": 5,
+  "candidate_iou_match": 0.3,
+  "held_out_splits_not_read": [
+    "calibration",
+    "test"
+  ],
+  "elapsed_seconds": 133.9220000000205
+}
