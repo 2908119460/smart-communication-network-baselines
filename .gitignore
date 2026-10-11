@@ -1,0 +1,9 @@
+*.npz
+*.log
+*.pt
+*.pth
+*.onnx
+*.ckpt
+datasets/
+weights/
+raw_data/
