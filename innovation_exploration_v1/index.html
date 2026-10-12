@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>智能通信网络 · 两方向创新探索</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#183043;background:#f2f5f7;font-size:16px}*{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:40px 24px 72px}h1{font-size:34px;margin:12px 0}h2{font-size:25px;margin:0 0 14px}h3{font-size:19px;margin:22px 0 8px}p{line-height:1.8;color:#405667}a{color:#175da3}nav{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}.eyebrow{color:#175da3;font-size:14px}.card{background:#fff;border:1px solid #dae4eb;border-radius:12px;padding:26px;margin:22px 0}.note{background:#e8f0f7;padding:16px 20px;line-height:1.7;border-radius:8px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.grid article{background:#f4f7fa;padding:18px;border-radius:8px}.grid h3{margin-top:0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:11px 8px;border-bottom:1px solid #e0e8ee;white-space:nowrap}th{font-weight:500;color:#536c7d}.scroll{overflow:auto}.caption{font-size:14px;color:#5a7080;line-height:1.7}.media{width:100%;height:auto;border-radius:6px}label{display:block;margin:15px 0 10px}input[type=range]{width:100%;max-width:540px}.badge{display:inline-block;font-size:13px;background:#e8f1e9;color:#23613b;padding:5px 10px;border-radius:20px}footer{font-size:14px;color:#596d7c;margin-top:30px}details{margin:18px 0}summary{cursor:pointer;color:#175da3}#load-state{color:#526e80}@media(max-width:720px){main{padding:24px 14px}.card{padding:19px}.grid{grid-template-columns:1fr}h1{font-size:27px}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-12</div>
+<h1>两个方向继续探索，先看机制是否有效</h1>
+<p>当前范围：无人机本体检测与 60 GHz 强化学习调度。PA 已停止投入，旧结果留作历史资料。“离线强教师 → 在线小模型”仍在候选池中；现阶段不确定最终选题。</p>
+<nav><a href="#vision">教师与轻量学生</a><a href="#resolution">分辨率诊断</a><a href="#rl">队列感知调度</a><a href="#next">候选创新与后续</a><a href="../paper_baselines_v1/">历史 baseline 与视频</a></nav>
+<div class="note">本轮是单种子的短实验，优先验证和 demo。视觉新结果来自 792 张验证帧；95% 召回工作点在这批验证标签上选择，因此用于判断潜力。RL 每支从相同 360k PPO 继续 30k，评估三条配对仿真轨迹。</div>
+<p id="load-state" role="status">正在读取已完成实验的结果…</p>
+<section class="card" id="vision">
+<span class="badge">已完成三支学生对照</span><h2>教师能区分，学生能否学会？</h2>
+<p>冻结 DINOv2 ViT-S/14（2206 万参数）提取候选框特征，用训练集五类标签训练线性分类头。学生是预训练 MobileNetV3-small（152 万参数），以无人机、直升机、鸟、飞机和背景进行 8 轮训练。部署形式为 YOLO 候选框 + 轻量复核器。</p>
+<div class="grid"><article><h3>普通蒸馏 KD</h3><p>学生同时学习真实标签与教师五类软概率；温度 T=2，CE 与 KD 各占 0.5。</p></article><article><h3>置信门控蒸馏</h3><p>只有教师对正确类别的概率高于其他类别时，才迁移其知识；边距越大权重越高，直升机、鸟、飞机的有效信号再乘 2。</p></article></div>
+<h3>相近召回下的误报：同验证集诊断</h3><div id="vision-95" class="scroll"></div>
+<p class="caption">对照三支的初始权重、训练样本顺序与 688 次更新一致。门控版本在相同召回下比 CE / 普通 KD 少 3 个误报，是局部正向信号。普通 KD 未超过同容量 CE。教师仍优于学生，迁移尚未完成。</p>
+<details><summary>查看固定 P(drone) ≥ 0.5 的结果</summary><div id="vision-fixed" class="scroll"></div><p>固定 0.5 会删掉较多无人机；误报下降需要与召回损失一起读。概率尺度不同，不能只看这个阈值判定教师或学生强弱。</p></details>
+<h3>在不同召回要求下比较</h3><label for="recall-target">目标帧召回：<output id="recall-label">95%</output></label><input id="recall-target" type="range" min="70" max="95" step="1" value="95"><div id="operating" class="scroll"></div>
+<p class="caption">滑动后从已保存验证曲线中选满足目标召回的最高阈值。这里展示阈值取舍，没有重新训练，也不是独立测试成绩。</p>
+<h3>成功与失败都展示</h3><a href="../vision_teacher_student_capacity_v1/validation_cases.jpg"><img class="media" src="../vision_teacher_student_capacity_v1/validation_cases.jpg" alt="教师与三支学生的验证案例：修正误报、保留误报、额外漏检与保留无人机" loading="lazy"></a>
+<p class="caption">图中的框来自 YOLO 预测。数字为各复核器的无人机概率；保留/拒绝按各自验证诊断阈值决定。案例用于解释机制，整批结果见上表。</p>
+<p><a href="../vision_teacher_student_capacity_v1/README.md">学生实验报告</a> · <a href="../vision_teacher_student_explore_v1/audit.md">数据与实现审查</a> · <a href="../notes/literature_teacher_student_scan.md">教师—学生论文与候选</a></p>
+</section>
+<section class="card" id="resolution"><h2>同一 YOLO，640 与 960 输入</h2><p>无需重训，先检查增加有效分辨率是否提供更好的检测框。这个对照为高分辨率教师路线提供依据；单独增大输入分辨率属于已有方法。</p><div id="resolution-results" class="scroll"></div><p id="resolution-conclusion"></p><a href="../vision_resolution_probe_v1/resolution_comparison.jpg"><img class="media" src="../vision_resolution_probe_v1/resolution_comparison.jpg" alt="640与960分辨率的预测框与真实标注框对照" loading="lazy"></a><p><a href="../vision_resolution_probe_v1/README.md">分辨率实验协议与结果</a></p></section>
+<section class="card" id="rl"><span class="badge">三支各继续 30k</span><h2>奖励中加入队列信息，是否改善积压？</h2>
+<p>当前 PPO 主要奖励已交付吞吐。本轮在同一模型上比较普通续训、队列漂移奖励、超阈值积压惩罚。网络仍是原 35 维状态 / 180 个动作，参数和训练预算一致。</p>
+<div class="grid"><article><h3>队列漂移</h3><p>使用行动前后的队列差异：减少积压时给奖励，增长时扣分。平方队列会强调较大积压；每步增量截断后乘 0.02。</p></article><article><h3>超阈值积压惩罚</h3><p>当用户队列超过 2000 包时扣分，惩罚持续积压。阈值和系数在运行前固定，没有展开参数搜索。</p></article></div>
+<div id="rl-results" class="scroll"></div><p id="rl-conclusion"></p>
+<h3>配对仿真队列曲线</h3><p><a href="../rl_queue_risk_explore_v1/queue_trajectory_topology12.html">打开可交互队列回放</a></p><p class="caption">曲线来自保存的真实仿真轨迹，三个方法使用相同外生到达/遮挡随机过程。Pending 为仿真窗口结束时未交付包占总到达比例。它不是丢包率；已交付包的时延也不能代表这些未完成包。</p>
+<p><a href="../rl_queue_risk_explore_v1/README.md">队列奖励实验报告</a> · <a href="../rl_user_prior_demo_v1/REPORT.md">此前用户级先验实验</a> · <a href="../notes/literature_rl_innovation_scan.md">RL 文献与七个候选</a></p>
+</section>
+<section class="card" id="next"><h2>候选池：贡献要落在具体问题上</h2><div class="scroll"><table><thead><tr><th>方向</th><th>候选机制</th><th>当前依据 / 下一步</th></tr></thead><tbody>
+<tr><td>视觉</td><td>近类感知的可信教师蒸馏</td><td>教师有效、门控学生有初步信号；随后迁入 YOLO 训练</td></tr>
+<tr><td>视觉</td><td>小目标定位 / 尺度选择蒸馏</td><td>先读 640/960 定位诊断，再做大教师 → 640 学生</td></tr>
+<tr><td>视觉</td><td>候选轨迹的轻量时序判别</td><td>单帧 vs EMA vs 真实因果历史；尚未训练新时序模型</td></tr>
+<tr><td>视觉</td><td>语义 + 轨迹可靠性筛选伪标签</td><td>先测伪标签正确率与覆盖率，后训练学生</td></tr>
+<tr><td>RL</td><td>队列约束 + 自适应用户先验</td><td>固定奖励和原用户先验已试；自适应机制仍待验证</td></tr>
+<tr><td>RL</td><td>部分观测历史策略 / 条件动作结构</td><td>先测观测退化，再训练 GRU 或用户→配置 actor</td></tr>
+<tr><td>RL</td><td>多场景 / 特权教师 → 小部署策略</td><td>先验证教师比现有 PPO 强，再检验闭环迁移</td></tr>
+<tr><td>RL</td><td>历史世界模型辅助预测</td><td>先超过简单持续性预测，再考虑想象轨迹或强教师</td></tr>
+</tbody></table></div>
+<p>后续 4×4090 更适合扩大教师、分辨率和跨场景训练。视觉可考虑 DINOv3 / SAM 3；权重需要官方访问授权，当前尚未部署。RL 原策略很小，应让更大模型解决部分观测与跨场景问题，而不是单纯增大参数。</p>
+<p>普通 KD、可靠性筛选、Lyapunov 思路、条件策略和世界模型均有先例。我们的候选贡献是它们针对当前失败模式的具体设计及验证；本轮没有宣称学术首创。</p>
+<p><a href="../notes/两方向创新探索_20261012.md">本轮统一报告</a> · <a href="../notes/literature_vision_pa_scan.md">视觉论文与数据资源</a></p></section>
+<footer>当前页面展示探索结果；历史完整 baseline / 视频在上方归档入口。本轮未微调基础大模型，未开展新增多种子矩阵。</footer>
+</main>
+<script>
+const names={yolo:'YOLO11n',frozen_teacher:'冻结 DINOv2 教师',teacher:'冻结 DINOv2 教师',explicit_negative_ce:'MobileNet · CE',teacher_kd:'MobileNet · 普通 KD',confidence_gated_kd:'MobileNet · 门控 KD',continued_ppo:'普通 PPO 续训',queue_drift:'队列漂移',tail_queue_penalty:'超阈值惩罚'};
+function table(id,headers,rows){const target=document.getElementById(id),t=document.createElement('table'),head=t.createTHead().insertRow();for(const value of headers){const th=document.createElement('th');th.textContent=value;head.append(th)}const body=t.createTBody();for(const values of rows){const row=body.insertRow();for(const value of values)row.insertCell().textContent=value}target.replaceChildren(t)}
+const percent=v=>v==null?'—':(100*v).toFixed(2)+'%';
+function visionRows(values){return Object.entries(values).map(([name,r])=>[names[name]||name,percent(r.recall),percent(r.negative_frame_FPR),r.TP,r.FP])}
+function drawOperating(v){const target=Number(document.getElementById('recall-target').value)/100;document.getElementById('recall-label').textContent=Math.round(target*100)+'%';const rows=[];for(const [name,curve] of Object.entries(v.curves)){const valid=curve.filter(r=>r.recall>=target).sort((a,b)=>b.probability_threshold-a.probability_threshold);const r=valid[0];rows.push(r?[names[name],r.probability_threshold.toFixed(4),percent(r.recall),percent(r.negative_frame_FPR),r.FP]:[names[name],'不可达','—','—','—'])}table('operating',['方法','P(drone) 阈值','实际召回','负帧误报率','误报帧'],rows)}
+async function main(){try{const response=await fetch('results.json');if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json(),v=data.vision;const operating={yolo:v.fixed.yolo};for(const [name,diagnostic] of Object.entries(v.diagnostics))operating[name]=diagnostic.operating_point;table('vision-95',['方法','帧召回','负帧误报率','TP','FP'],visionRows(operating));table('vision-fixed',['方法','帧召回','负帧误报率','TP','FP'],visionRows(v.fixed));drawOperating(v);document.getElementById('recall-target').addEventListener('input',()=>drawOperating(v));const rows=data.rl.evaluations.map(r=>[r.scenario,names[r.method_id],r.throughput_gbps.toFixed(3),Math.round(r.mean_queue_packets_per_ue).toLocaleString(),Math.round(r.worst_user_mean_queue_packets).toLocaleString(),percent(r.end_pending_fraction_of_total_arrivals)]);table('rl-results',['场景','方法','吞吐 / Gbps','平均队列 / 包','最差用户均队列 / 包','末尾 pending'],rows);const s=data.resolution;table('resolution-results',s.web_headers||['结果'],s.web_rows||[['请查看下方实验报告']]);document.getElementById('resolution-conclusion').textContent=s.web_conclusion||'分辨率实验的完整指标定义与结果见下方报告。';document.getElementById('rl-conclusion').textContent=data.rl.comparisons.map(c=>`${c.scene} · ${names[c.method]}：吞吐 ${c.throughput_relative_percent>=0?'+':''}${c.throughput_relative_percent.toFixed(1)}%，平均队列 ${c.queue_relative_percent>=0?'+':''}${c.queue_relative_percent.toFixed(1)}%。`).join(' ');document.getElementById('load-state').textContent='本轮实验已完成。下表按实际保存指标展示。'}catch(error){document.getElementById('load-state').textContent='结果读取失败：'+error.message+'。请使用各实验报告链接。'}}main();
+</script></body></html>
