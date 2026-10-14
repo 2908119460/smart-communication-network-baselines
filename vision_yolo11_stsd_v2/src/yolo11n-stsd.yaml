@@ -1,0 +1,45 @@
+# YOLO11-STSD nano. Based on Ultralytics 8.3.253, AGPL-3.0.
+# Retains YOLO11 backbone and Detect; dynamic fusion REPLACES fixed FPN/PAN.
+# The previous additive-PAN prototype is yolo11n-stsd-pan.yaml.
+nc: 1
+scales:
+  n: [0.50, 0.25, 1024]
+# Explicit map: original YOLO11 layer -> STSD layer for pretrained transfer.
+stsd_base_layer_map:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  23: 20
+backbone:
+  - [-1, 1, Conv, [64, 3, 2]]        # 0
+  - [-1, 1, Conv, [128, 3, 2]]       # 1
+  - [-1, 2, C3k2, [256, False, 0.25]]
+  - [-1, 1, Conv, [256, 3, 2]]       # 3
+  - [-1, 2, C3k2, [512, False, 0.25]] # 4 P3/8, C=128
+  - [-1, 1, Conv, [512, 3, 2]]       # 5
+  - [-1, 2, C3k2, [512, True]]       # 6 P4/16, C=128
+  - [-1, 1, Conv, [1024, 3, 2]]      # 7
+  - [-1, 2, C3k2, [1024, True]]
+  - [-1, 1, SPPF, [1024, 5]]
+  - [-1, 2, C2PSA, [1024]]          # 10 P5/32, C=256
+  - [4, 1, SkyPriorModule, [0.25, 0.1, True]]  # 11 P3 unchanged
+  - [6, 1, SkyPriorModule, [0.25, 0.1, True]]  # 12 P4 unchanged
+  - [10, 1, SkyPriorModule, [0.25, 0.1, True]] # 13 P5 unchanged
+head:
+  # [target scale, MLP reduction, output channels before nano width scaling]
+  # Three branches perform the same dynamic fusion at P3/P4/P5 resolutions.
+  - [[11, 12, 13], 1, DynamicScaleNeck, [0, 4, 256]]  # 14 P3/8, C=64
+  - [[11, 12, 13], 1, DynamicScaleNeck, [1, 4, 512]]  # 15 P4/16, C=128
+  - [[11, 12, 13], 1, DynamicScaleNeck, [2, 4, 1024]] # 16 P5/32, C=256
+  - [14, 1, TemporalFeatureModule, []]       # 17 P3
+  - [15, 1, TemporalFeatureModule, []]       # 18 P4
+  - [16, 1, TemporalFeatureModule, []]       # 19 P5
+  - [[17, 18, 19], 1, Detect, [nc]]          # 20 unchanged Detect
