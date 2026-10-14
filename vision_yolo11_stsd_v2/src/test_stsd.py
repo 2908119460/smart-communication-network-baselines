@@ -337,6 +337,21 @@ class STSDIntegrationTests(unittest.TestCase):
         self.assertEqual(len(batch["cls"]), len(batch["bboxes"]))
         self.assertEqual(batch["im_file"], tuple(base.im_files[i] for i in [1, 4, 5, 2]))
 
+    def test_disjoint_pair_stride_preserves_one_exposure_per_frame(self):
+        class Frames:
+            im_files = [f"train/video_{i:06d}.jpg" for i in range(0, 120, 15)]
+            labels = [{} for _ in im_files]
+
+            def __len__(self):
+                return len(self.im_files)
+
+        paired = TemporalPairDataset(Frames(), pair_stride=2)
+        self.assertEqual(paired.pairs, [(0, 1), (2, 3), (4, 5), (6, 7)])
+        self.assertEqual(paired.pair_statistics["unique_frames_used"], 8)
+        self.assertEqual(len({i for pair in paired.pairs for i in pair}), 2 * len(paired))
+        with self.assertRaises(ValueError):
+            TemporalPairDataset(Frames(), pair_stride=0)
+
     def test_explicit_baseline_transfer_and_removed_neck_is_not_reused(self):
         baseline_yaml = MODEL_YAML.with_name("yolo11.yaml")
         baseline = YOLO(str(baseline_yaml), task="detect", verbose=False)

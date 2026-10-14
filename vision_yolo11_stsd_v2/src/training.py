@@ -21,8 +21,10 @@ class TemporalPairDataset(Dataset):
     Parent path also scopes sequence identity. Explicit index tuples in ``pairs``
     support other naming conventions. max_frame_gap bounds sampled-frame gaps.
     """
-    def __init__(self, dataset, pairs=None, max_frame_gap=32):
+    def __init__(self, dataset, pairs=None, max_frame_gap=32, pair_stride=1):
         self.dataset = dataset
+        if not isinstance(pair_stride, int) or pair_stride < 1:
+            raise ValueError("pair_stride must be a positive integer")
         if pairs is None:
             groups = defaultdict(list)
             for index, filename in enumerate(dataset.im_files):
@@ -39,7 +41,8 @@ class TemporalPairDataset(Dataset):
             pairs, gaps = [], []
             for frames in groups.values():
                 frames.sort()
-                for (previous_frame, previous), (current_frame, current) in zip(frames, frames[1:]):
+                for offset in range(0, len(frames) - 1, pair_stride):
+                    (previous_frame, previous), (current_frame, current) = frames[offset:offset + 2]
                     gap = current_frame - previous_frame
                     if 0 < gap <= max_frame_gap:
                         pairs.append((previous, current))
@@ -47,7 +50,8 @@ class TemporalPairDataset(Dataset):
             self.pair_statistics = {"pairs": len(pairs), "sequences": len(groups),
                                     "frame_gap_min": min(gaps) if gaps else None,
                                     "frame_gap_max": max(gaps) if gaps else None,
-                                    "max_frame_gap": max_frame_gap}
+                                    "max_frame_gap": max_frame_gap, "pair_stride": pair_stride,
+                                    "unique_frames_used": len({i for pair in pairs for i in pair})}
         else:
             self.pair_statistics = {"pairs": len(pairs), "explicit_pair_indices": True}
         if not pairs:
@@ -95,7 +99,8 @@ class STSDPairTrainer(DetectionTrainer):
         gs = max(int(unwrap_model(self.model).stride.max()), 32)
         # mode=val + rect=False gives square deterministic letterboxing.
         dataset = build_yolo_dataset(cfg, img_path, batch, self.data, mode="val", rect=False, stride=gs)
-        paired = TemporalPairDataset(dataset, max_frame_gap=int(self.data.get("temporal_max_frame_gap", 32)))
+        paired = TemporalPairDataset(dataset, max_frame_gap=int(self.data.get("temporal_max_frame_gap", 32)),
+                                     pair_stride=int(self.data.get("temporal_pair_stride", 1)))
         LOGGER.info(f"STSD temporal pairs: {paired.pair_statistics}")
         return paired
 

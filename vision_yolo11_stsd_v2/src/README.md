@@ -10,6 +10,17 @@ modules → original Detect. Dynamic fusion **replaces** the fixed FPN/PAN.
 `yolo11n-stsd.yaml` is the default. `yolo11n-stsd-pan.yaml` retains the earlier v1
 additive-PAN prototype for comparison; its results do not describe v2.
 
+Full-data experiments are launched separately from the engineering probe. Run
+`python experiments/scripts/vision_stsd_formal.py all --epochs 80`. This serially
+trains STSD and a matching YOLO11n control from the same official COCO checkpoint,
+then evaluates validation/test and four fixed complete videos. Each run uses
+seed 0, batch 8 and validation-only early stopping (patience 15). The formal
+dataset sets `temporal_pair_stride: 2`: 2,148 disjoint pairs expose all 4,296
+training images once per epoch (537 batches). Both models use the same
+deterministic letterbox pipeline. Original augmentation-based baseline results
+remain a separate reference. Status lives in `formal_status.json`; logs and
+checkpoints stay under `formal_seed0/` and `formal_pair_baseline_seed0/`.
+
 For a 640×640 input, backbone features are `[B,128,80,80]`, `[B,128,40,40]`,
 and `[B,256,20,20]`. Sky attention keeps these shapes. Each dynamic branch
 projects all three inputs to a common channel count and resizes them to its
@@ -45,6 +56,8 @@ Ordinary training (`--spatial-only`) does not learn temporal fusion.
 Supported frame naming: `<sequence>_<number>.jpg` or per-sequence folders containing
 numbered frame names such as `000001.jpg`. Only images inside the current split
 are paired. `temporal_max_frame_gap: 32` in data YAML controls allowable frame gaps.
+`temporal_pair_stride: 1` is the default overlapping-pair sampling used by the
+historical probe. Set it to 2 for disjoint pairs as in the formal experiment.
 Other conventions can use explicit same-sequence index tuples in
 `TemporalPairDataset`. Video cache assumes stable lanes; reset on every new stream.
 
@@ -56,6 +69,13 @@ CUDA installation, then install `ultralytics==8.3.253` for its dependencies. The
 runner puts this fork first on `sys.path`; installing the fork over the baseline
 environment is unnecessary. The archive includes source and tests, not weights,
 datasets or a virtual environment.
+
+For the formal experiment on the existing RGB dataset, also install
+`pip install -r experiments/sources/ultralytics_stsd/requirements-formal.txt`.
+The annotation reader `experiments/scripts/vision_prepare.py` is included;
+`mcos-decoder` reads the dataset's MATLAB MCOS ground-truth tables. Formal
+evaluation requires the existing split/protocol files and original videos,
+which are not distributed in the source archive.
 
 For another dataset, supply actual paths:
 
@@ -76,7 +96,7 @@ training and an explicit detached video cache; image inference is stateless.
 There is no motion alignment or optical flow in this version. ONNX/JIT tracing
 uses the image path and does not export the Python video cache.
 
-Ten module/integration checks cover both YAML configurations, real detection
+Eleven module/integration checks cover both YAML configurations, real detection
 loss, gradients in all three module types, parameter updates, weight transfer,
 same-sequence pairs, video cache and checkpoint reload. Run `check` to record
 the current result. The authoritative v2 experiment metrics and training budget

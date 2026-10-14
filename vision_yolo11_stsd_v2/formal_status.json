@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-14T14:51:22.416504+00:00",
+  "status": "running",
+  "phase": "stsd_training",
+  "started_at": "2026-10-14T14:38:45.312690+00:00",
+  "data": {
+    "name": "DroneDetectionThesis RGB (not official Anti-UAV)",
+    "train_frames": 4296,
+    "val_frames": 792,
+    "test_frames": 792
+  },
+  "config": {
+    "epochs": 80,
+    "patience": 15,
+    "seed": 0,
+    "batch": 8,
+    "imgsz": 640,
+    "initialization": "public_coco",
+    "pair_stride": 2,
+    "overlapping_pairs": false,
+    "exposures_per_epoch": 4296,
+    "batches_per_epoch": 537
+  },
+  "runs": [
+    {
+      "id": "stsd",
+      "name": "YOLO11-STSD v2",
+      "status": "running",
+      "started_at": "2026-10-14T14:38:54.336205+00:00",
+      "current_epoch": 8,
+      "completed_epochs": 7,
+      "max_epochs": 80,
+      "best_epoch": 4,
+      "latest_val": {
+        "map50": 0.70643,
+        "map50_95": 0.29126,
+        "precision": 0.79902,
+        "recall": 0.65885
+      },
+      "best_val": {
+        "map50": 0.76181,
+        "map50_95": 0.30347,
+        "precision": 0.78391,
+        "recall": 0.67708
+      },
+      "epoch_seconds": 91.13097834587097,
+      "observed_budget": {
+        "batches": 4250,
+        "optimizer_updates": 4240
+      },
+      "last_update": "2026-10-14T14:50:01.532506+00:00",
+      "early_stopped": null,
+      "runtime": {
+        "amp_actual": true,
+        "physical_batch_images": 8,
+        "batches_per_epoch": 537,
+        "pairs": {
+          "pairs": 2148,
+          "sequences": 179,
+          "frame_gap_min": 13,
+          "frame_gap_max": 15,
+          "max_frame_gap": 32,
+          "pair_stride": 2,
+          "unique_frames_used": 4296
+        },
+        "parameters": 3994053,
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+      }
+    },
+    {
+      "id": "pair_control",
+      "name": "YOLO11n 配对训练对照",
+      "status": "queued",
+      "started_at": null,
+      "current_epoch": 0,
+      "completed_epochs": 0,
+      "max_epochs": 80,
+      "best_epoch": null,
+      "latest_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "best_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "epoch_seconds": null,
+      "observed_budget": {},
+      "last_update": null,
+      "early_stopped": null,
+      "runtime": {}
+    }
+  ],
+  "evaluation": {
+    "status": "queued",
+    "val_frames": 792,
+    "test_frames": 792,
+    "full_test_videos": 4,
+    "results": [],
+    "continuous": {}
+  },
+  "limitations": [
+    "The published status is a timestamped snapshot, not a live GPU connection.",
+    "Running validation metrics are provisional; test runs after checkpoint selection.",
+    "Matched pair control shares the data transforms; historical baseline is a reference."
+  ]
+}
