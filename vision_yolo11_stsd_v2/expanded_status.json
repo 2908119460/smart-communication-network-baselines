@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-14T15:09:45.526370+00:00",
+  "status": "waiting_for_gpu",
+  "phase": "waiting_for_gpu",
+  "registered_at": "2026-10-14T15:08:08.362808+00:00",
+  "started_at": null,
+  "data": {
+    "name": "DroneDetectionThesis RGB (not official Anti-UAV)",
+    "train_frames": 17184,
+    "val_frames": 792,
+    "test_frames": 792,
+    "train_videos": 179,
+    "pair_original_frame_gap_min": 1,
+    "pair_original_frame_gap_max": 1
+  },
+  "config": {
+    "epochs": 80,
+    "patience": 15,
+    "seed": 0,
+    "batch": 8,
+    "imgsz": 640,
+    "initialization": "public_coco",
+    "pair_stride": 2,
+    "overlapping_pairs": false,
+    "exposures_per_epoch": 17184,
+    "batches_per_epoch": 2148
+  },
+  "runs": [
+    {
+      "id": "stsd",
+      "name": "YOLO11-STSD v2",
+      "status": "queued",
+      "started_at": null,
+      "current_epoch": 0,
+      "completed_epochs": 0,
+      "max_epochs": 80,
+      "best_epoch": null,
+      "latest_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "best_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "epoch_seconds": null,
+      "observed_budget": {},
+      "last_update": null,
+      "early_stopped": null,
+      "runtime": {}
+    },
+    {
+      "id": "pair_control",
+      "name": "YOLO11n 配对训练对照",
+      "status": "queued",
+      "started_at": null,
+      "current_epoch": 0,
+      "completed_epochs": 0,
+      "max_epochs": 80,
+      "best_epoch": null,
+      "latest_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "best_val": {
+        "map50": null,
+        "map50_95": null,
+        "precision": null,
+        "recall": null
+      },
+      "epoch_seconds": null,
+      "observed_budget": {},
+      "last_update": null,
+      "early_stopped": null,
+      "runtime": {}
+    }
+  ],
+  "evaluation": {
+    "status": "queued",
+    "val_frames": 792,
+    "test_frames": 792,
+    "full_test_videos": 4,
+    "results": [],
+    "continuous": {}
+  },
+  "limitations": [
+    "The published status is a timestamped snapshot, not a live GPU connection.",
+    "Running validation metrics are provisional; test runs after checkpoint selection.",
+    "Matched pair control shares the data transforms; historical baseline is a reference."
+  ]
+}

@@ -10,6 +10,7 @@ import time
 
 EXP = Path(__file__).resolve().parents[1]
 ROOT = EXP / "runs/vision_yolo11_stsd_v2"
+DATA = EXP / "data/vision/paper_v1"
 
 
 def read(path):
@@ -25,6 +26,11 @@ def metrics(values):
 
 def snapshot():
     pipeline = read(ROOT / "formal_pipeline_seed0/manifest.json")
+    counts = read(DATA / "protocol.json").get("counts", {})
+    sampling = read(DATA / "sampling_audit.json")
+    train_frames = counts.get("train", {}).get("frames", 4296)
+    val_frames = counts.get("validation", {}).get("frames", 792)
+    test_frames = counts.get("test", {}).get("frames", 792)
     runs = []
     for kind, name in (("stsd", "formal_seed0"), ("pair_control", "formal_pair_baseline_seed0")):
         manifest = read(ROOT / name / "run_manifest.json")
@@ -62,24 +68,31 @@ def snapshot():
     phase = {"stsd": "stsd_training", "control": "pair_control_training", "evaluation": "evaluation"}.get(stage, "queued")
     if pipeline.get("status") == "completed":
         phase = "completed"
+    if pipeline.get("status") == "waiting_for_gpu":
+        phase = "waiting_for_gpu"
     return {"schema_version": 1, "updated_at": datetime.now(timezone.utc).isoformat(),
             "status": pipeline.get("status", "queued"), "phase": phase,
-            "started_at": pipeline.get("started_utc"),
+            "registered_at": pipeline.get("started_utc"),
+            "started_at": (None if pipeline.get("status") == "waiting_for_gpu" else
+                           pipeline.get("gpu_acquired_utc", pipeline.get("started_utc"))),
             "data": {"name": "DroneDetectionThesis RGB (not official Anti-UAV)",
-                     "train_frames": 4296, "val_frames": 792, "test_frames": 792},
-            "config": {"epochs": 80, "patience": 15, "seed": 0, "batch": 8, "imgsz": 640,
+                     "train_frames": train_frames, "val_frames": val_frames, "test_frames": test_frames,
+                     "train_videos": counts.get("train", {}).get("videos"),
+                     "pair_original_frame_gap_min": sampling.get("pair_original_frame_gap_min"),
+                     "pair_original_frame_gap_max": sampling.get("pair_original_frame_gap_max")},
+            "config": {"epochs": pipeline.get("epochs_max_each", 80), "patience": 15, "seed": 0, "batch": 8, "imgsz": 640,
                        "initialization": "public_coco", "pair_stride": 2, "overlapping_pairs": False,
-                       "exposures_per_epoch": 4296, "batches_per_epoch": 537},
+                       "exposures_per_epoch": train_frames, "batches_per_epoch": (train_frames + 7)//8},
             "runs": runs,
-            "evaluation": {"status": evaluation.get("status", "queued"), "val_frames": 792,
-                           "test_frames": 792, "full_test_videos": 4,
+            "evaluation": {"status": evaluation.get("status", "queued"), "val_frames": val_frames,
+                           "test_frames": test_frames, "full_test_videos": 4,
                            "results": evaluation_rows, "continuous": evaluation.get("continuous", {})},
             "limitations": ["The published status is a timestamped snapshot, not a live GPU connection.",
                             "Running validation metrics are provisional; test runs after checkpoint selection.",
                             "Matched pair control shares the data transforms; historical baseline is a reference."]}
 
 
-def export(copy_to_pages=False, quiet=False):
+def export(copy_to_pages=False, quiet=False, public_name="formal_status.json"):
     value = snapshot()
     path = ROOT / "formal_status.json"
     temp = path.with_suffix(".tmp")
@@ -88,7 +101,7 @@ def export(copy_to_pages=False, quiet=False):
     if copy_to_pages:
         public = EXP.parent / "github_pages/vision_yolo11_stsd_v2"
         public.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(path, public / path.name)
+        shutil.copy2(path, public / public_name)
     if not quiet:
         print(json.dumps(value, ensure_ascii=False, indent=2))
     return value
@@ -98,9 +111,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--copy-to-pages", action="store_true", help="Copy snapshot locally; does not push Git")
     parser.add_argument("--watch", action="store_true", help="Refresh local status every 30s until the pipeline stops")
+    parser.add_argument("--run-root", default=str(ROOT))
+    parser.add_argument("--data-root", default=str(DATA))
+    parser.add_argument("--public-name", default="formal_status.json")
     args = parser.parse_args()
+    ROOT, DATA = Path(args.run_root).resolve(), Path(args.data_root).resolve()
     while True:
-        value = export(args.copy_to_pages, quiet=args.watch)
+        value = export(args.copy_to_pages, quiet=args.watch, public_name=args.public_name)
         if not args.watch or value["status"] in {"completed", "failed"}:
             break
         time.sleep(30)

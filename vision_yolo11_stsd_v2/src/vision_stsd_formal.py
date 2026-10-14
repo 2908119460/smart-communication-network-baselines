@@ -85,7 +85,7 @@ def train(kind, epochs):
     settings.mkdir(exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(settings)
     # Native AMP check resolves its reference detector to this verified local file.
-    os.chdir(DATA / "weights")
+    os.chdir(SOURCE.parent)
     import torch
     import yaml
     from ultralytics import YOLO
@@ -99,7 +99,8 @@ def train(kind, epochs):
     locked = read(DATA / "protocol.json")
     if digest(DATA / "split_manifest.json") != locked["split_manifest_sha256"]:
         raise RuntimeError("Existing data split changed")
-    source_record = next(r for r in read(DATA / "weights/manifest.json")["files"]
+    weights_manifest = Path(locked.get("weights_manifest_path", str(DATA / "weights/manifest.json")))
+    source_record = next(r for r in read(weights_manifest)["files"]
                          if Path(r["path"]).name == SOURCE.name)
     if digest(SOURCE) != source_record["sha256"]:
         raise RuntimeError("Official initialization checksum mismatch")
@@ -128,7 +129,7 @@ def train(kind, epochs):
                 "training_geometry": "deterministic square letterbox; no random augmentation in paired trainer",
                 "test_used_for_training_or_selection": False,
                 "limitations": ["Current dataset is DroneDetectionThesis, not official Anti-UAV",
-                    "Adjacent sampled frames are about 13-15 original frames apart",
+                    "Temporal spacing is recorded in runtime_setup.json; sampling is dataset-specific",
                     "Original historical baseline uses different augmentation; paired control is matched",
                     "Single seed; no significance or generalization claim"]}
     save(out / "run_manifest.json", manifest)
@@ -241,24 +242,40 @@ def train(kind, epochs):
         raise
 
 
-def supervise(epochs):
+def supervise(epochs, wait_pipeline=None):
     out = ROOT / "formal_pipeline_seed0"
     if (out / "manifest.json").exists():
         raise FileExistsError("Formal pipeline already exists; inspect it instead of starting a duplicate")
     out.mkdir(parents=True, exist_ok=True)
-    state = {"status": "running", "pid": os.getpid(), "started_utc": utc(),
+    state = {"status": "waiting_for_gpu" if wait_pipeline else "running", "pid": os.getpid(), "started_utc": utc(),
              "epochs_max_each": epochs, "seed": 0, "serial_gpu_workers": True,
              "monitoring": "process poll and heartbeat every 30s; no automatic retries",
              "timeout_monitoring": "elapsed time recorded; 80-epoch/15-patience budget, no time-based truncation",
-             "steps": []}
+             "data_root": str(DATA), "run_root": str(ROOT), "source_checkpoint": str(SOURCE),
+             "wait_pipeline": str(wait_pipeline) if wait_pipeline else None, "steps": []}
     save(out / "manifest.json", state)
     commands = [(kind, [sys.executable, "-u", str(Path(__file__).resolve()), "train",
-                       "--kind", kind, "--epochs", str(epochs)]) for kind in ("stsd", "control")]
+                       "--kind", kind, "--epochs", str(epochs),
+                       "--data-root", str(DATA), "--run-root", str(ROOT), "--weights", str(SOURCE)])
+                for kind in ("stsd", "control")]
     commands.append(("evaluation", [sys.executable, "-u", str(EXP / "scripts/vision_stsd_formal_evaluate.py"),
                        "--weights", str(ROOT / "formal_seed0/weights/best.pt"),
                        "--baseline-weights", str(ROOT / "formal_pair_baseline_seed0/weights/best.pt"),
                        "--output", str(ROOT / "formal_seed0/evaluation"), "--device", "0"]))
     try:
+        if wait_pipeline:
+            while True:
+                previous = read(wait_pipeline)
+                state["last_monitor_utc"] = utc()
+                state["waiting_pipeline_status"] = previous["status"]
+                save(out / "manifest.json", state)
+                if previous["status"] == "completed":
+                    break
+                if previous["status"] == "failed":
+                    raise RuntimeError("Earlier GPU pipeline failed; inspect it before starting this queued run")
+                time.sleep(30)
+            state.update(status="running", gpu_acquired_utc=utc())
+            save(out / "manifest.json", state)
         for kind, command in commands:
             with (out / (kind + ".log")).open("w", encoding="utf-8") as stream:
                 child = subprocess.Popen(command, cwd=str(EXP.parent), stdout=stream, stderr=subprocess.STDOUT)
@@ -288,5 +305,10 @@ if __name__ == "__main__":
     parser.add_argument("action", choices=["all", "train"])
     parser.add_argument("--kind", choices=list(RUN_NAMES), default="stsd")
     parser.add_argument("--epochs", type=int, default=80)
+    parser.add_argument("--data-root", default=str(DATA), help="Independent prepared dataset directory")
+    parser.add_argument("--run-root", default=str(ROOT), help="Independent experiment output directory")
+    parser.add_argument("--weights", default=str(SOURCE), help="Verified official initialization checkpoint")
+    parser.add_argument("--wait-pipeline", type=Path, help="Wait for an existing GPU pipeline to complete")
     args = parser.parse_args()
-    train(args.kind, args.epochs) if args.action == "train" else supervise(args.epochs)
+    DATA, ROOT, SOURCE = Path(args.data_root).resolve(), Path(args.run_root).resolve(), Path(args.weights).resolve()
+    train(args.kind, args.epochs) if args.action == "train" else supervise(args.epochs, args.wait_pipeline)
