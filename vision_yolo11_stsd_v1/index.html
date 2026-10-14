@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOLO11-STSD · 实现与可行性验证</title>
+<style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-size:16px;color:#183043;background:#f2f5f7}*{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:34px 24px 70px}h1{font-size:34px;margin:14px 0}h2{font-size:25px;margin:0 0 15px}h3{font-size:19px;margin:22px 0 8px}p,li{color:#405667;line-height:1.8}a{color:#175da3}nav{display:flex;flex-wrap:wrap;gap:20px;margin:22px 0}.eyebrow{font-size:14px;color:#175da3}.card{background:white;border:1px solid #dae4eb;border-radius:12px;padding:26px;margin:22px 0}.note{background:#e8f0f7;border-radius:8px;padding:16px 20px;line-height:1.8}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid article{background:#f4f7fa;border-radius:8px;padding:18px}.grid h3{margin-top:0}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:11px 9px;text-align:left;border-bottom:1px solid #e0e8ee;vertical-align:top}th{color:#536c7d;font-weight:500}code{font-family:Consolas,monospace;font-size:.9em}pre{background:#f4f7fa;border-radius:8px;padding:16px;overflow:auto;line-height:1.65;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}.badge{display:inline-block;background:#e8f1e9;color:#23613b;font-size:13px;padding:5px 10px;border-radius:20px}.muted{font-size:14px;color:#5a7080;line-height:1.7}.flow{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:17px 0}.flow span{padding:12px 14px;background:#f0f5fa;border:1px solid #cbdce9;border-radius:7px;font-size:14px}.flow b{color:#6b8495}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{padding:16px;border-radius:8px;background:#f4f7fa}.metric small{display:block;color:#5b7282}.metric strong{font-size:23px;display:block;margin-top:8px;font-weight:500}summary{cursor:pointer;color:#175da3}details{margin:16px 0}footer{font-size:14px;color:#596d7c;margin:30px 0}.media{max-width:100%;border-radius:7px}@media(max-width:720px){main{padding:24px 14px}.card{padding:19px}h1{font-size:27px}.grid,.metrics{grid-template-columns:1fr}.flow{display:block}.flow span{display:block;text-align:center}.flow b{display:block;text-align:center;margin:6px}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-14</div>
+<h1>YOLO11-STSD：实现、shape 与短训练</h1>
+<p>在 Ultralytics YOLO11n 中直接插入空间注意力、动态尺度融合和时序融合。原 Detect、检测 loss 和输入格式保留；原 baseline 使用独立代码和权重。此页面分别记录工程验证与检测效果，不把新增模块等同于已经验证的贡献。</p>
+<nav><a href="../innovation_exploration_v1/#stsd">返回探索页</a><a href="#architecture">结构与兼容</a><a href="#modules">三个模块</a><a href="#verification">工程检查</a><a href="#probe">短训练</a><a href="#source">代码与复现</a></nav>
+<div class="note">当前数据来自 DroneDetectionThesis / Svanström RGB 视频数据集，不是官方 Anti-UAV。STSD 面向无人机检测；官方 Anti-UAV 上的收益需要在该数据上另行验证。三项机制的性能贡献暂未确认。</div>
+
+<section class="card" id="architecture"><h2>结构：保留 YOLO 主体，直接学习检测特征</h2>
+<div class="flow" aria-label="YOLO11-STSD架构"><span>YOLO11n Backbone</span><b>→</b><span>Sky × 3</span><b>→</b><span>原 FPN/PAN</span><b>→</b><span>Dynamic × 3</span><b>→</b><span>Temporal × 3</span><b>→</b><span>原 Detect</span></div>
+<p>三尺度通道不同，不能直接相加；仅输出一个 P3 也无法接原三尺度 Detect。兼容实现为每个目标尺度建立一个动态分支：先用 1×1 Conv 对齐通道，再 resize 和加权，最终仍输出 P3/P4/P5。保留原 FPN/PAN 后插入动态融合，减少对原结构和预训练参数用途的改变。</p>
+<div class="scroll"><table><thead><tr><th>640 输入 / nano 宽度</th><th>P3，stride 8</th><th>P4，stride 16</th><th>P5，stride 32</th></tr></thead><tbody>
+<tr><td>Backbone → Sky</td><td>[B,128,80,80]</td><td>[B,128,40,40]</td><td>[B,256,20,20]</td></tr>
+<tr><td>原 FPN/PAN</td><td>[B,64,80,80]</td><td>[B,128,40,40]</td><td>[B,256,20,20]</td></tr>
+<tr><td>Dynamic → Temporal → Detect</td><td>[B,64,80,80]</td><td>[B,128,40,40]</td><td>[B,256,20,20]</td></tr>
+</tbody></table></div>
+<p class="muted">B 为 batch 大小。新增层改变了层号，YAML 中显式保存基线层映射，由入口迁移原参数；新模块独立初始化。最终类别数由数据配置决定。</p>
+</section>
+
+<section class="card" id="modules"><h2>三个模块具体做什么</h2><div class="grid">
+<article><h3>SkyPriorModule</h3><p>Conv3×3 → BN → SiLU → Conv1×1 → Sigmoid，生成 [B,1,H,W] 的 A；输出 <code>F × (1 + α × A)</code>，仍为 [B,C,H,W]。α 默认 0.1、可学习。</p><p>当前没有 sky mask 标签，A 是通过检测损失学习的空间注意力。是否关注天空、是否降低背景误报，需要可视化与消融；残差调制不会硬删除非天空无人机。</p><p><a href="src/SkyPriorModule.py">查看完整代码</a></p></article>
+<article><h3>DynamicScaleNeck</h3><p>三个输入都投影到目标通道并 resize 到目标尺度。concat 后经 GAP → Linear → ReLU → Linear → Softmax，为每张图生成 [B,3] 的权重，和为 1，再加权输出。</p><p>三个 target 分支分别恢复 P3/P4/P5。尺度权重初始为 1/3；这里是每张图的尺度选择，性能与计算代价由实际实验判断。</p><p><a href="src/DynamicScaleNeck.py">查看完整代码</a></p></article>
+<article><h3>TemporalFeatureModule</h3><p>前帧和当前帧从 [B,C,H,W] 拼成 [B,2C,H,W]，Conv3×3 回到 C，再做可学习强度的残差融合。首帧无历史直接返回当前特征。</p><p>视频缓存需显式开启、换视频需重置；缓存 detach 且不保存到权重。单图默认无状态，导出默认走单图路径。暂未加入光流或相机运动对齐。</p><p><a href="src/TemporalFeatureModule.py">查看完整代码</a></p></article>
+<article><h3>为什么时序训练要成对</h3><p>原随机 batch 的两张图可能来自不同视频，不能充当前后帧。兼容入口从同一视频取相邻采样帧，按 [previous₀,current₀,previous₁,current₁,…] 排列，使用一致几何变换。当前 probe 的采样间隔为原始视频 13–14 帧，不等于逐帧连续训练。</p><p>普通 shuffled batch 保持 identity，不更新 temporal 分支。B 必须为偶数，关闭不适合连续帧的 mosaic / mixup。输入仍是 YOLO 标准 [B,3,H,W]。</p></article>
+</div></section>
+
+<section class="card" id="verification"><span class="badge" id="summary-status">等待实际记录</span><h2>工程验证：模型是否能正确训练</h2>
+<p id="verification-state" role="status">正在读取 summary.json。若检查尚未完成，将保留待验证状态。</p>
+<div class="metrics"><div class="metric"><small>STSD 参数量</small><strong id="model-params">待验证</strong></div><div class="metric"><small>原模型参数量</small><strong id="baseline-params">待验证</strong></div><div class="metric"><small>Detect strides</small><strong id="head-strides">8 / 16 / 32（设计）</strong></div><div class="metric"><small>Ultralytics 源版本</small><strong id="source-version">8.3.253（基础）</strong></div></div>
+<div class="scroll" id="checks-table"><table><thead><tr><th>检查范围</th><th>应验证的内容</th><th>状态</th></tr></thead><tbody>
+<tr><td>空间模块</td><td>shape 不变、attention 有界、梯度有限</td><td>等实际记录</td></tr>
+<tr><td>尺度模块</td><td>三输出 shape、权重和为 1、投影梯度</td><td>等实际记录</td></tr>
+<tr><td>时序模块</td><td>首帧 / 次帧 / reset、成对训练、缓存不保存</td><td>等实际记录</td></tr>
+<tr><td>完整检测网络</td><td>YAML 注册、stride、检测 loss 与优化一步</td><td>等实际记录</td></tr>
+<tr><td>基线与参数迁移</td><td>原包未修改、基线层映射、checkpoint 重载</td><td>等实际记录</td></tr>
+</tbody></table></div>
+<p class="muted">工程检查通过支持接口和训练可用；它不会证明 mAP 改善、误报下降或学术新颖性。</p>
+</section>
+
+<section class="card" id="probe"><h2>短训练：先验证管线和早期表现</h2>
+<p id="probe-state" role="status">短训练尚待实际结果。不会把占位数字当成实验成绩。</p>
+<div class="metrics"><div class="metric"><small>完成 epochs</small><strong id="probe-epochs">待完成</strong></div><div class="metric"><small>训练 / 验证帧</small><strong id="probe-frames">待记录</strong></div><div class="metric"><small>验证 mAP50</small><strong id="probe-map50">待验证</strong></div><div class="metric"><small>验证 mAP50–95</small><strong id="probe-map5095">待验证</strong></div></div>
+<p class="muted">历史原 YOLO11n 完整训练测试 mAP50=0.8310、mAP50–95=0.3914；该数字来自独立 test，不能与此处短训练 validation 直接比较。短训练成功后，仍需同划分、同预算的单 seed 对照和三个模块消融。</p>
+<h3>同一批验证帧：原基线与短训练原型</h3><div id="probe-comparison" class="scroll"><p>等待实际同子集记录。</p></div>
+<p class="muted">Precision / Recall 是 Ultralytics 在其选择的置信度工作点报告的检测指标，区别于历史教师—学生实验的帧级无人机召回。</p>
+<div class="note" id="probe-interpretation">工程可运行性已通过，检测收益尚未验证。有效短训练结果由实际记录展示；短预算只能检验早期变化，不能证明最终性能收益。无效初始化试跑与较早 2 轮试跑保留为历史记录。</div>
+<div id="discarded-probes"></div>
+<div id="probe-extra"></div><div id="demo-links"></div>
+<h3>当前限制与后续验证</h3><ul id="limitations-list"><li>空间注意力未经天空标签监督，不能称准确 sky probability。</li><li>动态融合与时序融合的性能收益尚待确认。</li><li>时序缓存要求稳定视频顺序；相机运动和目标位移可能影响未经对齐的融合。</li><li>现有数据不是官方 Anti-UAV；尚未证明跨数据集泛化。</li></ul>
+</section>
+
+<section class="card" id="source"><h2>文件与复现入口</h2>
+<div class="scroll"><table><thead><tr><th>修改位置</th><th>内容</th><th>完整代码</th></tr></thead><tbody>
+<tr><td>nn/modules/SkyPriorModule.py</td><td>空间注意力</td><td><a href="src/SkyPriorModule.py">SkyPriorModule.py</a></td></tr>
+<tr><td>nn/modules/DynamicScaleNeck.py</td><td>三尺度动态融合</td><td><a href="src/DynamicScaleNeck.py">DynamicScaleNeck.py</a></td></tr>
+<tr><td>nn/modules/TemporalFeatureModule.py</td><td>训练成对融合与缓存</td><td><a href="src/TemporalFeatureModule.py">TemporalFeatureModule.py</a></td></tr>
+<tr><td>nn/modules/__init__.py</td><td>导出三个模块</td><td><a href="src/modules_init.py">modules_init.py</a></td></tr>
+<tr><td>nn/tasks.py</td><td>导入与 parse_model 通道处理</td><td><a href="src/tasks.py">tasks.py</a></td></tr>
+<tr><td>cfg/models/11/yolo11n-stsd.yaml</td><td>网络连接与基线权重层映射</td><td><a href="src/yolo11n-stsd.yaml">yolo11n-stsd.yaml</a></td></tr>
+<tr><td>experiments/scripts/vision_yolo11_stsd.py</td><td>check / probe / train / video</td><td><a href="src/vision_yolo11_stsd.py">vision_yolo11_stsd.py</a></td></tr>
+</tbody></table></div>
+<p><a href="portableimplementation.zip" download>下载便携实现代码包</a> · <a href="../notes/yolo11_stsd_implementation.md">详细实现与 shape / 缓存说明</a> · <a href="summary.json">实际检查与实验 JSON</a></p>
+<details><summary>展开完整 SkyPriorModule.py</summary><pre id="code-sky">正在读取完整代码…</pre></details>
+<details><summary>展开完整 DynamicScaleNeck.py</summary><pre id="code-dynamic">正在读取完整代码…</pre></details>
+<details><summary>展开完整 TemporalFeatureModule.py</summary><pre id="code-temporal">正在读取完整代码…</pre></details>
+<pre><code>experiments\.venv\Scripts\python.exe experiments\scripts\vision_yolo11_stsd.py check
+experiments\.venv\Scripts\python.exe experiments\scripts\vision_yolo11_stsd.py probe --epochs 2 --device 0
+experiments\.venv\Scripts\python.exe experiments\scripts\vision_yolo11_stsd.py probe --epochs 8 --probe-frames-per-sequence 16 --name probe_train_8ep --device 0
+experiments\.venv\Scripts\python.exe experiments\scripts\vision_yolo11_stsd.py train --epochs 80 --batch 8 --device 0
+experiments\.venv\Scripts\python.exe experiments\scripts\vision_yolo11_stsd.py video --weights "experiments\runs\vision_yolo11_stsd_v1\probe_train_8ep\weights\best.pt" --source "路径\视频.mp4"</code></pre>
+<p>从项目根目录运行，默认使用现有数据配置与已训基线 best，通过层映射初始化 STSD。8 轮阶段使用 128 张训练采样帧；重复运行改用新的 <code>--name</code>，避免覆盖原结果。video 省略 <code>--weights</code> 时读取最新有效权重。训练默认采用同视频相邻采样帧成对入口；完整参数以 <code>--help</code> 为准。便携包不包含模型权重、数据集或虚拟环境。</p>
+<details><summary>查看页面读取的完整记录</summary><pre id="raw-json">等待 summary.json…</pre></details>
+</section>
+<footer>直接修改 YOLO 特征网络；此前 MobileNet 实验仍是候选框复核器。页面只展示实际保存结果，工程验证与检测性能分开解释。</footer>
+</main>
+<script>
+const byId=id=>document.getElementById(id),labels={completed:'已完成',passed:'通过',running:'进行中',pending:'待完成',failed:'未通过',not_run:'未运行'};
+const limitationNames={'Sky maps are attention, not supervised sky probability.':'Sky map 是检测损失学习的空间注意力，没有天空标签监督，不能直接称准确天空概率。','Dynamic fusion augments the original FPN/PAN; it does not replace it.':'当前保留原 FPN/PAN，并追加动态融合；这样优先维持原训练和参数迁移兼容。','Ordinary shuffled training does not learn the temporal branch.':'普通随机 batch 走无时序路径，不会学习 temporal 分支；时序学习要求正确成对的数据。','Pairs are adjacent sampled frames, not necessarily consecutive original frames.':'训练使用同视频相邻采样帧，首次 probe 的间隔为原始视频 13–14 帧，不等于逐帧连续训练。','Existing data is DroneDetectionThesis, not the official Anti-UAV benchmark.':'现有数据为 DroneDetectionThesis / Svanström，不是官方 Anti-UAV benchmark。','Short probe metrics cannot establish improvement over the completed baseline.':'短训练预算远少于已完成 baseline；其指标只说明当前原型表现，不能确立相同训练预算下的提升。'};
+const checkNames={passed:'工程检查整体',unit_test_exit_code:'检查程序退出码（0 为正常结束）',log:'完整检查日志',baseline_files_sha256:'基线文件 SHA256 记录',baseline_package_unchanged:'原 baseline 安装包保持原样',checkpoint_reload_valid:'保存权重后重新加载验证'};
+const fmt=v=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('zh-CN'):'待记录';
+const ap=v=>typeof v==='number'&&Number.isFinite(v)?(100*v).toFixed(2)+'%':'待验证';
+function text(id,value){byId(id).textContent=value}
+function tabulate(id,rows,headers=['工程检查','保存的结果']){const table=document.createElement('table'),head=table.createTHead().insertRow();for(const name of headers){const cell=document.createElement('th');cell.textContent=name;head.append(cell)}const body=table.createTBody();for(const values of rows){const row=body.insertRow();for(const value of values)row.insertCell().textContent=typeof value==='boolean'?(value?'通过':'未通过'):(typeof value==='object'?JSON.stringify(value):String(value))}byId(id).replaceChildren(table)}
+function links(value){if(!value)return;const items=Array.isArray(value)?value:Object.values(value);const paragraph=document.createElement('p');for(const item of items){const href=typeof item==='string'?item:item.path||item.url;if(!href||href.includes('..')||/^[a-z]+:/i.test(href))continue;const a=document.createElement('a');a.href=href;a.textContent=typeof item==='string'?'查看 demo / 图示':item.label||item.name||'查看 demo / 图示';paragraph.append(a,document.createTextNode(' · '))}if(paragraph.childNodes.length)byId('demo-links').replaceChildren(paragraph)}
+function relativePath(value){const path=typeof value==='string'?value:value&&value.path||value&&value.url;if(!path)return null;const normalized=path.replace(/\\/g,'/');return normalized.includes('..')||/^[a-z]+:/i.test(normalized)||normalized.startsWith('/')?null:normalized}
+function renderVideo(video){if(!video)return;const demo=relativePath(video.demo),trace=relativePath(video.trace||video.trace_path||video.trace_json);if(!demo&&!trace)return;const section=document.createElement('div'),title=document.createElement('h3');title.textContent='视频工程回放：缓存与特征状态';section.append(title);if(demo){const img=document.createElement('img');img.className='media';img.src=demo;img.alt='STSD视频工程回放：检测输出与时序缓存';img.loading='lazy';section.append(img)}if(trace){const p=document.createElement('p'),a=document.createElement('a');a.href=trace;a.textContent='查看逐帧缓存 / 尺度权重轨迹';p.append(a);section.append(p)}const caption=document.createElement('p');caption.className='muted';caption.textContent=(typeof video.frames==='number'?'本次回放 '+fmt(video.frames)+' 帧，'+fmt(video.frames_using_memory)+' 帧使用历史缓存。':'')+'回放用于确认视频输入、首帧处理、历史缓存与模型输出流程。检测性能需结合整批指标与对照，回放本身不能证明三个模块的贡献。';section.append(caption);byId('demo-links').replaceChildren(section)}
+function discarded(records){if(!records)return;const values=Array.isArray(records)?records:[records];if(!values.length)return;const section=document.createElement('div'),title=document.createElement('h3'),p=document.createElement('p'),detail=document.createElement('details'),summary=document.createElement('summary'),pre=document.createElement('pre');title.textContent='无效试跑已单独归档';p.textContent='初次试跑未正确保留基线初始化，不能作为 STSD 性能证据。有效重跑使用修正后的初始化管线；上表只读取有效 probe。';summary.textContent='查看归档原因与原始记录';pre.textContent=JSON.stringify(records,null,2);detail.append(summary,pre);section.append(title,p,detail);byId('discarded-probes').replaceChildren(section)}
+async function loadSources(){await Promise.allSettled([['code-sky','SkyPriorModule.py'],['code-dynamic','DynamicScaleNeck.py'],['code-temporal','TemporalFeatureModule.py']].map(async([id,file])=>{try{const response=await fetch('src/'+file);if(!response.ok)throw Error('HTTP '+response.status);text(id,await response.text())}catch(error){text(id,'完整代码尚未可读取（'+error.message+'）。请使用上方源码链接或便携包。')}}))}
+async function load(){try{const response=await fetch('./summary.json');if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();text('raw-json',JSON.stringify(data,null,2));text('summary-status','工程记录：'+(labels[data.status]||data.status||'已记录'));text('verification-state','已读取实际工程记录；检查通过确认能构建、反传、训练及重载，检测效果见下方实际指标。');const model=data.model||{};text('model-params',fmt(model.parameters));text('baseline-params',fmt(model.baseline_parameters));if(Array.isArray(model.head_strides))text('head-strides',model.head_strides.join(' / '));if(model.source_version)text('source-version',String(model.source_version));if(data.checks&&Object.keys(data.checks).length)tabulate('checks-table',Object.entries(data.checks).filter(([key])=>key!=='baseline_files_sha256').map(([key,value])=>[checkNames[key]||key,value]));const probe=data.probe||{};text('probe-state','有效短训练状态：'+(labels[probe.status]||probe.status||'待完成')+'。使用 '+fmt(probe.train_frames)+' 张训练帧、'+fmt(probe.val_frames)+' 张验证帧；'+fmt(probe.epochs)+' 轮训练。');text('probe-epochs',fmt(probe.epochs));if(probe.train_frames!=null||probe.val_frames!=null)text('probe-frames',fmt(probe.train_frames)+' / '+fmt(probe.val_frames));const metrics=probe.metrics||{};text('probe-map50',ap(metrics.map50));text('probe-map5095',ap(metrics.map50_95));const baseline=probe.baseline_same_validation_subset;if(baseline){tabulate('probe-comparison',[['已完成 YOLO11n baseline',ap(baseline.map50),ap(baseline.map50_95),ap(baseline.precision),ap(baseline.recall),'完整 baseline 训练'],['STSD 有效短训练原型',ap(metrics.map50),ap(metrics.map50_95),ap(metrics.precision),ap(metrics.recall),fmt(probe.epochs)+' 轮']],['同一验证子集','mAP50','mAP50–95','Precision','Recall','训练预算'])}if(metrics.map50===0&&metrics.map50_95===0){text('probe-interpretation','当前保存的有效短试跑 mAP50 和 mAP50–95 均为 0，尚未形成有效检测。短训练预算不能证明最终性能收益；需要继续确认有效训练和基本检测能力，再做模块贡献对照。')}else if(typeof metrics.map50==='number'){text('probe-interpretation','有效短训练已产生非零检测指标，仍需考虑新增模块的初始化适应、训练预算及模型计算代价。完整基线和短训原型预算不同；短预算不证明性能收益，贡献需要同预算对照及消融。')}if(probe.note){const p=document.createElement('p');p.textContent=probe.note;byId('probe-extra').replaceChildren(p)}if(probe.pairs){const p=document.createElement('p'),pairs=probe.pairs;p.className='muted';p.textContent='时序训练：'+fmt(pairs.pairs)+' 对采样帧，来自 '+fmt(pairs.sequences)+' 个视频；原始视频帧间隔 '+fmt(pairs.frame_gap_min)+'–'+fmt(pairs.frame_gap_max)+'，属于相邻采样帧。';byId('probe-extra').append(p)}if(Array.isArray(data.limitations)&&data.limitations.length){byId('limitations-list').replaceChildren(...data.limitations.map(value=>{const li=document.createElement('li');li.textContent=limitationNames[value]||value;return li}))}discarded(data.discarded_probes);links(data.demos||probe.demos||data.artifacts);renderVideo(data.video)}catch(error){text('verification-state','实际结果暂未可读取（'+error.message+'）。当前结构说明不代表验证已完成。');text('raw-json','尚未读取到实际结果。')}}load();loadSources();
+</script>
+</body></html>

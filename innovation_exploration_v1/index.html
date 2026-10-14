@@ -8,12 +8,26 @@
 </style>
 </head>
 <body><main>
-<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-12</div>
+<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-14 更新</div>
 <h1>两个方向继续探索，先看机制是否有效</h1>
-<p>当前范围：无人机本体检测与 60 GHz 强化学习调度。PA 已停止投入，旧结果留作历史资料。“离线强教师 → 在线小模型”仍在候选池中；现阶段不确定最终选题。</p>
-<nav><a href="#vision">教师与轻量学生</a><a href="#resolution">分辨率诊断</a><a href="#rl">队列感知调度</a><a href="#next">候选创新与后续</a><a href="../paper_baselines_v1/">历史 baseline 与视频</a></nav>
-<div class="note">本轮是单种子的短实验，优先验证和 demo。视觉新结果来自 792 张验证帧；95% 召回工作点在这批验证标签上选择，因此用于判断潜力。RL 每支从相同 360k PPO 继续 30k，评估三条配对仿真轨迹。</div>
+<p>当前范围：无人机本体检测与 60 GHz 强化学习调度。视觉新增 YOLO11-STSD：将空间注意力、动态尺度融合与可选时序融合直接插入 YOLO11n。先确认工程可运行及有效初始化，再查看短训练结果；当前不预设性能收益。此前教师—学生与 RL 探索结果保留。</p>
+<nav><a href="#stsd">YOLO11-STSD 新实现</a><a href="#vision">历史教师与轻量学生</a><a href="#resolution">分辨率诊断</a><a href="#rl">队列感知调度</a><a href="#next">候选创新与后续</a><a href="../paper_baselines_v1/">历史 baseline 与视频</a></nav>
+<div class="note">2026-10-14：STSD 是针对 YOLO 检测网络的直接改动，目前三模块仍是创新候选，不预设已经提高精度。下方 2026-10-12 的教师—学生和 RL 数字来自已有单种子短实验；视觉工作点在 792 张验证帧上选择。</div>
 <p id="load-state" role="status">正在读取已完成实验的结果…</p>
+<section class="card" id="stsd">
+<span class="badge">YOLO11n 内部模块扩展</span><h2>YOLO11-STSD：空间、尺度与时间三项机制</h2>
+<p>这次修改 YOLO11n 的特征处理网络，新增模块参加原检测损失的训练；原 Detect 检测头、bbox 输出和 Ultralytics 训练接口保留。已完成的原 YOLO11n baseline 使用原代码与原权重，不被覆盖。</p>
+<div class="note">输入 → YOLO11 Backbone → P3/P4/P5 空间注意力 → 原 FPN/PAN → 三个动态尺度融合分支 → 三个可选时序分支 → 原 Detect → bbox 与 confidence</div>
+<div class="grid">
+<article><h3>Sky Spatial Prior</h3><p>每个尺度生成一张 soft attention map，以 <code>F × (1 + α × A)</code> 调制特征，尺寸不变。当前只有检测标签，A 是可学习空间注意力；没有证据将其直接解释为准确的天空概率。</p></article>
+<article><h3>Dynamic Scale Neck</h3><p>先对齐 P3/P4/P5 的通道和分辨率，再为每张图学习三个和为 1 的尺度权重。分别输出 P3、P4、P5，保持 Detect 要求的三尺度输入。</p></article>
+<article><h3>Temporal Feature</h3><p>相邻帧特征 concat 后卷积，通过残差融合保留当前帧。单图默认不使用缓存；视频显式开启并在换流时重置。普通随机 batch 不被当成连续帧。</p></article>
+<article><h3>验证边界</h3><p>工程测试回答 shape、梯度、原训练兼容与缓存是否正确。短训练只能检验训练管线和早期变化，三模块各自的检测收益仍需后续对照。</p></article>
+</div>
+<p>现有训练资源来自 <a href="https://github.com/DroneDetectionThesis/Drone-detection-dataset">DroneDetectionThesis / Svanström 数据集</a>，包含真实无人机、鸟、飞机与直升机视频。它不是官方 Anti-UAV 数据集，页面不将两者混称。</p>
+<p id="stsd-brief-state" role="status">工程检查与有效短训练结果由实际保存记录更新；无效的初始化试跑单独归档，不作为性能证据。</p>
+<p><a href="../vision_yolo11_stsd_v1/">打开 STSD 结构、代码、测试与短训练报告</a> · <a href="../notes/yolo11_stsd_implementation.md">完整实现说明</a></p>
+</section>
 <section class="card" id="vision">
 <span class="badge">已完成三支学生对照</span><h2>教师能区分，学生能否学会？</h2>
 <p>冻结 DINOv2 ViT-S/14（2206 万参数）提取候选框特征，用训练集五类标签训练线性分类头。学生是预训练 MobileNetV3-small（152 万参数），以无人机、直升机、鸟、飞机和背景进行 8 轮训练。部署形式为 YOLO 候选框 + 轻量复核器。</p>
@@ -36,6 +50,7 @@
 <p><a href="../rl_queue_risk_explore_v1/README.md">队列奖励实验报告</a> · <a href="../rl_user_prior_demo_v1/REPORT.md">此前用户级先验实验</a> · <a href="../notes/literature_rl_innovation_scan.md">RL 文献与七个候选</a></p>
 </section>
 <section class="card" id="next"><h2>候选池：贡献要落在具体问题上</h2><div class="scroll"><table><thead><tr><th>方向</th><th>候选机制</th><th>当前依据 / 下一步</th></tr></thead><tbody>
+<tr><td>视觉</td><td>YOLO11-STSD：空间 / 尺度 / 时间模块</td><td>直接修改 YOLO11n；先完成训练和推理验证，再做模块消融</td></tr>
 <tr><td>视觉</td><td>近类感知的可信教师蒸馏</td><td>教师有效、门控学生有初步信号；随后迁入 YOLO 训练</td></tr>
 <tr><td>视觉</td><td>小目标定位 / 尺度选择蒸馏</td><td>先读 640/960 定位诊断，再做大教师 → 640 学生</td></tr>
 <tr><td>视觉</td><td>候选轨迹的轻量时序判别</td><td>单帧 vs EMA vs 真实因果历史；尚未训练新时序模型</td></tr>
@@ -48,7 +63,7 @@
 <p>后续 4×4090 更适合扩大教师、分辨率和跨场景训练。视觉可考虑 DINOv3 / SAM 3；权重需要官方访问授权，当前尚未部署。RL 原策略很小，应让更大模型解决部分观测与跨场景问题，而不是单纯增大参数。</p>
 <p>普通 KD、可靠性筛选、Lyapunov 思路、条件策略和世界模型均有先例。我们的候选贡献是它们针对当前失败模式的具体设计及验证；本轮没有宣称学术首创。</p>
 <p><a href="../notes/两方向创新探索_20261012.md">本轮统一报告</a> · <a href="../notes/literature_vision_pa_scan.md">视觉论文与数据资源</a></p></section>
-<footer>当前页面展示探索结果；历史完整 baseline / 视频在上方归档入口。本轮未微调基础大模型，未开展新增多种子矩阵。</footer>
+<footer>当前页面展示实现和探索结果；STSD 的工程可运行性与检测性能分别记录。历史完整 baseline / 视频在上方归档入口；没有新增多随机种子矩阵。</footer>
 </main>
 <script>
 const names={yolo:'YOLO11n',frozen_teacher:'冻结 DINOv2 教师',teacher:'冻结 DINOv2 教师',explicit_negative_ce:'MobileNet · CE',teacher_kd:'MobileNet · 普通 KD',confidence_gated_kd:'MobileNet · 门控 KD',continued_ppo:'普通 PPO 续训',queue_drift:'队列漂移',tail_queue_penalty:'超阈值惩罚'};
@@ -57,4 +72,5 @@ const percent=v=>v==null?'—':(100*v).toFixed(2)+'%';
 function visionRows(values){return Object.entries(values).map(([name,r])=>[names[name]||name,percent(r.recall),percent(r.negative_frame_FPR),r.TP,r.FP])}
 function drawOperating(v){const target=Number(document.getElementById('recall-target').value)/100;document.getElementById('recall-label').textContent=Math.round(target*100)+'%';const rows=[];for(const [name,curve] of Object.entries(v.curves)){const valid=curve.filter(r=>r.recall>=target).sort((a,b)=>b.probability_threshold-a.probability_threshold);const r=valid[0];rows.push(r?[names[name],r.probability_threshold.toFixed(4),percent(r.recall),percent(r.negative_frame_FPR),r.FP]:[names[name],'不可达','—','—','—'])}table('operating',['方法','P(drone) 阈值','实际召回','负帧误报率','误报帧'],rows)}
 async function main(){try{const response=await fetch('results.json');if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json(),v=data.vision;const operating={yolo:v.fixed.yolo};for(const [name,diagnostic] of Object.entries(v.diagnostics))operating[name]=diagnostic.operating_point;table('vision-95',['方法','帧召回','负帧误报率','TP','FP'],visionRows(operating));table('vision-fixed',['方法','帧召回','负帧误报率','TP','FP'],visionRows(v.fixed));drawOperating(v);document.getElementById('recall-target').addEventListener('input',()=>drawOperating(v));const rows=data.rl.evaluations.map(r=>[r.scenario,names[r.method_id],r.throughput_gbps.toFixed(3),Math.round(r.mean_queue_packets_per_ue).toLocaleString(),Math.round(r.worst_user_mean_queue_packets).toLocaleString(),percent(r.end_pending_fraction_of_total_arrivals)]);table('rl-results',['场景','方法','吞吐 / Gbps','平均队列 / 包','最差用户均队列 / 包','末尾 pending'],rows);const s=data.resolution;table('resolution-results',s.web_headers||['结果'],s.web_rows||[['请查看下方实验报告']]);document.getElementById('resolution-conclusion').textContent=s.web_conclusion||'分辨率实验的完整指标定义与结果见下方报告。';document.getElementById('rl-conclusion').textContent=data.rl.comparisons.map(c=>`${c.scene} · ${names[c.method]}：吞吐 ${c.throughput_relative_percent>=0?'+':''}${c.throughput_relative_percent.toFixed(1)}%，平均队列 ${c.queue_relative_percent>=0?'+':''}${c.queue_relative_percent.toFixed(1)}%。`).join(' ');document.getElementById('load-state').textContent='本轮实验已完成。下表按实际保存指标展示。'}catch(error){document.getElementById('load-state').textContent='结果读取失败：'+error.message+'。请使用各实验报告链接。'}}main();
+fetch('../vision_yolo11_stsd_v1/summary.json').then(response=>response.ok?response.json():null).then(data=>{if(!data)return;const label={completed:'已完成',running:'进行中',pending:'待完成',failed:'未通过'},probe=data.probe||{},metrics=probe.metrics||{};const zero=metrics.map50===0&&metrics.map50_95===0;document.getElementById('stsd-brief-state').textContent='STSD 工程记录：'+(label[data.status]||data.status||'已记录')+'；有效短训练 '+(label[probe.status]||probe.status||'待完成')+'，'+(probe.epochs||'—')+' 轮，验证 mAP50 / mAP50–95：'+percent(metrics.map50)+' / '+percent(metrics.map50_95)+'。'+(zero?'当前有效原型尚未形成有效检测。':'短训练指标仍需结合训练预算和同数据对照解读。')+'短预算不证明性能收益；无效初始化试跑单独归档。'}).catch(()=>{});
 </script></body></html>

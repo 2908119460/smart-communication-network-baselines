@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-14",
+  "purpose": "implementation and engineering feasibility; not a novelty benchmark",
+  "limitations": [
+    "Sky maps are attention, not supervised sky probability.",
+    "Dynamic fusion augments the original FPN/PAN; it does not replace it.",
+    "Ordinary shuffled training does not learn the temporal branch.",
+    "Pairs are adjacent sampled frames, not necessarily consecutive original frames.",
+    "Existing data is DroneDetectionThesis, not the official Anti-UAV benchmark.",
+    "Short probe metrics cannot establish improvement over the completed baseline."
+  ],
+  "checks": {
+    "passed": true,
+    "unit_test_exit_code": 0,
+    "log": "checks.log",
+    "baseline_files_sha256": {
+      "nn\\tasks.py": "9c784fdd1f2bd7b2bfa4749f197c0300f130532574b1bab39121e3799d8f4648",
+      "nn\\modules\\__init__.py": "e5283fdbc3037cac1dbb5e13cbf5826a22176728c1490fb108d0b09e8cffc3ec",
+      "cfg\\models\\11\\yolo11.yaml": "43d8a7c86acc77282ddf4966d6526e091e5b064c140ed4a6e4c0b68ecbc3784c"
+    },
+    "baseline_package_unchanged": true
+  },
+  "status": "completed",
+  "model": {
+    "name": "YOLO11-STSD",
+    "parameters": 4759077,
+    "baseline_parameters": 2590035,
+    "head_strides": [
+      8.0,
+      16.0,
+      32.0
+    ],
+    "source_version": "8.3.253",
+    "source": "D:\\vs code\\智能通信网络大作业\\experiments\\sources\\ultralytics_stsd\\ultralytics\\__init__.py",
+    "head": "Detect"
+  },
+  "probe": {
+    "status": "completed",
+    "epochs": 2,
+    "seed": 0,
+    "training_mode": "true sampled-frame pairs",
+    "imgsz": 640,
+    "batch_images": 4,
+    "seconds": 39.82021979987621,
+    "metrics": {
+      "map50": 0.0,
+      "map50_95": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "checkpoint": "experiments/runs/vision_yolo11_stsd_v1/probe_train/weights/best.pt",
+    "pretrained_tensors": 499,
+    "trainer_initialization_handoff": {
+      "verified": true,
+      "tensors": 613
+    },
+    "temporal_gamma": [
+      0.09874026477336884,
+      0.10004732757806778,
+      0.09533639252185822
+    ],
+    "train_frames": 64,
+    "val_frames": 32,
+    "pairs": {
+      "pairs": 56,
+      "sequences": 8,
+      "frame_gap_min": 13,
+      "frame_gap_max": 14,
+      "max_frame_gap": 32
+    },
+    "training_batches_per_epoch": 28,
+    "purpose": "engineering probe; baseline has a much larger completed training budget",
+    "baseline_same_validation_subset": {
+      "map50": 0.995,
+      "map50_95": 0.40467353174603177,
+      "precision": 0.9631622124837229,
+      "recall": 1.0
+    }
+  }
+}
