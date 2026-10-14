@@ -1,5 +1,6 @@
 *.npz
 *.log
+!vision_yolo11_stsd_v1/checks.log
 *.pt
 *.pth
 *.onnx
