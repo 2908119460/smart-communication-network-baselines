@@ -8,14 +8,14 @@
 </style>
 </head>
 <body><main>
-<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-14 更新</div>
+<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-15 更新</div>
 <h1>两个方向继续探索，先看机制是否有效</h1>
-<p>当前范围：无人机本体检测与 60 GHz 强化学习调度。视觉已进入 YOLO11-STSD v2 全量实验：保留 Backbone 和 Detect，以动态尺度融合直接替代固定 FPN/PAN，并插入空间注意力与可选时序融合。先训练新结构，再跑同条件 YOLO11n 对照与固定测试评估。此前工程短试跑、教师—学生与 RL 探索结果保留。</p>
+<p>当前范围：无人机本体检测与 60 GHz 强化学习调度。视觉已完成 YOLO11-STSD v2 的 4,296 帧与 17,184 帧两组正式训练、同条件 YOLO11n 对照及固定测试评估。模型保留 Backbone 和 Detect，以动态尺度融合直接替代固定 FPN/PAN，并插入空间注意力与可选时序融合。此前工程短试跑、教师—学生与 RL 探索结果保留。</p>
 <nav><a href="#stsd">YOLO11-STSD 新实现</a><a href="#vision">历史教师与轻量学生</a><a href="#resolution">分辨率诊断</a><a href="#rl">队列感知调度</a><a href="#next">候选创新与后续</a><a href="../paper_baselines_v1/">历史 baseline 与视频</a></nav>
-<div class="note">2026-10-14：训练数据新增 17,184 帧扩容版本（原来的 4 倍），使用真实相邻帧对，179 个训练视频与 792 / 792 帧 val / test 划分不变。原 4,296 帧正式队列继续运行；扩容版本等当前队列释放 GPU 后自动串行训练新结构与同条件 YOLO11n，再完成固定评估。两组均单 seed、80 轮上限、patience 15，结果独立记录。</div>
+<div class="note">2026-10-15：两组正式实验均已完成，4,296 帧组于 00:23、17,184 帧组于 03:47 完成训练与固定评估（北京时间）。均为单 seed、80 轮上限、patience 15，自然早停；179 个训练视频与 792 / 792 帧 val / test 划分不变，结果独立记录。目前尚无稳定的检测提升。</div>
 <p id="load-state" role="status">正在读取已完成实验的结果…</p>
 <section class="card" id="stsd">
-<span class="badge">默认 v2 · 正式全量实验</span><h2>YOLO11-STSD：空间、尺度与时间三项机制</h2>
+<span class="badge">默认 v2 · 两组正式实验已完成</span><h2>YOLO11-STSD：空间、尺度与时间三项机制</h2>
 <p>这次修改 YOLO11n 的特征处理网络，新增模块参加原检测损失的训练；原 Detect 检测头、bbox 输出和 Ultralytics 训练接口保留。已完成的原 YOLO11n baseline 使用原代码与原权重，不被覆盖。</p>
 <div class="note">输入 → YOLO11 Backbone → P3/P4/P5 空间注意力 → 三个动态尺度融合分支（替代原固定 FPN/PAN） → 三个可选时序分支 → 原 Detect → bbox 与 confidence</div>
 <div class="grid">
@@ -25,13 +25,14 @@
 <article><h3>验证边界</h3><p>工程测试回答 shape、梯度、原训练兼容与缓存是否正确。短训练只能检验训练管线和早期变化，三模块各自的检测收益仍需后续对照。</p></article>
 </div>
 <p>现有训练资源来自 <a href="https://github.com/DroneDetectionThesis/Drone-detection-dataset">DroneDetectionThesis / Svanström 数据集</a>，包含真实无人机、鸟、飞机与直升机视频。它不是官方 Anti-UAV 数据集，页面不将两者混称。</p>
-<h3>新增：17,184 帧扩容实验</h3>
-<p id="stsd-expanded-state" role="status">正在读取扩容实验状态；未启动前不展示训练成绩。</p>
+<h3>17,184 帧扩容实验（已完成）</h3>
+<p id="stsd-expanded-state" role="status">扩容训练与固定评估已完成；正在读取结果。</p>
 <p class="caption">每视频 24 → 96 张，总训练帧 4,296 → 17,184；仍为 179 个视频，新增的是帧数而非场景数。每视频 48 对真实相邻原帧，间隔 1 帧（30 fps 下约 1/30 秒），原采样帧间隔为 13–15 帧。640 输入、batch 8，每轮 17,184 次图片曝光、2,148 个 batch，验证 / 测试各固定 792 帧。</p>
 <p><a href="../vision_yolo11_stsd_v2/#expanded">查看扩容实验队列与结果</a></p>
-<h3>原 4,296 帧正式队列（继续运行）</h3>
-<p id="stsd-formal-state" role="status">正在读取原 4,296 帧实验进度…</p>
+<h3>原 4,296 帧正式实验（已完成）</h3>
+<p id="stsd-formal-state" role="status">4,296 帧训练与固定评估已完成；正在读取结果…</p>
 <p class="caption">配对 stride=2、不重叠，每轮 4,296 次图片曝光、537 个 batch；imgsz 640、batch 8。两模型均关闭随机增强，使用确定性 letterbox。原完整 baseline 保留参考；同条件配对对照用于检验结构收益。公开页进度以最近一次发布的状态文件为准。</p>
+<p>固定 test 的 mAP50 / mAP50–95：4,296 帧组 STSD 为 78.23% / 37.45%，同条件 YOLO11n 为 82.24% / 36.64%；17,184 帧组分别为 46.13% / 22.96% 与 62.46% / 29.81%。尚无稳定提升。4 段完整视频中，4,296 帧模型开启时序仅多召回 1 帧，17,184 帧模型开关结果一致；不能据此声称减少鸟类误报。<a href="../vision_yolo11_stsd_v2/#expanded">查看完整固定评估表</a>。</p>
 <p id="stsd-brief-state" class="caption">历史工程短试跑：正在读取 v2 的检查与 8 轮子集训练记录；这些数字不是正式全量实验结果。</p>
 <p><a href="../vision_yolo11_stsd_v2/#formal">打开正式实验进度与评估</a> · <a href="../vision_yolo11_stsd_v2/">v2 结构、完整代码与历史检查</a> · <a href="../notes/yolo11_stsd_v2_implementation.md">v2 完整实现说明</a></p>
 <p class="caption">结构修正：最初 v1 在原 PAN 后叠加 Dynamic，没有直接替代固定 Neck，现已修正。<a href="../vision_yolo11_stsd_v1/">旧 v1 叠加 PAN 历史报告</a>保留其原有代码、权重与成绩。v2 删除原 Neck 后仅迁移 Backbone 与 Detect，新动态层需训练适应。</p>
@@ -58,7 +59,7 @@
 <p><a href="../rl_queue_risk_explore_v1/README.md">队列奖励实验报告</a> · <a href="../rl_user_prior_demo_v1/REPORT.md">此前用户级先验实验</a> · <a href="../notes/literature_rl_innovation_scan.md">RL 文献与七个候选</a></p>
 </section>
 <section class="card" id="next"><h2>候选池：贡献要落在具体问题上</h2><div class="scroll"><table><thead><tr><th>方向</th><th>候选机制</th><th>当前依据 / 下一步</th></tr></thead><tbody>
-<tr><td>视觉</td><td>YOLO11-STSD：空间 / 尺度 / 时间模块</td><td>全量单 seed 训练已启动；接同条件 YOLO11n 对照与固定 val / test、完整视频评估</td></tr>
+<tr><td>视觉</td><td>YOLO11-STSD：空间 / 尺度 / 时间模块</td><td>两组单 seed 正式训练与固定评估已完成，尚无稳定提升；下一步诊断扩容退化及各模块贡献</td></tr>
 <tr><td>视觉</td><td>近类感知的可信教师蒸馏</td><td>教师有效、门控学生有初步信号；随后迁入 YOLO 训练</td></tr>
 <tr><td>视觉</td><td>小目标定位 / 尺度选择蒸馏</td><td>先读 640/960 定位诊断，再做大教师 → 640 学生</td></tr>
 <tr><td>视觉</td><td>候选轨迹的轻量时序判别</td><td>单帧 vs EMA vs 真实因果历史；尚未训练新时序模型</td></tr>
@@ -86,7 +87,7 @@ async function loadExpanded(){try{
  const response=await fetch('../vision_yolo11_stsd_v2/expanded_status.json?t='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
  const data=await response.json(),labels={running:'进行中',in_progress:'进行中',completed:'已完成',failed:'未通过',pending:'待完成',queued:'排队中',waiting_for_gpu:'等待当前队列释放 GPU',stsd_training:'STSD 扩容训练',pair_control_training:'同条件 YOLO11n 扩容对照训练',evaluation:'固定评估'},runs=Array.isArray(data.runs)?data.runs:[];expandedLoaded=true;
  document.getElementById('stsd-expanded-state').textContent='17,184 帧扩容实验：'+(labels[data.phase]||data.phase||'待记录')+' · '+(labels[data.status]||data.status||'待记录')+'。'+runs.map(run=>{const latest=run.latest_val||{},best=run.best_val||{};return (run.name||run.id)+' '+(labels[run.status]||run.status||'待记录')+'，'+(!run.started_at&&!run.completed_epochs?'未启动，0 / '+(run.max_epochs??data.config?.epochs??80)+' 轮':'当前第 '+(run.current_epoch??'—')+' 轮、已完成 '+(run.completed_epochs??'—')+' / '+(run.max_epochs??data.config?.epochs??80)+' 轮')+'，最近 val mAP50 / 50–95 '+percent(latest.map50)+' / '+percent(latest.map50_95)+'，最佳 '+percent(best.map50)+' / '+percent(best.map50_95)+'。'}).join(' ')+' 启动：'+(data.started_at?formalTime(data.started_at):'未启动')+'；状态快照：'+formalTime(data.updated_at)+'。';
- }catch(error){if(!expandedLoaded)document.getElementById('stsd-expanded-state').textContent='扩容实验状态待同步（'+error.message+'）；尚未确认启动，成绩待运行后更新。'}}
+ }catch(error){if(!expandedLoaded)document.getElementById('stsd-expanded-state').textContent='扩容实验状态待同步（'+error.message+'）；已完成结果见下方固定 test 说明，详细记录待同步。'}}
 let formalLoaded=false;
 const formalTime=value=>value&&!Number.isNaN(Date.parse(value))?new Date(value).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})+'（北京时间）':'待记录';
 async function loadFormal(){try{

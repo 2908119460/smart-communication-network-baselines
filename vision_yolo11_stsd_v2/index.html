@@ -8,7 +8,7 @@
 </style>
 </head>
 <body><main>
-<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-14 · 默认实现 v2</div>
+<div class="eyebrow">《智能通信网络》课程项目 · 2026-10-15 更新 · 默认实现 v2</div>
 <h1>YOLO11-STSD：用动态融合替代固定 Neck</h1>
 <p>保留 YOLO11n Backbone 和原三尺度 Detect，空间注意力后直接进入动态尺度融合，再进行可选时序融合。模型输入、检测头、原检测损失和结果格式保持兼容；新增模块参与检测网络训练。</p>
 <nav><a href="../innovation_exploration_v1/#stsd">返回探索页</a><a href="#expanded">17,184 帧扩容实验</a><a href="#formal">原 4,296 帧实验</a><a href="#architecture">结构与 shape</a><a href="#modules">三个模块</a><a href="#verification">工程检查</a><a href="#probe">历史短试跑</a><a href="#source">完整代码与训练</a></nav>
@@ -51,26 +51,28 @@
 
 <section class="card" id="expanded"><span class="badge" id="expanded-status">扩容实验 · 读取状态中</span><h2>扩容实验：17,184 张训练帧，真实相邻帧对</h2>
 <p>训练帧从每视频 24 张增加为 96 张，总量从 4,296 增加到 17,184 张（4 倍）。仍是原来的 179 个训练视频，场景数量没有增加；验证与测试各保留原有 792 帧，便于比较。每视频使用 48 对真实相邻原帧，间隔 1 帧（30 fps 视频约 1/30 秒）；原实验采样帧间隔为 13–15 帧。</p>
-<p id="expanded-state" role="status">正在读取 expanded_status.json；扩容实验与原 4,296 帧队列独立记录。</p>
+<p class="muted">本组于 2026-10-15 03:47（北京时间）完成训练与固定评估。STSD / 同条件 YOLO11n 分别训练 19 / 17 轮后自然早停，均为单 seed 0。</p>
+<p id="expanded-state" role="status">扩容实验已完成；正在读取 expanded_status.json 中的训练与评估结果。</p>
 <div class="metrics"><div class="metric"><small>训练 / 验证 / 测试帧</small><strong id="expanded-data">17,184 / 792 / 792</strong></div><div class="metric"><small>训练视频 / 每视频帧对</small><strong>179 / 48 对</strong></div><div class="metric"><small>训练上限 / 早停耐心</small><strong id="expanded-budget">80 / 15 epochs</strong></div><div class="metric"><small>每轮曝光 / batch 数</small><strong id="expanded-exposures">17,184 / 2,148</strong></div></div>
-<p id="expanded-started" class="muted">启动：未启动；状态快照待同步。当前 4,296 帧队列继续运行，扩容版本等待其结束释放 GPU 后，再串行训练 STSD、同条件 YOLO11n 对照并执行固定评估。</p>
-<div class="scroll" id="expanded-runs"><p>等待扩容队列记录；未启动的训练没有成绩。</p></div>
+<p id="expanded-started" class="muted">扩容队列于 2026-10-15 03:47（北京时间）完成训练与固定评估。STSD / 同条件 YOLO11n 分别训练 19 / 17 轮后自然早停，均为单 seed 0。</p>
+<div class="scroll" id="expanded-runs"><p>正在读取已完成训练的 epoch 与验证指标…</p></div>
 <div class="note">扩容版本单独保存数据、权重、日志和结果，不覆盖当前实验。两模型均使用同一扩容数据、公开 COCO 初始化、640 输入、batch 8 和单 seed 0。每轮图片曝光增加 4 倍，训练时间也会增加；相邻帧更密集不等于新增 4 倍独立场景。</div>
-<p id="expanded-evaluation-state" class="muted">固定评估尚未开始：792 帧 val、792 帧 test，以及原定 4 段完整 test 视频。</p><div class="scroll" id="expanded-results"></div>
+<p>固定 test 上，STSD 的 mAP50 / mAP50–95 为 46.13% / 22.96%，同条件 YOLO11n 为 62.46% / 29.81%。扩容后尚未获得稳定提升；4 段完整视频中，STSD 时序开关的帧级结果一致，不能据此声称减少鸟类误报。</p>
+<p id="expanded-evaluation-state" class="muted">固定评估已完成：792 帧 val、792 帧 test，以及 4 段完整 test 视频；正在读取详细结果。</p><div class="scroll" id="expanded-results"></div>
 <p><a href="expanded_status.json">扩容实验状态与结果 JSON</a> · <a href="../notes/yolo11_stsd_expanded_seed0.md">数据采样与训练说明</a> · <a href="#formal">查看原 4,296 帧队列</a></p>
 <details><summary>查看最近一次扩容实验状态记录</summary><pre id="expanded-json">正在读取…</pre></details>
 </section>
 
 <section class="card" id="formal"><span class="badge" id="formal-status">原 4,296 帧实验 · 读取状态中</span><h2>原 4,296 帧实验：新结构 → 同条件 YOLO11n 对照 → 固定评估</h2>
-<p>已从工程短试跑进入全量训练。先训练直接动态 Neck 的 STSD，再训练同条件 YOLO11n 配对对照；最后固定验证 / 测试集，并对 4 个固定 test 视频完成整段评估。两模型均从公开 COCO 预训练权重初始化，使用同一数据划分与单个 seed，不接着短试跑权重训练。</p>
+<p>本组于 2026-10-15 00:23（北京时间）完成训练与固定评估：先训练直接动态 Neck 的 STSD，再训练同条件 YOLO11n 配对对照，分别在 28 / 30 轮自然早停；最后评估固定验证 / 测试集及 4 个完整 test 视频。两模型均从公开 COCO 预训练权重初始化，使用同一数据划分与单个 seed，不接着短试跑权重训练。</p>
 <div class="flow"><span>1. STSD v2<br>全量配对训练</span><b>→</b><span>2. YOLO11n<br>同条件配对对照</span><b>→</b><span>3. 固定 val / test<br>与 4 段完整视频</span></div>
 <p id="formal-state" role="status">正在读取 formal_status.json；当前状态只按实际训练日志更新。</p>
 <div class="metrics"><div class="metric"><small>训练 / 验证 / 测试帧</small><strong id="formal-data">4,296 / 792 / 792</strong></div><div class="metric"><small>训练上限 / 早停耐心</small><strong id="formal-budget">80 / 15 epochs</strong></div><div class="metric"><small>输入分辨率 / batch</small><strong id="formal-batch">640 / 8</strong></div><div class="metric"><small>单 seed / 初始化</small><strong id="formal-init">0 / COCO</strong></div></div>
-<p id="formal-started" class="muted">训练启动时间、最近更新时间将在状态记录生成后展示；网页每 30 秒重新读取状态文件，公开页面进度以最近一次发布为准。</p>
+<p id="formal-started" class="muted">本组于 2026-10-15 00:23（北京时间）完成训练与固定评估。STSD / 同条件 YOLO11n 分别训练 28 / 30 轮后自然早停；网页每 30 秒重新读取状态文件。</p>
 <div class="scroll" id="formal-runs"><p>正在读取两模型的当前 epoch、当期和最佳验证指标…</p></div>
 <p class="muted">当期与最佳值均来自训练期间的 validation；“最佳”对应选中的 best checkpoint。训练过程不读取 test 成绩。单帧验证关闭视频缓存，视频评估则明确区分无状态与时序缓存模式。</p>
 <div class="note">公平对照：配对 stride=2，同视频帧两两成对、不重叠；每轮 4,296 次图片曝光、537 个 batch。STSD 与 YOLO11n 配对对照均关闭随机几何、mosaic 等增强，使用确定性 letterbox。此前完整 baseline 使用另一套增强流程，保留作参考；同条件 pair-control 才是判断新结构收益的主要对照。</div>
-<h3>最终固定评估</h3><p id="formal-evaluation-state">待训练结束后，在固定 792 帧 val、792 帧 test 与 4 段完整 test 视频上评估。</p><div class="scroll" id="formal-results"></div>
+<h3>最终固定评估</h3><p>固定 test 上，STSD 的 mAP50 / mAP50–95 为 78.23% / 37.45%，同条件 YOLO11n 为 82.24% / 36.64%：定位综合指标略高，mAP50 较低，尚无稳定提升。4 段完整视频中，开启时序比关闭多召回 1 张无人机帧（292 对 291）；两种模式与同条件对照均为 0 个负帧误报，不能据此声称减少鸟类误报。</p><p id="formal-evaluation-state">固定 792 帧 val、792 帧 test 与 4 段完整 test 视频均已完成评估；正在读取详细结果。</p><div class="scroll" id="formal-results"></div>
 <p><a href="formal_status.json">正式实验状态与结果 JSON</a> · <a href="../notes/yolo11_stsd_formal_seed0.md">正式实验配置与产物说明</a> · <a href="src/vision_stsd_formal.py">训练队列代码</a> · <a href="src/vision_stsd_formal_evaluate.py">正式评估代码</a></p>
 <details><summary>查看最近一次正式实验状态记录</summary><pre id="formal-json">正在读取…</pre></details>
 </section>
@@ -133,7 +135,7 @@ async function loadExpanded(){try{
  if(runs.length)tabulate('expanded-runs',runs.map(run=>{const latest=run.latest_val||{},best=run.best_val||{};return [run.name||run.id||'模型',labels[run.status]||run.status||'待记录',!run.started_at&&!run.completed_epochs?'未启动；0 / '+fmt(run.max_epochs??config.epochs):'当前 '+fmt(run.current_epoch)+'；已完成 '+fmt(run.completed_epochs)+' / '+fmt(run.max_epochs??config.epochs),ap(latest.map50)+' / '+ap(latest.map50_95),ap(best.map50)+' / '+ap(best.map50_95)]}),['模型','状态','epoch 进度','最近完成轮 val mAP50 / 50–95','最佳 val mAP50 / 50–95']);
  setText('expanded-evaluation-state','扩容版本固定评估：'+(labels[evaluation.status]||evaluation.status||'待完成')+'；val '+fmt(evaluation.val_frames??dataset.val_frames)+' 帧，test '+fmt(evaluation.test_frames??dataset.test_frames)+' 帧，完整 test 视频 '+fmt(evaluation.full_test_videos??4)+' 段。'+(evaluation.status==='completed'?'下表展示已保存的实际结果。':'尚未完成的评估不显示成绩。'));
  if(Array.isArray(evaluation.results)&&evaluation.results.length)tabulate('expanded-results',evaluation.results.map(result=>[result.name||result.model||'—',result.split||'—',ap(result.map50),ap(result.map50_95),ap(result.precision),ap(result.recall)]),['模型 / 模式','固定评估集合','mAP50','mAP50–95','Precision','Recall']);
- }catch(error){if(!expandedLoaded){setText('expanded-status','17,184 帧扩容实验 · 状态待同步');setText('expanded-state','扩容状态文件暂未读取（'+error.message+'）；未确认启动前不展示训练成绩。');setText('expanded-json','扩容状态记录暂未读取。')}}}
+ }catch(error){if(!expandedLoaded){setText('expanded-status','17,184 帧扩容实验 · 状态待同步');setText('expanded-state','扩容状态文件暂未读取（'+error.message+'）；已完成结果见本页静态说明，详细记录待同步。');setText('expanded-json','扩容状态记录暂未读取。')}}}
 let formalLoaded=false;
 async function loadFormal(){try{
  const response=await fetch('formal_status.json?t='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json(),config=data.config||{},dataset=data.data||{},runs=Array.isArray(data.runs)?data.runs:[],evaluation=data.evaluation||{};formalLoaded=true;

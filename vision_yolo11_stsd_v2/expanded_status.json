@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T15:09:45.526370+00:00",
-  "status": "waiting_for_gpu",
-  "phase": "waiting_for_gpu",
+  "updated_at": "2026-10-15T01:56:08.019770+00:00",
+  "status": "completed",
+  "phase": "completed",
   "registered_at": "2026-10-14T15:08:08.362808+00:00",
-  "started_at": null,
+  "started_at": "2026-10-14T16:24:09.453519+00:00",
   "data": {
     "name": "DroneDetectionThesis RGB (not official Anti-UAV)",
     "train_frames": 17184,
@@ -30,65 +30,821 @@
     {
       "id": "stsd",
       "name": "YOLO11-STSD v2",
-      "status": "queued",
-      "started_at": null,
-      "current_epoch": 0,
-      "completed_epochs": 0,
+      "status": "completed",
+      "started_at": "2026-10-14T16:24:18.191850+00:00",
+      "current_epoch": 19,
+      "completed_epochs": 19,
       "max_epochs": 80,
-      "best_epoch": null,
+      "best_epoch": 4,
       "latest_val": {
-        "map50": null,
-        "map50_95": null,
-        "precision": null,
-        "recall": null
+        "map50": 0.43802,
+        "map50_95": 0.1771,
+        "precision": 0.49216,
+        "recall": 0.40885
       },
       "best_val": {
-        "map50": null,
-        "map50_95": null,
-        "precision": null,
-        "recall": null
+        "map50": 0.5981303567540674,
+        "map50_95": 0.2621806593801726,
+        "precision": 0.568445475638051,
+        "recall": 0.6380208333333334
       },
-      "epoch_seconds": null,
-      "observed_budget": {},
-      "last_update": null,
-      "early_stopped": null,
-      "runtime": {}
+      "epoch_seconds": 341.40886545181274,
+      "observed_budget": {
+        "batches": 40800,
+        "optimizer_updates": 40776
+      },
+      "last_update": "2026-10-14T18:12:56.058042+00:00",
+      "early_stopped": true,
+      "runtime": {
+        "amp_actual": true,
+        "physical_batch_images": 8,
+        "batches_per_epoch": 2148,
+        "pairs": {
+          "pairs": 8592,
+          "sequences": 179,
+          "frame_gap_min": 1,
+          "frame_gap_max": 1,
+          "max_frame_gap": 32,
+          "pair_stride": 2,
+          "unique_frames_used": 17184
+        },
+        "parameters": 3994053,
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+      }
     },
     {
       "id": "pair_control",
       "name": "YOLO11n 配对训练对照",
-      "status": "queued",
-      "started_at": null,
-      "current_epoch": 0,
-      "completed_epochs": 0,
+      "status": "completed",
+      "started_at": "2026-10-14T18:13:20.711772+00:00",
+      "current_epoch": 17,
+      "completed_epochs": 17,
       "max_epochs": 80,
-      "best_epoch": null,
+      "best_epoch": 2,
       "latest_val": {
-        "map50": null,
-        "map50_95": null,
-        "precision": null,
-        "recall": null
+        "map50": 0.22139,
+        "map50_95": 0.08696,
+        "precision": 0.62763,
+        "recall": 0.14583
       },
       "best_val": {
-        "map50": null,
-        "map50_95": null,
-        "precision": null,
-        "recall": null
+        "map50": 0.6188059875023907,
+        "map50_95": 0.25836874125592935,
+        "precision": 0.7881151457814954,
+        "recall": 0.5327497119756582
       },
-      "epoch_seconds": null,
-      "observed_budget": {},
-      "last_update": null,
-      "early_stopped": null,
-      "runtime": {}
+      "epoch_seconds": 318.5217673778534,
+      "observed_budget": {
+        "batches": 36500,
+        "optimizer_updates": 36476
+      },
+      "last_update": "2026-10-14T19:44:21.578256+00:00",
+      "early_stopped": true,
+      "runtime": {
+        "amp_actual": true,
+        "physical_batch_images": 8,
+        "batches_per_epoch": 2148,
+        "pairs": {
+          "pairs": 8592,
+          "sequences": 179,
+          "frame_gap_min": 1,
+          "frame_gap_max": 1,
+          "max_frame_gap": 32,
+          "pair_stride": 2,
+          "unique_frames_used": 17184
+        },
+        "parameters": 2590035,
+        "device": "cuda:0",
+        "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+      }
     }
   ],
   "evaluation": {
-    "status": "queued",
+    "status": "completed",
     "val_frames": 792,
     "test_frames": 792,
     "full_test_videos": 4,
-    "results": [],
-    "continuous": {}
+    "results": [
+      {
+        "name": "baseline",
+        "split": "val",
+        "map50": 0.6188059875023907,
+        "map50_95": 0.25836874125592935,
+        "precision": 0.7881151457814954,
+        "recall": 0.5327497119756582
+      },
+      {
+        "name": "baseline",
+        "split": "test",
+        "map50": 0.6246067735686723,
+        "map50_95": 0.29810029454420156,
+        "precision": 0.6259833048582601,
+        "recall": 0.5546875
+      },
+      {
+        "name": "stsd",
+        "split": "val",
+        "map50": 0.5981303567540674,
+        "map50_95": 0.2621806593801726,
+        "precision": 0.568445475638051,
+        "recall": 0.6380208333333334
+      },
+      {
+        "name": "stsd",
+        "split": "test",
+        "map50": 0.46133662188004915,
+        "map50_95": 0.22960747541018617,
+        "precision": 0.4478632478632479,
+        "recall": 0.6822916666666666
+      },
+      {
+        "name": "original_reference",
+        "split": "val",
+        "map50": 0.810745646611384,
+        "map50_95": 0.3872232002516803,
+        "precision": 0.8451856887235242,
+        "recall": 0.828125
+      },
+      {
+        "name": "original_reference",
+        "split": "test",
+        "map50": 0.8309610605066371,
+        "map50_95": 0.39139735389455205,
+        "precision": 0.8303350308379498,
+        "recall": 0.859375
+      }
+    ],
+    "continuous": {
+      "baseline": {
+        "checkpoint_key": "baseline",
+        "temporal_enabled": false,
+        "presence": {
+          "frame_micro": {
+            "threshold": 0.25,
+            "frames": 1224,
+            "TP": 248,
+            "FP": 0,
+            "FN": 57,
+            "TN": 919,
+            "precision": 1.0,
+            "recall": 0.8131147540983606,
+            "negative_frame_FPR": 0.0,
+            "f1": 0.8969258589511754
+          },
+          "per_source_category": {
+            "AIRPLANE": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "BIRD": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "DRONE": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 248,
+              "FP": 0,
+              "FN": 57,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.8131147540983606,
+              "negative_frame_FPR": null,
+              "f1": 0.8969258589511754
+            },
+            "HELICOPTER": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "per_video": {
+            "V_AIRPLANE_007": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_BIRD_004": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_DRONE_005": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 248,
+              "FP": 0,
+              "FN": 57,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.8131147540983606,
+              "negative_frame_FPR": null,
+              "f1": 0.8969258589511754
+            },
+            "V_HELICOPTER_008": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "interpretation": "Presence means any predicted drone versus any DRONE GT box; no IoU requirement. Categories identify source videos, not a multiclass detector."
+        },
+        "latency": {
+          "frames": 1224,
+          "mean_ms": 12.569951961612865,
+          "median_ms": 11.950550018809736,
+          "p95_ms": 16.821400029584765,
+          "throughput_fps": 79.55479886111584,
+          "scope": "Sequential batch=1 predict call incl. preprocessing, GPU synchronization and NMS; excludes file decoding, GT reading and JSON writing; after one synthetic warmup."
+        },
+        "per_video_cache": {
+          "V_DRONE_005": {
+            "frames": 305,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_BIRD_004": {
+            "frames": 315,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_HELICOPTER_008": {
+            "frames": 304,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_AIRPLANE_007": {
+            "frames": 300,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          }
+        },
+        "total_frames": 1224,
+        "total_frames_using_memory": 0
+      },
+      "stsd_temporal_off": {
+        "checkpoint_key": "stsd",
+        "temporal_enabled": false,
+        "presence": {
+          "frame_micro": {
+            "threshold": 0.25,
+            "frames": 1224,
+            "TP": 290,
+            "FP": 0,
+            "FN": 15,
+            "TN": 919,
+            "precision": 1.0,
+            "recall": 0.9508196721311475,
+            "negative_frame_FPR": 0.0,
+            "f1": 0.9747899159663865
+          },
+          "per_source_category": {
+            "AIRPLANE": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "BIRD": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "DRONE": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 290,
+              "FP": 0,
+              "FN": 15,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "negative_frame_FPR": null,
+              "f1": 0.9747899159663865
+            },
+            "HELICOPTER": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "per_video": {
+            "V_AIRPLANE_007": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_BIRD_004": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_DRONE_005": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 290,
+              "FP": 0,
+              "FN": 15,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "negative_frame_FPR": null,
+              "f1": 0.9747899159663865
+            },
+            "V_HELICOPTER_008": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "interpretation": "Presence means any predicted drone versus any DRONE GT box; no IoU requirement. Categories identify source videos, not a multiclass detector."
+        },
+        "latency": {
+          "frames": 1224,
+          "mean_ms": 13.802713071592638,
+          "median_ms": 13.212150079198182,
+          "p95_ms": 17.794900108128786,
+          "throughput_fps": 72.44952458354726,
+          "scope": "Sequential batch=1 predict call incl. preprocessing, GPU synchronization and NMS; excludes file decoding, GT reading and JSON writing; after one synthetic warmup."
+        },
+        "per_video_cache": {
+          "V_DRONE_005": {
+            "frames": 305,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [
+              0,
+              0,
+              0
+            ],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_BIRD_004": {
+            "frames": 315,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [
+              0,
+              0,
+              0
+            ],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_HELICOPTER_008": {
+            "frames": 304,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [
+              0,
+              0,
+              0
+            ],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_AIRPLANE_007": {
+            "frames": 300,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [
+              0,
+              0,
+              0
+            ],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          }
+        },
+        "total_frames": 1224,
+        "total_frames_using_memory": 0
+      },
+      "stsd_temporal_on": {
+        "checkpoint_key": "stsd",
+        "temporal_enabled": true,
+        "presence": {
+          "frame_micro": {
+            "threshold": 0.25,
+            "frames": 1224,
+            "TP": 290,
+            "FP": 0,
+            "FN": 15,
+            "TN": 919,
+            "precision": 1.0,
+            "recall": 0.9508196721311475,
+            "negative_frame_FPR": 0.0,
+            "f1": 0.9747899159663865
+          },
+          "per_source_category": {
+            "AIRPLANE": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "BIRD": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "DRONE": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 290,
+              "FP": 0,
+              "FN": 15,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "negative_frame_FPR": null,
+              "f1": 0.9747899159663865
+            },
+            "HELICOPTER": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "per_video": {
+            "V_AIRPLANE_007": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_BIRD_004": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_DRONE_005": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 290,
+              "FP": 0,
+              "FN": 15,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9508196721311475,
+              "negative_frame_FPR": null,
+              "f1": 0.9747899159663865
+            },
+            "V_HELICOPTER_008": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 304,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            }
+          },
+          "interpretation": "Presence means any predicted drone versus any DRONE GT box; no IoU requirement. Categories identify source videos, not a multiclass detector."
+        },
+        "latency": {
+          "frames": 1224,
+          "mean_ms": 14.63797940869566,
+          "median_ms": 13.919649878516793,
+          "p95_ms": 18.92439997754991,
+          "throughput_fps": 68.3154397256463,
+          "scope": "Sequential batch=1 predict call incl. preprocessing, GPU synchronization and NMS; excludes file decoding, GT reading and JSON writing; after one synthetic warmup."
+        },
+        "per_video_cache": {
+          "V_DRONE_005": {
+            "frames": 305,
+            "frames_using_memory": 304,
+            "module_cache_use_counts": [
+              304,
+              304,
+              304
+            ],
+            "expected_per_module": 304,
+            "first_frame_without_memory": true
+          },
+          "V_BIRD_004": {
+            "frames": 315,
+            "frames_using_memory": 314,
+            "module_cache_use_counts": [
+              314,
+              314,
+              314
+            ],
+            "expected_per_module": 314,
+            "first_frame_without_memory": true
+          },
+          "V_HELICOPTER_008": {
+            "frames": 304,
+            "frames_using_memory": 303,
+            "module_cache_use_counts": [
+              303,
+              303,
+              303
+            ],
+            "expected_per_module": 303,
+            "first_frame_without_memory": true
+          },
+          "V_AIRPLANE_007": {
+            "frames": 300,
+            "frames_using_memory": 299,
+            "module_cache_use_counts": [
+              299,
+              299,
+              299
+            ],
+            "expected_per_module": 299,
+            "first_frame_without_memory": true
+          }
+        },
+        "total_frames": 1224,
+        "total_frames_using_memory": 1220
+      },
+      "original_reference": {
+        "checkpoint_key": "original_reference",
+        "temporal_enabled": false,
+        "presence": {
+          "frame_micro": {
+            "threshold": 0.25,
+            "frames": 1224,
+            "TP": 301,
+            "FP": 123,
+            "FN": 4,
+            "TN": 796,
+            "precision": 0.7099056603773585,
+            "recall": 0.9868852459016394,
+            "negative_frame_FPR": 0.1338411316648531,
+            "f1": 0.8257887517146777
+          },
+          "per_source_category": {
+            "AIRPLANE": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "BIRD": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "DRONE": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 301,
+              "FP": 0,
+              "FN": 4,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9868852459016394,
+              "negative_frame_FPR": null,
+              "f1": 0.9933993399339934
+            },
+            "HELICOPTER": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 123,
+              "FN": 0,
+              "TN": 181,
+              "precision": 0.0,
+              "recall": null,
+              "negative_frame_FPR": 0.40460526315789475,
+              "f1": 0.0
+            }
+          },
+          "per_video": {
+            "V_AIRPLANE_007": {
+              "threshold": 0.25,
+              "frames": 300,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 300,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_BIRD_004": {
+              "threshold": 0.25,
+              "frames": 315,
+              "TP": 0,
+              "FP": 0,
+              "FN": 0,
+              "TN": 315,
+              "precision": null,
+              "recall": null,
+              "negative_frame_FPR": 0.0,
+              "f1": null
+            },
+            "V_DRONE_005": {
+              "threshold": 0.25,
+              "frames": 305,
+              "TP": 301,
+              "FP": 0,
+              "FN": 4,
+              "TN": 0,
+              "precision": 1.0,
+              "recall": 0.9868852459016394,
+              "negative_frame_FPR": null,
+              "f1": 0.9933993399339934
+            },
+            "V_HELICOPTER_008": {
+              "threshold": 0.25,
+              "frames": 304,
+              "TP": 0,
+              "FP": 123,
+              "FN": 0,
+              "TN": 181,
+              "precision": 0.0,
+              "recall": null,
+              "negative_frame_FPR": 0.40460526315789475,
+              "f1": 0.0
+            }
+          },
+          "interpretation": "Presence means any predicted drone versus any DRONE GT box; no IoU requirement. Categories identify source videos, not a multiclass detector."
+        },
+        "latency": {
+          "frames": 1224,
+          "mean_ms": 12.7461785155735,
+          "median_ms": 12.096000020392239,
+          "p95_ms": 16.588999889791012,
+          "throughput_fps": 78.45488738276988,
+          "scope": "Sequential batch=1 predict call incl. preprocessing, GPU synchronization and NMS; excludes file decoding, GT reading and JSON writing; after one synthetic warmup."
+        },
+        "per_video_cache": {
+          "V_DRONE_005": {
+            "frames": 305,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_BIRD_004": {
+            "frames": 315,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_HELICOPTER_008": {
+            "frames": 304,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          },
+          "V_AIRPLANE_007": {
+            "frames": 300,
+            "frames_using_memory": 0,
+            "module_cache_use_counts": [],
+            "expected_per_module": 0,
+            "first_frame_without_memory": true
+          }
+        },
+        "total_frames": 1224,
+        "total_frames_using_memory": 0
+      }
+    }
   },
   "limitations": [
     "The published status is a timestamped snapshot, not a live GPU connection.",
